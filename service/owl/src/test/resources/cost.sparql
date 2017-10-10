@@ -1,0 +1,10 @@
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX c:    <http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#>
+
+SELECT ?X
+WHERE
+{
+?X rdf:type c:BoqWallSet1
+}

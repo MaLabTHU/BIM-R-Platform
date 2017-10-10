@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#"
+     xml:base="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#hasShape -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#hasShape">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#hasWork -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#hasWork"/>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#shapedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#shapedBy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#BoqWallSet1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#BoqWallSet1">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Wall"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#hasShape"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Shape1"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#hasWork"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Work1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#BoqWallSet2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#BoqWallSet2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Wall"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Product"/>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#QuotaWallSet1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#QuotaWallSet1">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Wall"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#hasShape"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Shape2"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#hasWork"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Work1"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#QuotaWallSet2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#QuotaWallSet2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Wall"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Shape -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Shape"/>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Shape1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Shape1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Shape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Shape2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Shape2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Shape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Wall -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Wall">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Work -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Work"/>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Work1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Work1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Work"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Work2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Work2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Work"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#shape1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#shape1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Shape1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#shape2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#shape2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Shape2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#wall1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#wall1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Wall"/>
+        <hasShape rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#shape1"/>
+        <hasShape rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#shape2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#wall2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#wall2">
+        <hasShape rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#shape2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#work1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#work1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-17#Work1"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
