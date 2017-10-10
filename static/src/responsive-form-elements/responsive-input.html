@@ -1,0 +1,51 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../src/responsive-form-elements/responsive-form-element-behavior.html">
+
+<link rel="import" href="../../src/responsive-form-elements/responsive-form-container.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+
+<dom-module id="responsive-input">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+
+            ::content paper-icon-button[suffix] {
+                width: 20px;
+                height: 20px;
+                padding: 0px;
+                margin-right: 2px;
+                margin-bottom: 4px;
+            }
+        </style>
+        <responsive-form-container label="[[label]]" origin="[[origin]]" required="[[required]]">
+            <paper-input id="input" label="[[getLabel(origin, label)]]" type="[[type]]" placeholder="[[placeholder]]"
+                         name="[[name]]" required="[[required]]" error-message="[[errorMessage]]" value="{{value}}"
+                         no-label-float="[[!origin]]" always-float-label>
+                <content></content>
+            </paper-input>
+        </responsive-form-container>
+    </template>
+    <script>
+        Polymer({
+            is: 'responsive-input',
+            properties: {
+                type: String,
+                value: {
+                    type: String,
+                    value: '',
+                },
+            },
+
+            behaviors: [
+                Polymer.ResponsiveFormElementBehavior,
+            ],
+
+            validate: function () {
+                return this.$.input.validate();
+            },
+        });
+    </script>
+</dom-module>

@@ -1,0 +1,136 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../bower_components/iron-resizable-behavior/iron-resizable-behavior.html">
+
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../../bower_components/paper-styles/color.html">
+
+<link rel="import" href="../../bower_components/iron-selector/iron-selector.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../../bower_components/iron-collapse/iron-collapse.html">
+
+<dom-module id="paper-collapses">
+    <template>
+        <style include="iron-flex iron-flex-alignment iron-positioning"></style>
+        <style>
+            :host {
+                display: block;
+                @apply(--layout-vertical);
+            }
+
+            paper-item {
+                font-size: 16px;
+                line-height: 16px;
+                padding: 0;
+                cursor: pointer;
+                --paper-item-min-height: 24px;
+                --paper-item: {
+                    background: var(--collapse-color, var(--paper-indigo-400));
+                    color: white;
+                };
+                --paper-item-selected: {
+                    background: var(--expand-color, var(--paper-indigo-400));
+                }
+            }
+
+            paper-item.iron-selected .opened,
+            paper-item .closed {
+                display: inherit
+            }
+
+            paper-item.iron-selected .closed,
+            paper-item .opened {
+                display: none;
+            }
+        </style>
+        <iron-selector id="selector" class="flex layout vertical" selectable=".selectable"
+                       multi="{{multi}}" selected="{{selected}}"
+                       on-iron-select="_onIronSelect" on-iron-deselect="_onIronDeselect"></iron-selector>
+    </template>
+    <script>
+        Polymer({
+            is: 'paper-collapses',
+            properties: {
+                multi: {
+                    type: Boolean,
+                    value: false,
+                },
+                selected: {
+                    type: Number,
+                    value: 0,
+                    notify: true,
+                },
+            },
+
+            behaviors: [
+                Polymer.IronResizableBehavior,
+            ],
+
+            attached: function () {
+                this._observer = Polymer.dom(this).observeNodes(this._processChildren);
+            },
+
+            detached: function () {
+                Polymer.dom(this).unobserveNodes(this._observer);
+            },
+
+            _reset: function () {
+                let child = this.$.selector.firstChild;
+                while (child) {
+                    this.$.selector.removeChild(child);
+                    child = this.$.selector.firstChild;
+                }
+                this.items = [];
+            },
+
+            _processChildren: function () {
+                this._reset();
+                for (let child of this.getEffectiveChildren()) {
+                    // todo replace with template
+                    let header = document.createElement('paper-item');
+                    header.className = 'paper-collapses selectable';
+                    let closed = document.createElement('iron-icon');
+                    closed.icon = 'arrow-drop-up';
+                    closed.className = 'paper-collapses closed';
+                    header.appendChild(closed);
+                    let opened = document.createElement('iron-icon');
+                    opened.icon = 'arrow-drop-down';
+                    opened.className = 'paper-collapses opened';
+                    header.appendChild(opened);
+                    // header.innerText = child.getAttribute('label');
+                    let span = document.createElement('span');
+                    span.innerText = child.getAttribute('label');
+                    header.appendChild(span);
+                    this.$.selector.appendChild(header);
+
+                    let collapse = document.createElement('iron-collapse');
+                    collapse.className = 'paper-collapses flex layout vertical';
+                    collapse.noAnimation = true;
+                    child.className += ' flex';
+                    collapse.appendChild(child);
+                    this.$.selector.appendChild(collapse);
+                    this.items.push(collapse);
+                }
+                this.$.selector.select(0);
+            },
+            items: [],
+
+            _onIronSelect: function (event) {
+                let collapse = event.detail.item.nextSibling;
+                if (!this.multi) {
+                    for (let c of this.items) {
+                        if (c != collapse) {
+                            c.hide();
+                        }
+                    }
+                }
+                collapse.show();
+            },
+
+            _onIronDeselect: function (event) {
+                event.detail.item.nextSibling.hide();
+            }
+        });
+    </script>
+</dom-module>

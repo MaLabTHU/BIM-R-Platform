@@ -1,0 +1,43 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../bower_components/iron-resizable-behavior/iron-resizable-behavior.html">
+
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../../bower_components/paper-styles/color.html">
+
+<link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
+
+<dom-module id="paper-fabs">
+    <template>
+        <style include="iron-flex"></style>
+        <style>
+            :host {
+                display: block;
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                @apply(--layout-vertical);
+            }
+
+            ::content paper-fab {
+                margin: 0 20px 20px -28px;
+            }
+
+            ::content paper-fab[mini] {
+                margin: 0 20px 20px -20px;
+                background: var(--fab-mini-color, --paper-indigo-500);
+            }
+        </style>
+        <content></content>
+    </template>
+    <script>
+        Polymer({
+            is: 'paper-fabs',
+
+            behaviors: [
+                Polymer.IronResizableBehavior,
+            ],
+        });
+    </script>
+</dom-module>

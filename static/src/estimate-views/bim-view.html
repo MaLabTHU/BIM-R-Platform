@@ -1,0 +1,337 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../src/app-framework/app-view-behavior.html">
+
+<link rel="import" href="../../src/app-framework/app-shared-styles.html">
+
+<link rel="import" href="../../bower_components/vaadin-split-layout/vaadin-split-layout.modified.html">
+<link rel="import" href="../../bower_components/paper-material/paper-material.html">
+<link rel="import" href="../../src/paper-collapses/paper-collapses.html">
+
+<link rel="import" href="../../src/ifc-elements/ifc-tree.html">
+<link rel="import" href="../../src/ifc-elements/ifc-viewer.html">
+<link rel="import" href="../../src/ifc-elements/ifc-translator.html">
+<link rel="import" href="../../src/paper-fabs/paper-fabs.html">
+<link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
+
+<link rel="import" href="../../src/estimate-tables/direct-boq-table.html">
+
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../../bower_components/paper-dialog/paper-dialog.html">
+
+<link rel="import" href="../../src/estimate-dialogs/boq-unclassified-dialog.html">
+
+<dom-module id="bim-view">
+    <template>
+        <style include="iron-flex iron-flex-alignment iron-positioning"></style>
+        <style include="app-shared-styles"></style>
+        <style>
+            :host {
+                display: block;
+                @apply(--layout-vertical);
+            }
+
+            #left {
+                display: none;
+                background: white;
+            }
+
+            @media (min-width: 600px) {
+                #left {
+                    display: inherit;
+                    width: 20%;
+                }
+
+                #right {
+                    width: 80%;
+                }
+            }
+
+            #top {
+                height: 80%;
+            }
+
+            #bottom {
+                height: 20%;
+            }
+        </style>
+        <vaadin-split-layout class="flex" invisible>
+            <paper-material id="left" class="layout vertical" elevation="1">
+                <paper-collapses id="collapses" class="flex" multi="true">
+                    <ifc-tree id="modelTree" label="Model"></ifc-tree>
+                    <ifc-tree id="typeTree" label="Component"></ifc-tree>
+                    <div id="viewTree" label="View"></div>
+                    <ifc-tree id="boqTree" label="BOQ"></ifc-tree>
+                    <div id="quotaTree" label="Quota"></div>
+                    <div id="propertyCollapses" label="Property"></div>
+                </paper-collapses>
+            </paper-material>
+            <div id="right" class="layout vertical" style="overflow-y: hidden">
+                <vaadin-split-layout class="flex" vertical invisible>
+                    <!--<div id="top" class="layout vertical">-->
+                    <ifc-viewer id="viewer" class="flex" api="[[nancyApi]]"></ifc-viewer>
+                    <!--</div>-->
+                    <!--<div id="bottom" class="layout vertical">-->
+                    <!--<direct-boq-table id="boq" class="flex"></direct-boq-table>-->
+                    <!--</div>-->
+                </vaadin-split-layout>
+            </div>
+        </vaadin-split-layout>
+        <paper-fabs>
+            <paper-fab icon="zoom-in" on-tap="onZoomIn" mini></paper-fab>
+            <paper-fab icon="zoom-out" on-tap="onZoomOut" mini></paper-fab>
+            <paper-fab icon="fullscreen" on-tap="onZoomAll" mini></paper-fab>
+            <paper-fab icon="open-with" on-tap="onPan" mini></paper-fab>
+            <paper-fab icon="done-all" on-tap="onAnalyze"></paper-fab>
+        </paper-fabs>
+        <ifc-translator id="translator"></ifc-translator>
+        <iron-ajax id="ajaxPostAnalyze" method="post" url$="[[restifyApi]]v1/projects/[[_projectId]]/analyze"
+                   on-response="_onAnalyze"></iron-ajax>
+        <paper-dialog id="loading" modal>
+            <p>加载模型中，请耐心等待数秒钟</p>
+        </paper-dialog>
+        <paper-dialog id="analyzing" modal>
+            <p>分析模型中，请耐心等待数分钟</p>
+        </paper-dialog>
+        <iron-ajax id="ajaxGetBoq" url$="[[restifyApi]]v1/projects/[[_projectId]]/boqs/direct-boq"
+                   on-response="_onBoq" handle-as="json"></iron-ajax>
+        <boq-unclassified-dialog id="unclassified"></boq-unclassified-dialog>
+    </template>
+    <script>
+        Polymer({
+            is: 'bim-view',
+            properties: {
+                restifyApi: String,
+                nancyApi: String,
+                _projectId: String,
+            },
+
+            behaviors: [
+                Polymer.AppViewBehavior,
+            ],
+
+            attached: function () {
+                this.$.modelTree.bind(this.$.viewer);
+                // this.$.typeTree.bind(this.$.viewer);
+                this.$.boqTree.bind(this.$.viewer);
+                this.$.viewer.onModelLoaded = () => {
+                    this.$.viewer.loadStructure((request) => {
+                        this.$.loading.close();
+                        let nodesByType = {};
+
+                        function classifyNodeByType(node, nodesByType) {
+                            let type = {
+                                    IfcWallStandardCase: 'IfcWall',
+                                }[node.type] || node.type;
+                            let subNodes = nodesByType[type];
+                            if (!subNodes) {
+                                subNodes = [];
+                                nodesByType[type] = subNodes;
+                            }
+                            subNodes.push(node);
+                        }
+
+                        function classifyNodesByType(nodes, nodesByType) {
+                            let _nodesByType = nodesByType || {};
+                            for (let node of nodes) {
+                                classifyNodeByType(node, _nodesByType);
+                            }
+                            return _nodesByType;
+                        }
+
+                        function getTypeArray(nodesByType) {
+                            let nodes = [];
+                            for (let type of Object.keys(nodesByType).sort()) {
+                                nodes.push({
+                                    id: 0,
+                                    type: '',
+                                    name: type,
+                                    instances: nodesByType[type]
+                                });
+                            }
+                            return nodes;
+                        }
+
+                        this.$.modelTree.setNodes(request.xhr.response.decomposedBy, false, (node) => {
+                            classifyNodeByType(node, nodesByType);
+                            let children = node.contains;
+                            children = children ? getTypeArray(classifyNodesByType(children)) : undefined;
+                            return {
+                                name: this.$.translator.getNameFromNode(node),
+                                data: node.id,
+                                children: node ? children || node.instances || node.decomposedBy : undefined,
+                            };
+                        }, _ => {
+                            for (let type of[
+                                '',
+                                'IfcAnnotation',
+                                'IfcBuilding',
+                                'IfcBuildingStorey',
+                                'IfcMember',
+                                'IfcSite',
+                                'IfcStairFlight',
+                            ]) {
+                                delete nodesByType[type];
+                            }
+                            this.$.typeTree.setNodes(getTypeArray(nodesByType), false, (node) => {
+                                return {
+                                    name: this.$.translator.getNameFromNode(node),
+                                    data: node.id,
+                                    children: node.instances,
+                                }
+                            })
+                        });
+                        this.$.modelTree.showDepth(2);
+                    }, (error) => {
+                        console.error(error);
+                    });
+                };
+                this.reset();
+            },
+
+            reset: function () {
+                // todo
+            },
+
+            load: function (project) {
+                this.$.loading.open();
+                this._projectId = project.id;
+                this.$.viewer.load(project.modelPath);
+            },
+
+            onAnalyze: function () {
+                this.$.analyzing.open();
+//                this.$.ajaxPostAnalyze.generateRequest();
+//                this.$.ajaxGetBoq.generateRequest();
+                setTimeout(() => {
+                    this._onAnalyze();
+                    this._onBoq();
+                }, 30000);
+            },
+            _onAnalyze: function () {
+                this.$.analyzing.close();
+                this.routeAnalyze();
+            },
+
+            _onBoq: function (request) {
+                let boqs = {
+                    children: [
+                        {
+                            name: 'Classified',
+                            children: [
+                                {
+                                    name: 'Architecture',
+                                    children: [
+                                        {
+                                            name: 'Concrete and reinforced steel bar (0105)',
+                                            children: [
+                                                {
+                                                    name: 'Concrete footing (010501)',
+                                                    children: [],
+                                                },
+                                                {
+                                                    name: 'Insitu concrete column (010502)',
+                                                    children: [
+                                                        {
+                                                            name: 'Rectangular column (010502001)',
+                                                            children: [],
+                                                        },
+                                                        {
+                                                            name: 'Structural column (010502002)',
+                                                            children: [],
+                                                        },
+                                                        {
+                                                            name: 'Special-shaped column (010502003)',
+                                                            children: [
+                                                                {
+                                                                    name: 'Insitu concrete special-shaped column 4-C30',
+                                                                    id: 17406,
+                                                                },
+                                                                {
+                                                                    name: 'Insitu concrete special-shaped column 4-C30',
+                                                                    id: 17604,
+                                                                },
+                                                                {
+                                                                    name: 'Insitu concrete special-shaped column 4-C30',
+                                                                    id: 17692,
+                                                                },
+                                                                {
+                                                                    name: 'Insitu concrete round column-C30',
+                                                                    id: 19433,
+                                                                },
+                                                                {
+                                                                    name: 'Insitu concrete round column-C30',
+                                                                    id: 20865,
+                                                                },
+                                                                {
+                                                                    name: 'Insitu concrete round column-C30',
+                                                                    id: 21001,
+                                                                },
+                                                                {name: 'Insitu concrete round column-C30',},
+                                                                {name: 'Insitu concrete round column-C30',},
+                                                                {name: 'Insitu concrete round column-C30',},
+                                                                {name: 'Insitu concrete round column-C30',},
+                                                                {name: 'Insitu concrete round column-C30',},
+                                                                {name: 'Insitu concrete round column-C30',},
+                                                                {name: 'Insitu concrete round column-C30',},
+                                                                {name: 'Insitu concrete round column-C30',},
+                                                                {name: 'Insitu concrete round column-C30',},
+                                                                {name: 'Insitu concrete round column-C30',},
+                                                                {name: 'Insitu concrete round column-C30',},
+                                                                {name: 'Insitu concrete round column-C30',},
+                                                            ],
+                                                        }
+                                                    ],
+                                                },
+                                                {
+                                                    name: 'Insitu concrete beam (010503)',
+                                                    children: [],
+                                                },
+                                                {name: 'Insitu concrete wall (010504)', children: [],},
+                                                {name: 'Insitu concrete slab (010505)', children: [],},
+                                                {name: 'Insitu concrete stair (010506)', children: [],},
+                                                {name: 'Insitu concrete other component (010507)', children: [],},
+                                                {name: 'Post-poured strip (010508)', children: [],},
+                                            ],
+                                        },
+                                        {
+                                            name: 'Temporary component(0117)',
+                                            children: [],
+                                        }
+                                    ],
+                                },
+                            ],
+                        },
+                        {
+                            name: 'Unclassified',
+                            children: [
+                                {
+
+                                    name: 'Architecture',
+                                    children: [],
+                                },
+                            ],
+                        },
+                    ],
+                };
+                this.$.boqTree.setNodes(boqs.children, false, (node) => {
+                    return {
+                        name: this.$.translator.getNameFromNode(node),
+                        data: node.id,
+                        children: node.children,
+                    };
+                });
+                this.$.boqTree.showDepth(3);
+            },
+
+            onZoomAll: function () {
+                this.$.unclassified.open();
+            },
+
+            onZoomIn: function () {
+            },
+
+            routeAnalyze: null,
+        });
+    </script>
+</dom-module>

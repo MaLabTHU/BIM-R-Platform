@@ -1,0 +1,298 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#"
+     xml:base="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#hasA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#hasA"/>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#hasB -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#hasB"/>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#hasC -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#hasC"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#hasI -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#hasI"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#DefinedClassA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#DefinedClassA">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#hasI"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</xsd:minExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#DefinedClassB -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#DefinedClassB">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#hasB"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#hasC"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#hasA"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#DefinedClassA"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#ExactlyClassC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#ExactlyClassC">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#hasC"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#anotherA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#anotherA"/>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#exactlyC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#exactlyC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#ExactlyClassC"/>
+        <hasC rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#anotherA"/>
+        <hasC rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#shouldBeA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#shouldBeA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#shouldBeA">
+        <hasB rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#shouldBeA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#swrlB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#swrlB">
+        <hasA rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#shouldBeA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#x -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#x">
+        <hasA rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#y"/>
+        <hasB rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#z"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#y -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#y"/>
+    
+
+
+    <!-- http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#z -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#z">
+        <hasI rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</hasI>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl#x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#z">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#hasA"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#hasB"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#z"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#hasC"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#y"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#z"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#hasB"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/luciferz2012/ontologies/2016/10/untitled-ontology-28#DefinedClassA"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

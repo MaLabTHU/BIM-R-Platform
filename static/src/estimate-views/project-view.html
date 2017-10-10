@@ -1,0 +1,321 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../src/app-framework/app-view-behavior.html">
+<link rel="import" href="../../src/electron-behavior/electron-behavior.html">
+
+<link rel="import" href="../../src/app-framework/app-shared-styles.html">
+
+<link rel="import" href="../../bower_components/vaadin-split-layout/vaadin-split-layout.modified.html">
+
+<link rel="import" href="../../bower_components/paper-listbox/paper-listbox.html">
+
+<link rel="import" href="../../bower_components/iron-selector/iron-selector.html">
+
+<link rel="import" href="../../bower_components/paper-item/paper-item.html">
+
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+
+<link rel="import" href="../../bower_components/iron-form/iron-form.html">
+
+<link rel="import" href="../../src/responsive-form-elements/responsive-input.html">
+<link rel="import" href="../../src/responsive-form-elements/responsive-dropdown-menu.html">
+<link rel="import" href="../../src/responsive-form-elements/responsive-date-picker.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+
+<link rel="import" href="../../src/responsive-form-elements/responsive-upload.html">
+<link rel="import" href="../../bower_components/paper-toast/paper-toast.html">
+
+<link rel="import" href="../../src/paper-fabs/paper-fabs.html">
+<link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
+
+<dom-module id="project-view">
+    <template>
+        <style include="iron-flex iron-flex-alignment iron-positioning"></style>
+        <style include="app-shared-styles"></style>
+        <style>
+            :host {
+                display: block;
+                @apply(--layout-vertical);
+            }
+
+            #left {
+                display: none;
+                padding: 1em;
+                /*background: white;*/
+            }
+
+            @media (min-width: 600px) {
+                #left {
+                    display: inherit;
+                    min-width: 150px;
+                    max-width: 400px;
+                    width: 10%;
+                }
+
+                #right {
+                    width: 90%;
+                }
+            }
+
+            paper-item {
+                --paper-item-selected: {
+                    background: rgba(0, 0, 0, 0.05);
+                }
+            }
+
+            paper-item a {
+                color: inherit;
+                text-decoration: none;
+                display: block;
+                line-height: 48px;
+                width: 100%;
+            }
+
+            .card-list paper-card > div {
+                padding: 2em;
+                padding-top: 1em;
+            }
+        </style>
+        <vaadin-split-layout class="flex" invisible>
+            <div id="left" class="flex layout vertical">
+                <iron-selector class="flex" selected="{{selected}}">
+                    <paper-item><a href="#project-info">工程信息</a></paper-item>
+                    <paper-item><a href="#estimate-info">编制信息</a></paper-item>
+                    <paper-item><a href="#ontology-info">规范信息</a></paper-item>
+                    <paper-item><a href="#bim-model-info">模型信息</a></paper-item>
+                </iron-selector>
+            </div>
+            <div id="right" class="layout horizontal center-justified card-list-container">
+                <form id="form" is="iron-form" class="flex card-list"
+                      content-type="application/json"
+                      on-iron-form-response="onResponse"
+                      on-iron-form-error="onError" novalidate>
+                    <div id="project-info"></div>
+                    <paper-card heading="工程信息">
+                        <div>
+                            <responsive-input label="工程名称" required
+                                              name="projectName" value="[[project.projectName]]"
+                                              error-message="请输入工程名称"></responsive-input>
+                            <responsive-input label="项目代码"
+                                              name="projectCode" value="[[project.projectCode]]"></responsive-input>
+                            <responsive-dropdown-menu label="工程类别" items="[[projectTypes]]" required
+                                                      name="projectType" value="[[project.projectType]]"
+                                                      error-message="请选择工程类型"></responsive-dropdown-menu>
+                            <responsive-dropdown-menu label="结构类型" items="[[structureTypes]]" required
+                                                      name="structureType" value="[[project.structureType]]"
+                                                      error-message="请选择结构类型"></responsive-dropdown-menu>
+                            <responsive-dropdown-menu label="基础形式" items="[[footingTypes]]" required
+                                                      name="footingType" value="[[project.footingType]]"
+                                                      error-message="请选择基础形式"></responsive-dropdown-menu>
+                            <responsive-dropdown-menu label="建筑特征" items="[[shapeTypes]]" required
+                                                      name="shapeType" value="[[project.shapeType]]"
+                                                      error-message="请选择建筑特征"></responsive-dropdown-menu>
+                            <responsive-input label="地下层数（层）" type="number" required
+                                              name="underGrounds" value="[[project.underGrounds]]"
+                                              error-message="请输入地下层数"></responsive-input>
+                            <responsive-input label="地上层数（层）" type="number" required
+                                              name="floors" value="[[project.floors]]"
+                                              error-message="请输入地上层数"></responsive-input>
+                            <responsive-input label="檐高（m）" required
+                                              name="height" value="[[project.height]]"
+                                              error-message="请输入檐高"></responsive-input>
+                            <responsive-input label="建筑面积（m2）" required
+                                              name="area" value="[[project.area]]"
+                                              error-message="请输入建筑面积"></responsive-input>
+                            <responsive-input label="室外地坪相对±0.000标高（m）" required
+                                              name="zero" value="[[project.zero]]"
+                                              error-message="请输入相对±0.000标高"></responsive-input>
+                        </div>
+                    </paper-card>
+                    <div id="estimate-info"></div>
+                    <paper-card heading="编制信息">
+                        <div>
+                            <responsive-input label="建设单位"
+                                              name="ownerOrg" value="[[project.ownerOrg]]"></responsive-input>
+                            <responsive-input label="设计单位"
+                                              name="designerOrg" value="[[project.designerOrg]]"></responsive-input>
+                            <responsive-input label="施工单位"
+                                              name="constructorOrg"
+                                              value="[[project.constructorOrg]]"></responsive-input>
+                            <responsive-input label="编制单位"
+                                              name="estimatorOrg" value="[[project.estimatorOrg]]"></responsive-input>
+                            <responsive-date-picker label="编制日期"
+                                                    name="estimateDate"
+                                                    value="[[project.estimateDate]]"></responsive-date-picker>
+                            <responsive-input label="编制人"
+                                              name="estimator" value="[[project.estimator]]"></responsive-input>
+                            <responsive-input label="编制人证号"
+                                              name="estimatorId" value="[[project.estimatorId]]"></responsive-input>
+                            <responsive-input label="审核人"
+                                              name="reviewer" value="[[project.reviewer]]"></responsive-input>
+                            <responsive-input label="审核人证号"
+                                              name="reviewerId" value="[[project.reviewerId]]"></responsive-input>
+                        </div>
+                    </paper-card>
+                    <div id="ontology-info"></div>
+                    <paper-card heading="规范信息">
+                        <div>
+                            <responsive-dropdown-menu label="清单规范" items="[[boqStandards]]" required
+                                                      name="boqStandard"
+                                                      value="[[project.boqStandard]]"></responsive-dropdown-menu>
+                            <responsive-dropdown-menu label="定额规范" items="[[quotaStandards]]" required
+                                                      name="quotaStandard"
+                                                      value="[[project.quotaStandard]]"></responsive-dropdown-menu>
+                        </div>
+                    </paper-card>
+                    <div id="bim-model-info"></div>
+                    <paper-card heading="模型信息">
+                        <div>
+                            <responsive-input name="modelPath" label="模型路径" value="{{project.modelPath}}"
+                                              hidden="[[!electron]]" required="[[electron]]" error-message="请输入模型路径">
+                                <paper-icon-button icon="folder-open" suffix
+                                                   on-tap="onModelButtonTap"></paper-icon-button>
+                            </responsive-input>
+                            <responsive-upload name="modelUuid" target="[[api]]v1/uploads" max-files="1"
+                                               value="{{project.modelUuid}}"
+                                               i18n="[[uploadI18n]]" files="[[getFiles(project)]]"
+                                               hidden="[[electron]]" required="[[!electron]]"
+                                               accept=".ifc"></responsive-upload>
+                        </div>
+                    </paper-card>
+                </form>
+                <paper-toast id="updateToast" text="预算信息更新成功！"></paper-toast>
+                <paper-fabs>
+                    <paper-fab icon="check" on-tap="onSubmitButtonTap"></paper-fab>
+                </paper-fabs>
+            </div>
+        </vaadin-split-layout>
+    </template>
+    <script>
+        Polymer({
+            is: 'project-view',
+            properties: {
+                project: Object,
+                api: String,
+                selected: {
+                    value: 0,
+                },
+                projectTypes: {
+                    value: ['住宅', '厂房', '写字楼',],
+                },
+                structureTypes: {
+                    value: [
+                        '砖混结构',
+                        '框架结构',
+                        '框架-剪力墙结构',
+                        '剪力墙结构',
+                        '框支-剪力墙结构',
+                        '框架-核心筒结构',
+                        '筒中筒结构',
+                        '单层厂房',
+                        '其他',
+                    ],
+                },
+                footingTypes: {
+                    value: ['条形基础', '独立基础', '满堂红基础', '桩基础',],
+                },
+                shapeTypes: {
+                    value: ['矩形', 'L形', '凹形', '其他',],
+                },
+                boqStandards: {
+                    value: ['房屋建筑与装饰工程计量规范 GB 500854-2013',],
+                },
+                quotaStandards: {
+                    value: ['北京市建设工程预算定额 2012'],
+                },
+                uploadI18n: {
+                    type: Object,
+                    value: {
+                        dropFiles: {
+                            // one: 'Drop file here...',
+                            one: '拖入模型文件',
+                            // many: 'Drop files here...'
+                            many: '拖入模型文件',
+                        },
+                        addFiles: {
+                            // one: 'Select File',
+                            one: '上传模型文件',
+                            // many: 'Upload Files'
+                            many: '上传模型文件',
+                        },
+                        // cancel: 'Cancel',
+                        cancel: '取消',
+                        error: {
+                            tooManyFiles: 'Too Many Files.',
+                            fileIsTooBig: 'File is Too Big.',
+                            incorrectFileType: 'Incorrect File Type.'
+                        },
+                        uploading: {
+                            status: {
+                                // connecting: 'Connecting...',
+                                connecting: '正在连接...',
+                                // stalled: 'Stalled.',
+                                stalled: '已暂停',
+                                // processing: 'Processing File...'
+                                processing: '正在处理文件...',
+                            },
+                            remainingTime: {
+                                // prefix: 'remaining time: ',
+                                prefix: '剩余时间：',
+                                // unknown: 'unknown remaining time'
+                                unknown: '无法估计剩余时间',
+                            },
+                            error: {
+                                serverUnavailable: 'Server Unavailable',
+                                unexpectedServerError: 'Unexpected Server Error',
+                                forbidden: 'Forbidden'
+                            }
+                        },
+                        units: {
+                            size: ['B', 'kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
+                        }
+                    }
+                },
+            },
+
+            behaviors: [
+                Polymer.AppViewBehavior,
+                Polymer.ElectronBehavior,
+            ],
+
+            reset: function () {
+                this.selected = 0;
+                this.$.right.scrollTop = 0;
+                this.$.form.reset();
+            },
+            getFiles: function (project) {
+                return project ? [{name: project.upload.name, progress: 100, complete: true}] : [];
+            },
+
+            onModelButtonTap: function () {
+                this.showOpenDialog({
+                    defaultPath: this.project.modelPath,
+                    properties: ['openfile'],
+                }, null);
+            },
+
+            onSubmitButtonTap: function () {
+                let form = this.$.form;
+                if (form.validate()) {
+                    form.method = 'post';
+                    form.action = this.api + 'v1/projects';
+                    if (this.project) {
+                        form.method = 'put';
+                        form.action += '/' + this.project.id;
+                    }
+                    form.submit();
+                }
+            },
+            routeSubmit: null,
+
+            onResponse: function (event) {
+                this.$.updateToast.open();
+                this.routeSubmit(event.detail.response);
+            },
+
+            onError: function (event) {
+                console.log(event);
+            },
+        });
+    </script>
+</dom-module>

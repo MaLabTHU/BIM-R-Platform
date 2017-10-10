@@ -1,0 +1,44 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<script src="cytoscape/cytoscape.js"></script>
+<script src="dagre/dagre.js"></script>
+<script src="cytoscape-dagre.js"></script>
+
+<script>
+    'use strict';
+    Polymer.CytoscapeBehavior = {
+        attached: function () {
+            this.style.overflow = 'hidden';
+            this.cy = cytoscape({
+                container: this,
+                style: this.getStyle(),
+            });
+        },
+
+        getStyle: function () {
+            return [{
+                selector: 'node',
+                style: {
+                    'background-color': '#666',
+                    'label': 'data(label)',
+                },
+            }, {
+                selector: 'edge',
+                style: {
+                    'curve-style': 'bezier',
+                    'line-color': '#ccc',
+                    'target-arrow-color': '#bbb',
+                    'target-arrow-shape': 'triangle',
+                    'label': 'data(label)',
+                },
+            }];
+        },
+
+        layout: function (options) {
+            return this.cy.layout(options || {
+                        name: 'dagre',
+                        rankDir: 'LR',
+                    });
+        },
+    };
+</script>

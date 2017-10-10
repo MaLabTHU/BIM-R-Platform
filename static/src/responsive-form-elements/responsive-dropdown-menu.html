@@ -1,0 +1,66 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../src/responsive-form-elements/responsive-form-element-behavior.html">
+
+<link rel="import" href="../../src/responsive-form-elements/responsive-form-container.html">
+<link rel="import" href="../../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../../bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item.html">
+
+<dom-module id="responsive-dropdown-menu">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+
+            paper-dropdown-menu {
+                width: 100%;
+            }
+        </style>
+        <responsive-form-container label="[[label]]" origin="[[origin]]" required="[[required]]">
+            <paper-dropdown-menu id="menu" label="[[getLabel(origin, label)]]" placeholder="[[placeholder]]"
+                                 name="[[name]]" required="[[required]]" error-message="[[errorMessage]]"
+                                 value="{{value}}"
+                                 no-label-float="[[!origin]]" always-float-label dynamic-align="true"
+                                 horizontal-align="left" noink no-animations>
+                <paper-listbox id="listbox" class="dropdown-content" selected="[[value]]" attr-for-selected="value">
+                    <template is="dom-repeat" items="[[items]]">
+                        <paper-item value="[[getItemValue(item)]]">[[getItemLabel(item)]]</paper-item>
+                    </template>
+                </paper-listbox>
+            </paper-dropdown-menu>
+        </responsive-form-container>
+    </template>
+    <script>
+        Polymer({
+            is: 'responsive-dropdown-menu',
+            properties: {
+                items: {
+                    type: Array,
+                    value: [],
+                },
+                value: {
+                    type: String,
+                    value: null,
+                },
+                selectedLabel: String,
+            },
+
+            behaviors: [
+                Polymer.ResponsiveFormElementBehavior,
+            ],
+
+            validate: function () {
+                return this.$.menu.validate();
+            },
+
+            getItemValue: function (item) {
+                return item && item.value ? item.value : item;
+            },
+            getItemLabel: function (item) {
+                return item && item.label ? item.label : item;
+            },
+        });
+    </script>
+</dom-module>

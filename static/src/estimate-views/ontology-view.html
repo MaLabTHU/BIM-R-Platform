@@ -1,0 +1,302 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../src/app-framework/app-view-behavior.html">
+
+<link rel="import" href="../../src/app-framework/app-shared-styles.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../src/app-framework/app-view-behavior.html">
+
+<link rel="import" href="../../src/app-framework/app-shared-styles.html">
+
+<link rel="import" href="../../bower_components/vaadin-split-layout/vaadin-split-layout.modified.html">
+<link rel="import" href="../../bower_components/paper-material/paper-material.html">
+<link rel="import" href="../../src/paper-collapses/paper-collapses.html">
+
+<link rel="import" href="../../src/owl-elements/owl-tree.html">
+<link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../../src/owl-elements/owl-viewer.html">
+
+<link rel="import" href="../../src/paper-fabs/paper-fabs.html">
+<link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
+<link rel="import" href="../../src/estimate-dialogs/owl-class-dialog-ui.html">
+
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="ontology-view">
+    <template>
+        <style include="iron-flex iron-flex-alignment iron-positioning"></style>
+        <style include="app-shared-styles"></style>
+        <style>
+            :host {
+                display: block;
+                --basic-color: #e6e6e6;
+                @apply(--layout-vertical);
+            }
+
+            #left {
+                display: none;
+                background: white;
+            }
+
+            @media (min-width: 600px) {
+                #left {
+                    display: inherit;
+                    width: 20%;
+                }
+
+                #right {
+                    width: 80%;
+                }
+            }
+
+            /*#top {*/
+            /*height: 80%;*/
+            /*}*/
+
+            /*#bottom {*/
+            /*height: 20%;*/
+            /*}*/
+
+            owl-viewer {
+                background: var(--basic-color);
+            }
+
+            owl-viewer ::content .label rect {
+                fill: var(--basic-color);
+            }
+        </style>
+        <vaadin-split-layout class="flex" invisible>
+            <paper-material id="left" class="layout vertical" elevation="1">
+                <paper-collapses id="collapses" class="flex" selected="{{selected}}">
+                    <owl-tree id="boqTree" label="清单视图"></owl-tree>
+                    <owl-tree id="quotaTree" label="定额视图"></owl-tree>
+                    <!--<owl-tree id="ruleTree" label="规则视图"></owl-tree>-->
+                    <!--<owl-tree id="conceptTree" label="概念视图"></owl-tree>-->
+                    <!--<owl-tree id="relationTree" label="关系视图"></owl-tree>-->
+                </paper-collapses>
+            </paper-material>
+            <div id="right" class="layout vertical">
+                <iron-pages class="flex layout vertical" selected="{{selected}}">
+                    <div class="flex layout vertical">
+                        <owl-viewer id="boqViewer" class="flex"></owl-viewer>
+                        <paper-fabs>
+                            <paper-fab icon="zoom-in" on-tap="onBoqZoomInTap" mini></paper-fab>
+                            <paper-fab icon="zoom-out" on-tap="onBoqZoomOutTap" mini></paper-fab>
+                            <paper-fab icon="fullscreen" on-tap="onBoqZoomAllTap" mini></paper-fab>
+                            <paper-fab icon="autorenew" on-tap="onBoqLayoutTap" mini></paper-fab>
+                            <paper-fab icon="add" on-tap="onBoqAddTap"></paper-fab>
+                        </paper-fabs>
+                    </div>
+                </iron-pages>
+            </div>
+        </vaadin-split-layout>
+        <owl-class-dialog id="classDialog"></owl-class-dialog>
+        <iron-ajax id="ajaxGetStandardItems" handle-as="json"></iron-ajax>
+    </template>
+    <script>
+        Polymer({
+            is: 'ontology-view',
+            properties: {
+                api: String,
+            },
+
+            behaviors: [
+                Polymer.AppViewBehavior,
+            ],
+
+            _initBoq: function () {
+                let v = this.$.boqViewer;
+
+                let itemAttrs = {
+                    rect: {
+                        fill: '#ff80ab',
+//                        stroke: '#ff80ab',
+                    },
+                };
+
+                let propertyAttrs = {
+                    pathAttrs: {
+                        '.connection': {stroke: '#ff80ab'},
+                        '.marker-target': {stroke: '#ff80ab', fill: '#ff80ab'},
+                        '.marker-source': {stroke: '#ff80ab', fill: '#ff80ab'},
+                    },
+                };
+
+                v.clear();
+                let element = v.addClass('建筑产品');
+
+                let beam = v.addClass('梁');
+                v.addTransition(element, beam, '产品类型：梁');
+
+                let concreteBeam = v.addClass('混凝土梁');
+                v.addTransition(beam, concreteBeam, '材料：混凝土');
+                let cipBeam = v.addClass('现浇混凝土梁');
+                v.addTransition(concreteBeam, cipBeam, '浇筑方法：现场浇筑');
+
+                let footingBeam = v.addClass('基础梁');
+                v.addTransition(beam, footingBeam, '功能：基础梁');
+                let cipFootingBeam = v.addClass('现浇混凝土基础梁');
+                v.addTransition(footingBeam, cipFootingBeam, '材料：混凝土\n浇筑方法：现场浇筑');
+                v.addTransition(cipBeam, cipFootingBeam, '功能：基础梁');
+
+                let rectangleBeam = v.addClass('矩形梁');
+                v.addTransition(beam, rectangleBeam, '截面形状：矩形');
+                let concreteRectangleBeam = v.addClass('混凝土矩形梁');
+                v.addTransition(rectangleBeam, concreteRectangleBeam, '材料：混凝土');
+                v.addTransition(concreteBeam, concreteRectangleBeam, '截面形状：矩形');
+                let cipRectangleBeam = v.addClass('现浇混凝土矩形梁');
+                v.addTransition(cipBeam, cipRectangleBeam, '截面形状：矩形');
+                v.addTransition(concreteRectangleBeam, cipRectangleBeam, '浇筑方法：现场浇筑');
+
+                let specialShapeBeam = v.addClass('异形梁');
+                v.addTransition(beam, specialShapeBeam, '截面形状：异形');
+                let concreteSpecialShapeBeam = v.addClass('混凝土异形梁');
+                v.addTransition(specialShapeBeam, concreteSpecialShapeBeam, '材料：混凝土');
+                let cipSpecialShapeBeam = v.addClass('现浇混凝土异形梁');
+                v.addTransition(cipBeam, cipSpecialShapeBeam, '截面形状：异形');
+                v.addTransition(specialShapeBeam, concreteSpecialShapeBeam, '材料：混凝土');
+                v.addTransition(concreteSpecialShapeBeam, cipSpecialShapeBeam, '浇筑方法：现场浇筑');
+
+                let ringBeam = v.addClass('圈梁');
+                v.addTransition(beam, ringBeam, '功能：圈梁');
+                let cipRingBeam = v.addClass('现浇混凝土圈梁');
+                v.addTransition(ringBeam, cipRingBeam, '材料：混凝土\n浇筑方法：现场浇筑');
+                v.addTransition(cipBeam, cipRingBeam, '功能：圈梁');
+
+                let lintel = v.addClass('过梁');
+                v.addTransition(beam, lintel, '功能：过梁');
+                let concreteLintel = v.addClass('混凝土过梁');
+                v.addTransition(lintel, concreteLintel, '材料：混凝土');
+                let cipLintel = v.addClass('现浇混凝土过梁');
+                v.addTransition(concreteLintel, cipLintel, '浇筑方法：现场浇筑');
+                v.addTransition(cipBeam, cipLintel, '功能：过梁');
+
+                let arcBeam = v.addClass('弧形梁');
+                v.addTransition(beam, arcBeam, '轴线形状：弧形');
+                let concreteArcBeam = v.addClass('混凝土弧形梁');
+                v.addTransition(arcBeam, concreteArcBeam, '材料：混凝土');
+                let cipArcBeam = v.addClass('现浇混凝土弧形梁');
+                v.addTransition(concreteArcBeam, cipArcBeam, '浇筑方法：现场浇筑');
+                v.addTransition(cipBeam, cipArcBeam, '轴线形状：弧形');
+
+                v.addProperty(cipFootingBeam, v.addClass('现浇混凝土梁\n基础梁\n010503001', itemAttrs), '套用', propertyAttrs);
+                v.addProperty(cipRectangleBeam, v.addClass('现浇混凝土梁\n矩形梁\n010503002', itemAttrs), '套用', propertyAttrs);
+                v.addProperty(cipSpecialShapeBeam, v.addClass('现浇混凝土梁\n异形梁\n010503003', itemAttrs), '套用', propertyAttrs);
+                v.addProperty(cipRingBeam, v.addClass('现浇混凝土梁\n圈梁\n010503004', itemAttrs), '套用', propertyAttrs);
+                v.addProperty(cipLintel, v.addClass('现浇混凝土梁\n过梁\n0105003005', itemAttrs), '套用', propertyAttrs);
+                v.addProperty(cipArcBeam, v.addClass('现浇混凝土梁\n弧形、拱形梁\n0105003006', itemAttrs), '套用', propertyAttrs);
+
+                this.onBoqLayoutTap();
+            },
+
+            attached: function () {
+                this.$.boqViewer.init = _=> {
+//                    this._initBoq();
+                };
+//                this.$.boqTree.bind(this.$.boqViewer);
+                let view = this;
+                let boqViewer = this.$.boqViewer;
+                // todo extract as owl-tree.bind
+                this.$.boqTree.onItemContentTap = function (index, item) {
+//                    switch (item.data.type) {
+//                        case 'section':
+//                            boqViewer.clear();
+//                            let root = boqViewer.addClass('建筑产品');
+//                            for (let child of item._children) {
+//                                let t = boqViewer.addUnknownClass('待定概念');
+//                                t.item = item;
+//                                boqViewer.addUnknownTransition(root, t, '?');
+//                                let c = boqViewer.addClass(item.data.name + '<br>' + child.data.name + '<br>' + child.data.code);
+//                                c.item = item;
+//                                boqViewer.addProperty(t, c, '套用');
+//                            }
+//                            boqViewer.layout();
+//                            break;
+//                        default:
+//                            break;
+//                    }
+                    view._initBoq();
+                };
+                this.$.boqViewer.onCellDblClick = function (cellView, event, x, y) {
+                    switch (cellView.model.attributes.type) {
+                        case 'owl.Class':
+                            console.log(cellView.$label.text());
+                            view.showClassDialog({
+                                resUri: '',
+                                type: 'owl.Class',
+                                labels: [
+                                    {
+                                        resUri: '',
+                                        lang: 'zh-cn',
+                                        label: cellView.$label.text(),
+                                    },
+                                ],
+                                definitions: [],
+                            });
+                            break;
+                        default:
+                            break;
+                    }
+                };
+            },
+
+            showClassDialog: function (owlClass) {
+//                this.$.classDialog.open(owlClass);
+                this.$.classDialog.open();
+            },
+
+            onBoqZoomInTap: function () {
+                this.$.boqViewer.zoom(1.25);
+            },
+            onBoqZoomOutTap: function () {
+                this.$.boqViewer.zoom(0.8);
+            },
+            onBoqZoomAllTap: function () {
+                this.$.boqViewer.zoomAll();
+            },
+            onBoqLayoutTap: function () {
+                this.$.boqViewer.layout(null, {rankdir: 'TB', padding: 100});
+            },
+            onBoqAddTap: function () {
+                this.showClassDialog();
+            },
+
+            load: function (project) {
+                let boqId = 0;
+                ajax = this.$.ajaxGetStandardItems;
+                ajax.url = this.api + 'v1/standards/boq/' + boqId + '/structure';
+
+                function getNode(node) {
+                    let name = node.name;
+                    switch (node.type) {
+                        case 'trade':
+                            break;
+                        case 'section':
+                        case 'item':
+                            name += '（' + node.code + '）';
+                            break;
+                        default:
+                            break;
+                    }
+                    return {
+                        name: name,
+                        data: node,
+                        children: node.children,
+                    };
+                }
+
+                ajax.generateRequest().completes.then((request)=> {
+                    this.$.boqTree.setNodes(request.xhr.response.children, false, getNode);
+                    this.$.boqTree.showDepth(2);
+                });
+                let quotaId = 0;
+                ajax.url = this.api + 'v1/standards/quota/' + quotaId + '/structure';
+                ajax.generateRequest().completes.then((request)=> {
+                    this.$.quotaTree.setNodes(request.xhr.response.children, false, getNode);
+                    this.$.quotaTree.showDepth(2);
+                });
+            },
+        });
+    </script>
+</dom-module>

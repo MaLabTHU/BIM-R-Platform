@@ -1,0 +1,47 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../bower_components/iron-resizable-behavior/iron-resizable-behavior.html">
+<link rel="import" href="../../bower_components/iron-form-element-behavior/iron-form-element-behavior.html">
+
+<script>
+    'use strict';
+    Polymer.ResponsiveFormElementBehaviorImpl = {
+        properties: {
+            label: {
+                type: String,
+            },
+            placeholder: String,
+            errorMessage: String,
+            responsiveWidth: {
+                type: Number,
+                value: 400,
+            },
+            origin: {
+                type: Boolean,
+                value: true,
+            },
+        },
+
+        listeners: {
+            'iron-resize': '_onIronResize',
+        },
+        _onIronResize: function () {
+            if ((this.offsetWidth > this.responsiveWidth) == this.origin) {
+                this.origin = !this.origin;
+            }
+        },
+
+        getLabel: function (origin, label) {
+            return origin ? label : '';
+        },
+        _onDescendantIronResize: function(event){
+            // xxx stop iron-resize from iron-dropdown
+        },
+    };
+
+    Polymer.ResponsiveFormElementBehavior = [
+        Polymer.IronResizableBehavior,
+        Polymer.IronFormElementBehavior,
+        Polymer.ResponsiveFormElementBehaviorImpl,
+    ];
+</script>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../src/app-framework/app.css">
+    <link rel="import" href="../indirect-boq-table.html">
+</head>
+
+<body>
+<indirect-boq-table id="app" api="http://127.0.0.1:4999/"></indirect-boq-table>
+<script>
+    window.addEventListener('WebComponentsReady', function () {
+        let app = document.getElementById('app');
+        app.load({id: 1});
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../src/responsive-form-elements/responsive-form-element-behavior.html">
+
+<link rel="import" href="../../bower_components/vaadin-upload/vaadin-upload.html">
+
+<script src="uuid/uuid.core.js"></script>
+
+<dom-module id="responsive-upload">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+
+            vaadin-upload:not([nodrop]) {
+                padding: 0;
+                border: 0;
+            }
+        </style>
+        <vaadin-upload id="upload" target="[[target]]" method="[[method]]" headers="[[headers]]" timeout="[[timeout]]"
+                       files="{{files}}" max-files="[[maxFiles]]" accept="[[accept]]" max-file-size="[[maxFileSize]]"
+                       i18n="[[i18n]]" on-upload-request="onUploadRequest" on-upload-success="onFilesChanged"
+                       on-file-remove="onFilesChanged"></vaadin-upload>
+    </template>
+    <script>
+        Polymer({
+            is: 'responsive-upload',
+            properties: {
+                // nodrop: Boolean,
+                target: String,
+                method: String,
+                headers: Object,
+                timeout: Number,
+                files: Array,
+                maxFiles: Number,
+                accept: String,
+                maxFileSize: Number,
+                i18n: Object,
+            },
+
+            behaviors: [
+                Polymer.ResponsiveFormElementBehavior,
+            ],
+
+            onUploadRequest: function (event) {
+                event.detail.file.uuid = UUID.generate();
+                event.detail.formData.append('uuid', event.detail.file.uuid);
+            },
+
+            onFilesChanged: function (event) {
+                this.value = this.getUuids();
+            },
+
+            validate: function () {
+                return this.value && this.value.length > 0;
+            },
+
+            getUuids: function () {
+                let uuids = [];
+                for (let file of this.files) {
+                    if (file.complete) {
+                        uuids.push(file.uuid);
+                    }
+                }
+                if (this.maxFiles == 1 && uuids.length == 1) {
+                    return uuids[0];
+                }
+                return uuids;
+            },
+        });
+    </script>
+</dom-module>

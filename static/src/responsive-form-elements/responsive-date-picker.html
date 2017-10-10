@@ -1,0 +1,47 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../src/responsive-form-elements/responsive-form-element-behavior.html">
+
+<link rel="import" href="../../src/responsive-form-elements/responsive-form-container.html">
+<link rel="import" href="../../bower_components/vaadin-date-picker/vaadin-date-picker.modified.html">
+
+<dom-module id="responsive-date-picker">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+
+            ::content #scroller #monthGrid.vaadin-month-calendar div[today].vaadin-month-calendar {
+                color: red;
+            }
+        </style>
+        <responsive-form-container label="[[label]]" origin="[[origin]]" required="[[required]]">
+            <vaadin-date-picker id="picker" label="[[getLabel(origin, label)]]" type="[[type]]"
+                                placeholder="[[placeholder]]"
+                                name="[[name]]" required="[[required]]" error-message="[[errorMessage]]"
+                                value="{{value}}"
+                                no-label-float="[[!origin]]" always-float-label></vaadin-date-picker>
+        </responsive-form-container>
+    </template>
+    <script>
+        Polymer({
+            is: 'responsive-date-picker',
+            properties: {
+                type: String,
+                value: {
+                    type: String,
+                    value: null,
+                },
+            },
+
+            behaviors: [
+                Polymer.ResponsiveFormElementBehavior,
+            ],
+
+            validate: function () {
+                return this.$.picker.validate();
+            },
+        });
+    </script>
+</dom-module>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../src/app-framework/app.css">
+    <link rel="import" href="../project-summary-table.html">
+</head>
+
+<body>
+<project-summary-table id="app" api="http://127.0.0.1:4999/"></project-summary-table>
+<script>
+    window.addEventListener('WebComponentsReady', function () {
+        let app = document.getElementById('app');
+        app.load({id: 1});
+    });
+</script>
+</body>
+
+</html>

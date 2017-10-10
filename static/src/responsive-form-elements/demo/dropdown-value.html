@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../src/app-framework/app.css">
+    <link rel="import" href="../responsive-dropdown-menu.html">
+</head>
+
+<body>
+<responsive-dropdown-menu id="app" label="test" items="[1, 2]" value="1"></responsive-dropdown-menu>
+<script>
+    window.addEventListener('WebComponentsReady', function () {
+        let app = document.getElementById('app');
+    });
+</script>
+</body>
+
+</html>

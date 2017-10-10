@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../src/app-framework/app.css">
+    <link rel="import" href="../../../src/paper-table/paper-table.html">
+</head>
+
+<body>
+<paper-table id="app">
+    <hot-column header="id" width="1"></hot-column>
+    <hot-column header="name" width="1"></hot-column>
+</paper-table>
+<script>
+    window.addEventListener('WebComponentsReady', function () {
+        let app = document.getElementById('app');
+    });
+</script>
+</body>
+
+</html>

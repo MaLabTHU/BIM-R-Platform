@@ -1,0 +1,121 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../bower_components/iron-resizable-behavior/iron-resizable-behavior.html">
+
+<script>
+    'use strict';
+    Polymer.TreeBehaviorImpl = {
+        _items: [],
+        setNodes: function (nodes, clone = true, itemCreator = null, callback = null) {
+            let _nodes = clone ? JSON.parse(JSON.stringify(nodes)) : nodes;
+            let items = [];
+            for (let node of _nodes) {
+                items.push(this._getItemFromNode(node, null, 0, itemCreator));
+            }
+            this._items = items;
+            if (callback) {
+                callback();
+            }
+        },
+        _getItemFromNode: function (node, parent, depth = 0, itemCreator = null) {
+            let item = (itemCreator || this.getItemFromNode)(node);
+            item._parent = parent;
+            item._depth = depth;
+            item._collapsed = null;
+            if (item.children) {
+                item._collapsed = true;
+                item._children = [];
+                for (let child of item.children) {
+                    item._children.push(this._getItemFromNode(child, node, item._depth + 1, itemCreator));
+                }
+            }
+            return item;
+        },
+        getItemFromNode: function (node) {
+            return {
+                name: node.name,
+                children: node.children,
+                data: node.data,
+            }
+        },
+        getCollapseIconForItem: function (collapsed) {
+            return collapsed === true ? 'arrow-drop-up' : collapsed === false ? 'arrow-drop-down' : ' ';
+        },
+        getPaddingForItem: function (depth) {
+            return '' + depth + 'em';
+        },
+
+        setItemProperty: function (item, path, value) {
+            item[path] = value;
+            let key = this.$.list._collection.getKey(item);
+            if (key) {
+                this.$.list._forwardItemPath(key + '.' + path, value);
+            }
+        },
+
+        _onItemTap: function (event, userCallback, defaultCallback) {
+            let model = event.model;
+            let callback = userCallback || defaultCallback;
+            if (callback) {
+                callback.call(this, model.index, model.item);
+            }
+            event.stopPropagation();
+        },
+
+        toggleCollapsionForItem: function (index, item, collapse = null) {
+            item = item || this._items[index];
+            collapse = collapse === null ? !item._collapsed : collapse;
+            if (item._collapsed != null && item._collapsed != collapse) {
+                this.setItemProperty(item, '_collapsed', collapse);
+                let i = 0;
+                for (let child of item._children) {
+                    collapse ?
+                        this.toggleCollapsionForItem(index + 1 + i++, child, true) :
+                        this.splice('_items', index + 1 + i++, 0, child);
+                }
+                if (collapse) {
+                    this.splice('_items', index + 1, item._children.length);
+                }
+            }
+        },
+        _onItemCollapseIconTap: function (event) {
+            this._onItemTap(event, this.onItemCollapseIconTap, this.toggleCollapsionForItem);
+        },
+
+        // todo - select
+
+        _onItemContentTap: function (event) {
+            this._onItemTap(event, this.onItemContentTap);
+        },
+
+        showDepthForItem: function (index, item, depth) {
+            let offset = 0;
+            item = item || this._items[index];
+            if (depth > 0) {
+                if (item && item._children) {
+                    this.toggleCollapsionForItem(index, item, false);
+                    for (let child of item._children) {
+                        offset += this.showDepthForItem(index + 1 + offset, child, depth - 1);
+                    }
+                }
+            } else {
+                this.toggleCollapsionForItem(index, item, true);
+            }
+            return offset + 1;
+        },
+
+        showDepth: function (depth) {
+            let offset = 0;
+            // fixme if the tree is not collapsed, it is wrong!
+            for (let i = 0, n = this._items.length; i < n; i++) {
+                offset += this.showDepthForItem(offset, null, depth);
+            }
+//            let offset = this.showDepthForItem(0, null, depth);
+        }
+    };
+
+    Polymer.TreeBehavior = [
+        Polymer.IronResizableBehavior,
+        Polymer.TreeBehaviorImpl,
+    ];
+</script>

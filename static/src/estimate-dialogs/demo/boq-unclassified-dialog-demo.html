@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../src/app-framework/app.css">
+    <link rel="import" href="../boq-unclassified-dialog.html">
+</head>
+
+<body>
+<div id="app"></div>
+<boq-unclassified-dialog id="dialog"></boq-unclassified-dialog>
+<script>
+    window.addEventListener('WebComponentsReady', function () {
+        let app = document.getElementById('app');
+        let dialog = document.getElementById('dialog');
+        dialog.open();
+    });
+</script>
+</body>
+
+</html>

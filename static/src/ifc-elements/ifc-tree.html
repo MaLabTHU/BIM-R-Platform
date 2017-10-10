@@ -1,0 +1,123 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../src/tree-behavior/tree-behavior.html">
+
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+
+<link rel="import" href="../../bower_components/iron-list/iron-list.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item.html">
+
+<dom-module id="ifc-tree">
+    <template>
+        <style include="iron-flex iron-flex-alignment iron-positioning"></style>
+        <style>
+            :host {
+                display: block;
+                --basic-size: 24px;
+                @apply(--layout-vertical);
+            }
+
+            paper-item {
+                --paper-item-min-height: var(--basic-size);
+                cursor: pointer;
+                /*padding: calc(var(--basic-size)/6) 0;*/
+            }
+
+            iron-icon {
+                --iron-icon-width: var(--basic-size);
+                --iron-icon-height: var(--basic-size);
+                min-width: var(--basic-size);
+            }
+
+            span {
+                margin-left: 0.5em;
+                white-space: nowrap;
+            }
+        </style>
+        <iron-list id="list" class="flex" items="[[_items]]">
+            <template>
+                <div>
+                    <paper-item tabindex$="[[tabIndex]]" style$="padding-left: [[getPaddingForItem(item._depth)]]"
+                                on-tap="_onItemContentTap">
+                        <iron-icon icon$="[[getCollapseIconForItem(item._collapsed)]]"
+                                   on-tap="_onItemCollapseIconTap"></iron-icon>
+                        <iron-icon icon$="[[getVisibleIconForItem(item._visible)]]"
+                                   on-tap="_onItemVisibleIconTap"></iron-icon>
+                        <span>[[item.name]]</span>
+                    </paper-item>
+                </div>
+            </template>
+        </iron-list>
+    </template>
+    <script>
+        Polymer({
+            is: 'ifc-tree',
+
+            behaviors: [
+                Polymer.TreeBehavior,
+            ],
+
+            attached: function () {
+                this.$.list.style['overflow-x'] = 'hidden';
+                let func = this._getItemFromNode;
+                this._getItemFromNode = function (node, parent, depth = 0, itemCreator = null) {
+                    let item = func.call(this, node, parent, depth, itemCreator);
+                    item._visible = true;
+                    return item;
+                };
+            },
+
+            bind: function (ifcViewer) {
+                let toggleVisible = (index, item, visible = null) => {
+                    this.toggleVisibilityForItem(index, item, visible, (index, item, visible) => {
+                        ifcViewer.toggleHiddenProducts([item.data], !item._visible);
+                    });
+                };
+                this.onItemVisibleIconTap = toggleVisible;
+                let getItemProductIds = (item) => {
+                    let ids = [item.data];
+                    if (item._children) {
+                        for (let child of item._children) {
+                            ids = ids.concat(getItemProductIds.call(this, child));
+                        }
+                    }
+                    return ids;
+                };
+                this.onItemContentTap = (index, item) => {
+                    this.$.list.selectItem(index);
+                    toggleVisible.call(this, index, item, true);
+                    ifcViewer.clearHighlightProducts();
+                    // ifcViewer.highlightProducts(getItemProductIds(item), true, item._depth > 2);
+                    ifcViewer.highlightProducts(getItemProductIds(item));
+                };
+            },
+
+            getVisibleIconForItem: function (visible) {
+                return visible ? 'icons:visibility' : 'icons:visibility-off';
+            },
+
+            toggleVisibilityForItem: function (index, item, visible = null, callback = null) {
+                item = item || this._items[index];
+                visible = visible === null ? !item._visible : visible;
+                if (item._visible != null && item._visible != visible) {
+                    this.setItemProperty(item, '_visible', visible);
+                    if (item._children) {
+                        for (let child of item._children) {
+                            this.toggleVisibilityForItem(null, child, visible, callback);
+                        }
+                    }
+                }
+                if (callback) {
+                    callback.call(this, index, item, visible);
+                }
+            },
+
+            _onItemVisibleIconTap: function (event) {
+                this._onItemTap(event, this.onItemVisibleIconTap, this.toggleVisibilityForItem);
+            },
+        });
+    </script>
+</dom-module>

@@ -1,0 +1,37 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../src/app-framework/app-shared-styles.html">
+
+<link rel="import" href="../../src/paper-table/paper-table.html">
+
+<dom-module id="specialty-provision-table">
+    <template>
+        <style include="iron-flex iron-flex-alignment iron-positioning"></style>
+        <style include="app-shared-styles"></style>
+        <style>
+            :host {
+                display: block;
+                @apply(--layout-vertical);
+            }
+        </style>
+        <paper-table class="flex" title="专业工程暂估价表" data-rows="{{dataRows}}">
+            <hot-column header="序号" value="id" editor="false"></hot-column>
+            <hot-column header="工程名称" value="name" editor="false"></hot-column>
+            <hot-column header="工程内容" value="content" editor="false"></hot-column>
+            <hot-column header="金额" value="cost" editor="false"></hot-column>
+            <hot-column header="备注" value="comment" editor="false"></hot-column>
+        </paper-table>
+    </template>
+    <script>
+        Polymer({
+            is: 'specialty-provision-table',
+            properties: {
+                dataRows: Array,
+            },
+
+            load: function(){
+                // todo
+            },
+        });
+    </script>
+</dom-module>

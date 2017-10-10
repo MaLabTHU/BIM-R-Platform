@@ -1,0 +1,9612 @@
+Prefix: : <#>
+Prefix: bi: <http://civil.tsinghua.edu.cn/owl/boq/GB500854-2013/item#>
+Prefix: boq: <http://civil.tsinghua.edu.cn/owl/boq#>
+Prefix: bs: <http://civil.tsinghua.edu.cn/owl/boq/GB500854-2013/section#>
+Prefix: bt: <http://civil.tsinghua.edu.cn/owl/boq/GB500854-2013/trade#>
+Prefix: bw: <http://civil.tsinghua.edu.cn/owl/boq/GB500854-2013/work#>
+Prefix: cost: <http://civil.tsinghua.edu.cn/owl/cost#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: ie: <http://civil.tsinghua.edu.cn/owl/ifc/extension#>
+Prefix: ifc: <http://civil.tsinghua.edu.cn/owl/ifc#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: qi: <http://civil.tsinghua.edu.cn/owl/quota/Quota-Beijing-2012-01/item#>
+Prefix: qs: <http://civil.tsinghua.edu.cn/owl/quota/Quota-Beijing-2012-01/section#>
+Prefix: qt: <http://civil.tsinghua.edu.cn/owl/quota/Quota-Beijing-2012-01/trade#>
+Prefix: quota: <http://civil.tsinghua.edu.cn/owl/quota#>
+Prefix: qw: <http://civil.tsinghua.edu.cn/owl/quota/Quota-Beijing-2012-01/work#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: 
+
+AnnotationProperty: rdfs:label
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: rdf:langString
+
+    
+ObjectProperty: ie:byMethod
+
+    
+ObjectProperty: ie:byWork
+
+    
+ObjectProperty: ie:hasAxialSectionShape
+
+    
+ObjectProperty: ie:hasAxisShape
+
+    
+ObjectProperty: ie:hasFunction
+
+    
+ObjectProperty: ie:hasMaterial
+
+    
+ObjectProperty: ie:hasProfile
+
+    
+ObjectProperty: ie:hasProfileShape
+
+    
+ObjectProperty: ie:other
+
+    
+Class: bi:010501001
+
+    Annotations: 
+        rdfs:label "垫层"@cn
+    
+    SubClassOf: 
+        bs:010501,
+        ie:byWork some bw:0105-1,
+        ie:byWork some bw:0105-2
+    
+    
+Class: bi:010501002
+
+    Annotations: 
+        rdfs:label "带形基础"@cn
+    
+    SubClassOf: 
+        bs:010501,
+        ie:byWork some bw:0105-1,
+        ie:byWork some bw:0105-2
+    
+    
+Class: bi:010501003
+
+    Annotations: 
+        rdfs:label "独立基础"@cn
+    
+    SubClassOf: 
+        bs:010501,
+        ie:byWork some bw:0105-1,
+        ie:byWork some bw:0105-2
+    
+    
+Class: bi:010501004
+
+    Annotations: 
+        rdfs:label "满堂基础"@cn
+    
+    SubClassOf: 
+        bs:010501,
+        ie:byWork some bw:0105-1,
+        ie:byWork some bw:0105-2
+    
+    
+Class: bi:010501005
+
+    Annotations: 
+        rdfs:label "桩承台基础"@cn
+    
+    SubClassOf: 
+        bs:010501,
+        ie:byWork some bw:0105-1,
+        ie:byWork some bw:0105-2
+    
+    
+Class: bi:010501006
+
+    Annotations: 
+        rdfs:label "设备基础"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteFootingForEquipment
+    
+    SubClassOf: 
+        bs:010501,
+        ie:byWork some bw:0105-1,
+        ie:byWork some bw:0105-2
+    
+    
+Class: bi:010502001
+
+    Annotations: 
+        rdfs:label "矩形柱"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteRectangularColumn
+    
+    SubClassOf: 
+        bs:010502,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010502002
+
+    Annotations: 
+        rdfs:label "构造柱"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteStructuralColumn
+    
+    SubClassOf: 
+        bs:010502,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010502003
+
+    Annotations: 
+        rdfs:label "异形柱"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteSpecialProfiledColumn
+    
+    SubClassOf: 
+        bs:010502,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010503001
+
+    Annotations: 
+        rdfs:label "基础梁"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteFootingBeam
+    
+    SubClassOf: 
+        bs:010503,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010503002
+
+    Annotations: 
+        rdfs:label "矩形梁"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteRectangularBeam
+    
+    SubClassOf: 
+        bs:010503,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010503003
+
+    Annotations: 
+        rdfs:label "异形梁"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteSpecialProfiledBeam
+    
+    SubClassOf: 
+        bs:010503,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010503004
+
+    Annotations: 
+        rdfs:label "圈梁"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteRingBeam
+    
+    SubClassOf: 
+        bs:010503,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010503005
+
+    Annotations: 
+        rdfs:label "过梁"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteLintel
+    
+    SubClassOf: 
+        bs:010503,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010503006
+
+    Annotations: 
+        rdfs:label "弧形、拱形梁"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteCurvedBeam
+    
+    SubClassOf: 
+        bs:010503,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010504001
+
+    Annotations: 
+        rdfs:label "直形墙"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteStraightWall
+    
+    SubClassOf: 
+        bs:010504,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010504002
+
+    Annotations: 
+        rdfs:label "弧形墙"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteCurvedWall
+    
+    SubClassOf: 
+        bs:010504,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010504003
+
+    Annotations: 
+        rdfs:label "短肢剪力墙"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteShortLimbShearWall
+    
+    SubClassOf: 
+        bs:010504,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010504004
+
+    Annotations: 
+        rdfs:label "挡土墙"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteRetainingWall
+    
+    SubClassOf: 
+        bs:010504,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010505001
+
+    Annotations: 
+        rdfs:label "有梁板"@cn
+    
+    SubClassOf: 
+        bs:010505,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010505002
+
+    Annotations: 
+        rdfs:label "无梁板"@cn
+    
+    SubClassOf: 
+        bs:010505,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010505003
+
+    Annotations: 
+        rdfs:label "平板"@cn
+    
+    SubClassOf: 
+        bs:010505,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010505004
+
+    Annotations: 
+        rdfs:label "拱板"@cn
+    
+    SubClassOf: 
+        bs:010505,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010505005
+
+    Annotations: 
+        rdfs:label "薄壳板"@cn
+    
+    SubClassOf: 
+        bs:010505,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010505006
+
+    Annotations: 
+        rdfs:label "栏板"@cn
+    
+    SubClassOf: 
+        bs:010505,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010505007
+
+    Annotations: 
+        rdfs:label "天沟(檐沟）、挑檐板"@cn
+    
+    SubClassOf: 
+        bs:010505,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010505008
+
+    Annotations: 
+        rdfs:label "雨篷、悬挑板、阳台板"@cn
+    
+    SubClassOf: 
+        bs:010505,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010505009
+
+    Annotations: 
+        rdfs:label "空心板"@cn
+    
+    SubClassOf: 
+        bs:010505,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010505010
+
+    Annotations: 
+        rdfs:label "其他板"@cn
+    
+    SubClassOf: 
+        bs:010505,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010506001
+
+    Annotations: 
+        rdfs:label "直形楼梯"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteStraightStair
+    
+    SubClassOf: 
+        bs:010506,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010506002
+
+    Annotations: 
+        rdfs:label "弧形楼梯"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteCurvedStair
+    
+    SubClassOf: 
+        bs:010506,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010507001
+
+    Annotations: 
+        rdfs:label "散水、坡道"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteRamp
+    
+    SubClassOf: 
+        bs:010507,
+        ie:byWork some bw:0105-1,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-4,
+        ie:byWork some bw:0105-5,
+        ie:byWork some bw:0105-6
+    
+    
+Class: bi:010507002
+
+    Annotations: 
+        rdfs:label "室外地坪"@cn
+    
+    SubClassOf: 
+        bs:010507,
+        ie:byWork some bw:0105-1,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-4,
+        ie:byWork some bw:0105-5,
+        ie:byWork some bw:0105-6
+    
+    
+Class: bi:010507003
+
+    Annotations: 
+        rdfs:label "电缆沟、地沟"@cn
+    
+    SubClassOf: 
+        bs:010507,
+        ie:byWork some bw:0105-1,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-5,
+        ie:byWork some bw:0105-7,
+        ie:byWork some bw:0105-8
+    
+    
+Class: bi:010507004
+
+    Annotations: 
+        rdfs:label "台阶"@cn
+    
+    SubClassOf: 
+        bs:010507,
+        ie:byWork some bw:0105-1,
+        ie:byWork some bw:0105-2
+    
+    
+Class: bi:010507005
+
+    Annotations: 
+        rdfs:label "扶手、压顶"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteRailing
+    
+    SubClassOf: 
+        bs:010507,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010507006
+
+    Annotations: 
+        rdfs:label "化粪池、检查井"@cn
+    
+    SubClassOf: 
+        bs:010507,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010507007
+
+    Annotations: 
+        rdfs:label "其他构件"@cn
+    
+    SubClassOf: 
+        bs:010507,
+        ie:InsituConcreteElement,
+        ie:byWork some bw:0105-2,
+        ie:byWork some bw:0105-3
+    
+    
+Class: bi:010508001
+
+    Annotations: 
+        rdfs:label "后浇带"@cn
+    
+    SubClassOf: 
+        bs:010508,
+        ie:byWork some bw:0105-10,
+        ie:byWork some bw:0105-9
+    
+    
+Class: bi:010509001
+
+    Annotations: 
+        rdfs:label "矩形柱"@cn
+    
+    EquivalentTo: 
+        ie:PrecastConcreteRectangularColumn
+    
+    SubClassOf: 
+        bs:010509,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-2
+    
+    
+Class: bi:010509002
+
+    Annotations: 
+        rdfs:label "异形柱"@cn
+    
+    EquivalentTo: 
+        ie:PrecastConcreteSpecialProfiledColumn
+    
+    SubClassOf: 
+        bs:010509,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-2
+    
+    
+Class: bi:010510001
+
+    Annotations: 
+        rdfs:label "矩形梁"@cn
+    
+    EquivalentTo: 
+        ie:PrecastConcreteRectangularBeam
+    
+    SubClassOf: 
+        bs:010510,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-2
+    
+    
+Class: bi:010510002
+
+    Annotations: 
+        rdfs:label "异形梁"@cn
+    
+    EquivalentTo: 
+        ie:PrecastConcreteSpecialProfiledBeam
+    
+    SubClassOf: 
+        bs:010510,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-2
+    
+    
+Class: bi:010510003
+
+    Annotations: 
+        rdfs:label "过梁"@cn
+    
+    EquivalentTo: 
+        ie:PrecastConcreteLintel
+    
+    SubClassOf: 
+        bs:010510,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-2
+    
+    
+Class: bi:010510004
+
+    Annotations: 
+        rdfs:label "拱形梁"@cn
+    
+    EquivalentTo: 
+        ie:PrecastConcreteCurvedBeam
+    
+    SubClassOf: 
+        bs:010510,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-2
+    
+    
+Class: bi:010510005
+
+    Annotations: 
+        rdfs:label "鱼腹式吊车梁"@cn
+    
+    EquivalentTo: 
+        ie:PrecastConcreteFishBelliedCraneBeam
+    
+    SubClassOf: 
+        bs:010510,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-2
+    
+    
+Class: bi:010510006
+
+    Annotations: 
+        rdfs:label "其他梁"@cn
+    
+    SubClassOf: 
+        bs:010510,
+        ie:PrecastConcreteBeam,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-2
+    
+    
+Class: bi:010511001
+
+    Annotations: 
+        rdfs:label "折线型"@cn
+    
+    SubClassOf: 
+        bs:010511,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-2
+    
+    
+Class: bi:010511002
+
+    Annotations: 
+        rdfs:label "组合"@cn
+    
+    SubClassOf: 
+        bs:010511,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-2
+    
+    
+Class: bi:010511003
+
+    Annotations: 
+        rdfs:label "薄腹"@cn
+    
+    SubClassOf: 
+        bs:010511,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-2
+    
+    
+Class: bi:010511004
+
+    Annotations: 
+        rdfs:label "门式刚架"@cn
+    
+    SubClassOf: 
+        bs:010511,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-2
+    
+    
+Class: bi:010511005
+
+    Annotations: 
+        rdfs:label "天窗架"@cn
+    
+    SubClassOf: 
+        bs:010511,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-2
+    
+    
+Class: bi:010512001
+
+    Annotations: 
+        rdfs:label "平板"@cn
+    
+    SubClassOf: 
+        bs:010512,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-15
+    
+    
+Class: bi:010512002
+
+    Annotations: 
+        rdfs:label "空心板"@cn
+    
+    SubClassOf: 
+        bs:010512,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-15
+    
+    
+Class: bi:010512003
+
+    Annotations: 
+        rdfs:label "槽形板"@cn
+    
+    SubClassOf: 
+        bs:010512,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-15
+    
+    
+Class: bi:010512004
+
+    Annotations: 
+        rdfs:label "网架板"@cn
+    
+    SubClassOf: 
+        bs:010512,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-15
+    
+    
+Class: bi:010512005
+
+    Annotations: 
+        rdfs:label "折线板"@cn
+    
+    SubClassOf: 
+        bs:010512,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-15
+    
+    
+Class: bi:010512006
+
+    Annotations: 
+        rdfs:label "带肋板"@cn
+    
+    SubClassOf: 
+        bs:010512,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-15
+    
+    
+Class: bi:010512007
+
+    Annotations: 
+        rdfs:label "大型板"@cn
+    
+    SubClassOf: 
+        bs:010512,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-15
+    
+    
+Class: bi:010512008
+
+    Annotations: 
+        rdfs:label "沟盖板、井盖板、井圈"@cn
+    
+    SubClassOf: 
+        bs:010512,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-15
+    
+    
+Class: bi:010513001
+
+    Annotations: 
+        rdfs:label "楼梯"@cn
+    
+    EquivalentTo: 
+        ie:PrecastConcreteStair
+    
+    SubClassOf: 
+        bs:010513,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-2
+    
+    
+Class: bi:010514001
+
+    Annotations: 
+        rdfs:label "垃圾道、通风道、烟道"@cn
+    
+    SubClassOf: 
+        bs:010514,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-2
+    
+    
+Class: bi:010514002
+
+    Annotations: 
+        rdfs:label "其他构件"@cn
+    
+    SubClassOf: 
+        bs:010514,
+        ie:PrecastConcreteElement,
+        ie:byWork some bw:0105-11,
+        ie:byWork some bw:0105-12,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-14,
+        ie:byWork some bw:0105-2
+    
+    
+Class: bi:010515001
+
+    Annotations: 
+        rdfs:label "现浇构件钢筋"@cn
+    
+    SubClassOf: 
+        bs:010515,
+        ie:byWork some bw:0105-16,
+        ie:byWork some bw:0105-17,
+        ie:byWork some bw:0105-18
+    
+    
+Class: bi:010515002
+
+    Annotations: 
+        rdfs:label "预制构件钢筋"@cn
+    
+    SubClassOf: 
+        bs:010515,
+        ie:byWork some bw:0105-16,
+        ie:byWork some bw:0105-17,
+        ie:byWork some bw:0105-18
+    
+    
+Class: bi:010515003
+
+    Annotations: 
+        rdfs:label "钢筋网片"@cn
+    
+    SubClassOf: 
+        bs:010515,
+        ie:byWork some bw:0105-18,
+        ie:byWork some bw:0105-19,
+        ie:byWork some bw:0105-20
+    
+    
+Class: bi:010515004
+
+    Annotations: 
+        rdfs:label "钢筋笼"@cn
+    
+    SubClassOf: 
+        bs:010515,
+        ie:byWork some bw:0105-18,
+        ie:byWork some bw:0105-21,
+        ie:byWork some bw:0105-22
+    
+    
+Class: bi:010515005
+
+    Annotations: 
+        rdfs:label "先张法预应力钢筋"@cn
+    
+    SubClassOf: 
+        bs:010515,
+        ie:byWork some bw:0105-16,
+        ie:byWork some bw:0105-23
+    
+    
+Class: bi:010515006
+
+    Annotations: 
+        rdfs:label "后张法预应力钢筋"@cn
+    
+    SubClassOf: 
+        bs:010515,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-24,
+        ie:byWork some bw:0105-25,
+        ie:byWork some bw:0105-26,
+        ie:byWork some bw:0105-27,
+        ie:byWork some bw:0105-28
+    
+    
+Class: bi:010515007
+
+    Annotations: 
+        rdfs:label "预应力钢丝"@cn
+    
+    SubClassOf: 
+        bs:010515,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-24,
+        ie:byWork some bw:0105-25,
+        ie:byWork some bw:0105-26,
+        ie:byWork some bw:0105-27,
+        ie:byWork some bw:0105-28
+    
+    
+Class: bi:010515008
+
+    Annotations: 
+        rdfs:label "预应力钢绞线"@cn
+    
+    SubClassOf: 
+        bs:010515,
+        ie:byWork some bw:0105-13,
+        ie:byWork some bw:0105-24,
+        ie:byWork some bw:0105-25,
+        ie:byWork some bw:0105-26,
+        ie:byWork some bw:0105-27,
+        ie:byWork some bw:0105-28
+    
+    
+Class: bi:010515009
+
+    Annotations: 
+        rdfs:label "支撑钢筋（铁马）"@cn
+    
+    SubClassOf: 
+        bs:010515,
+        ie:byWork some bw:0105-29
+    
+    
+Class: bi:010515010
+
+    Annotations: 
+        rdfs:label "声测管"@cn
+    
+    SubClassOf: 
+        bs:010515,
+        ie:byWork some bw:0105-30,
+        ie:byWork some bw:0105-31,
+        ie:byWork some bw:0105-32
+    
+    
+Class: bi:010516001
+
+    Annotations: 
+        rdfs:label "螺栓"@cn
+    
+    SubClassOf: 
+        bs:010516,
+        ie:byWork some bw:0105-33,
+        ie:byWork some bw:0105-34
+    
+    
+Class: bi:010516002
+
+    Annotations: 
+        rdfs:label "预埋铁件"@cn
+    
+    SubClassOf: 
+        bs:010516,
+        ie:byWork some bw:0105-33,
+        ie:byWork some bw:0105-34
+    
+    
+Class: bi:010516003
+
+    Annotations: 
+        rdfs:label "机械连接"@cn
+    
+    SubClassOf: 
+        bs:010516,
+        ie:byWork some bw:0105-35,
+        ie:byWork some bw:0105-36
+    
+    
+Class: bi:011701001
+
+    Annotations: 
+        rdfs:label "综合脚手架"@cn
+    
+    SubClassOf: 
+        bs:011701,
+        ie:byWork some bw:0117-1,
+        ie:byWork some bw:0117-2,
+        ie:byWork some bw:0117-3,
+        ie:byWork some bw:0117-4,
+        ie:byWork some bw:0117-5,
+        ie:byWork some bw:0117-6
+    
+    
+Class: bi:011701002
+
+    Annotations: 
+        rdfs:label "外脚手架"@cn
+    
+    SubClassOf: 
+        bs:011701,
+        ie:byWork some bw:0117-1,
+        ie:byWork some bw:0117-2,
+        ie:byWork some bw:0117-3,
+        ie:byWork some bw:0117-6
+    
+    
+Class: bi:011701003
+
+    Annotations: 
+        rdfs:label "里脚手架"@cn
+    
+    SubClassOf: 
+        bs:011701,
+        ie:byWork some bw:0117-1,
+        ie:byWork some bw:0117-2,
+        ie:byWork some bw:0117-3,
+        ie:byWork some bw:0117-6
+    
+    
+Class: bi:011701004
+
+    Annotations: 
+        rdfs:label "悬空脚手架"@cn
+    
+    SubClassOf: 
+        bs:011701,
+        ie:byWork some bw:0117-1,
+        ie:byWork some bw:0117-2,
+        ie:byWork some bw:0117-3,
+        ie:byWork some bw:0117-6
+    
+    
+Class: bi:011701005
+
+    Annotations: 
+        rdfs:label "挑脚手架"@cn
+    
+    SubClassOf: 
+        bs:011701,
+        ie:byWork some bw:0117-1,
+        ie:byWork some bw:0117-2,
+        ie:byWork some bw:0117-3,
+        ie:byWork some bw:0117-6
+    
+    
+Class: bi:011701006
+
+    Annotations: 
+        rdfs:label "满堂脚手架"@cn
+    
+    SubClassOf: 
+        bs:011701,
+        ie:byWork some bw:0117-1,
+        ie:byWork some bw:0117-2,
+        ie:byWork some bw:0117-3,
+        ie:byWork some bw:0117-6
+    
+    
+Class: bi:011701007
+
+    Annotations: 
+        rdfs:label "整体提升架"@cn
+    
+    SubClassOf: 
+        bs:011701,
+        ie:byWork some bw:0117-1,
+        ie:byWork some bw:0117-2,
+        ie:byWork some bw:0117-3,
+        ie:byWork some bw:0117-4,
+        ie:byWork some bw:0117-5,
+        ie:byWork some bw:0117-6
+    
+    
+Class: bi:011701008
+
+    Annotations: 
+        rdfs:label "外装饰吊篮"@cn
+    
+    SubClassOf: 
+        bs:011701,
+        ie:byWork some bw:0117-1,
+        ie:byWork some bw:0117-7,
+        ie:byWork some bw:0117-8,
+        ie:byWork some bw:0117-9
+    
+    
+Class: bi:011702001
+
+    Annotations: 
+        rdfs:label "基础"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702002
+
+    Annotations: 
+        rdfs:label "矩形柱"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702003
+
+    Annotations: 
+        rdfs:label "构造柱"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702004
+
+    Annotations: 
+        rdfs:label "异形柱"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702005
+
+    Annotations: 
+        rdfs:label "基础梁"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702006
+
+    Annotations: 
+        rdfs:label "矩形梁"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702007
+
+    Annotations: 
+        rdfs:label "异形梁"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702008
+
+    Annotations: 
+        rdfs:label "圈梁"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702009
+
+    Annotations: 
+        rdfs:label "过梁"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702010
+
+    Annotations: 
+        rdfs:label "弧形、拱形梁"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702011
+
+    Annotations: 
+        rdfs:label "直形墙"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702012
+
+    Annotations: 
+        rdfs:label "弧形墙"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702013
+
+    Annotations: 
+        rdfs:label "短肢剪力墙、电梯井壁"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702014
+
+    Annotations: 
+        rdfs:label "有梁板"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702015
+
+    Annotations: 
+        rdfs:label "无梁板"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702016
+
+    Annotations: 
+        rdfs:label "平板"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702017
+
+    Annotations: 
+        rdfs:label "拱板"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702018
+
+    Annotations: 
+        rdfs:label "薄壳板"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702019
+
+    Annotations: 
+        rdfs:label "空心板"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702020
+
+    Annotations: 
+        rdfs:label "其他板"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702021
+
+    Annotations: 
+        rdfs:label "栏板"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702022
+
+    Annotations: 
+        rdfs:label "天沟、檐沟"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702023
+
+    Annotations: 
+        rdfs:label "雨篷、悬挑板、阳台板"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702024
+
+    Annotations: 
+        rdfs:label "楼梯"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702025
+
+    Annotations: 
+        rdfs:label "其他现浇构件"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702026
+
+    Annotations: 
+        rdfs:label "电缆沟、地沟"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702027
+
+    Annotations: 
+        rdfs:label "台阶"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702028
+
+    Annotations: 
+        rdfs:label "扶手"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702029
+
+    Annotations: 
+        rdfs:label "散水"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702030
+
+    Annotations: 
+        rdfs:label "后浇带"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702031
+
+    Annotations: 
+        rdfs:label "化粪池"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011702032
+
+    Annotations: 
+        rdfs:label "检查井"@cn
+    
+    SubClassOf: 
+        bs:011702,
+        ie:byWork some bw:0117-10,
+        ie:byWork some bw:0117-11,
+        ie:byWork some bw:0117-12
+    
+    
+Class: bi:011703001
+
+    Annotations: 
+        rdfs:label "垂直运输"@cn
+    
+    SubClassOf: 
+        bs:011703,
+        ie:byWork some bw:0117-13,
+        ie:byWork some bw:0117-14
+    
+    
+Class: bi:011704001
+
+    Annotations: 
+        rdfs:label "超高施工增加"@cn
+    
+    SubClassOf: 
+        bs:011704,
+        ie:byWork some bw:0117-15,
+        ie:byWork some bw:0117-16,
+        ie:byWork some bw:0117-17
+    
+    
+Class: bi:011705001
+
+    Annotations: 
+        rdfs:label "大型机械设备进出场及安拆"@cn
+    
+    SubClassOf: 
+        bs:011705,
+        ie:byWork some bw:0117-18,
+        ie:byWork some bw:0117-19
+    
+    
+Class: bi:011706001
+
+    Annotations: 
+        rdfs:label "成井"@cn
+    
+    SubClassOf: 
+        bs:011706,
+        ie:byWork some bw:0117-20,
+        ie:byWork some bw:0117-21
+    
+    
+Class: bi:011706002
+
+    Annotations: 
+        rdfs:label "排水、降水"@cn
+    
+    SubClassOf: 
+        bs:011706,
+        ie:byWork some bw:0117-22,
+        ie:byWork some bw:0117-23
+    
+    
+Class: bi:011707001
+
+    Annotations: 
+        rdfs:label "安全文明施工"@cn
+    
+    SubClassOf: 
+        bs:011707,
+        ie:byWork some bw:0117-24,
+        ie:byWork some bw:0117-25,
+        ie:byWork some bw:0117-26,
+        ie:byWork some bw:0117-27
+    
+    
+Class: bi:011707002
+
+    Annotations: 
+        rdfs:label "夜间施工"@cn
+    
+    SubClassOf: 
+        bs:011707,
+        ie:byWork some bw:0117-28,
+        ie:byWork some bw:0117-29,
+        ie:byWork some bw:0117-30
+    
+    
+Class: bi:011707003
+
+    Annotations: 
+        rdfs:label "非夜间施工照明"@cn
+    
+    SubClassOf: 
+        bs:011707,
+        ie:byWork some bw:0117-31
+    
+    
+Class: bi:011707004
+
+    Annotations: 
+        rdfs:label "二次搬运"@cn
+    
+    SubClassOf: 
+        bs:011707,
+        ie:byWork some bw:0117-32
+    
+    
+Class: bi:011707005
+
+    Annotations: 
+        rdfs:label "冬雨季施工"@cn
+    
+    SubClassOf: 
+        bs:011707,
+        ie:byWork some bw:0117-33,
+        ie:byWork some bw:0117-34,
+        ie:byWork some bw:0117-35,
+        ie:byWork some bw:0117-36
+    
+    
+Class: bi:011707006
+
+    Annotations: 
+        rdfs:label "地上、地下设施、建筑物的临时保护设施"@cn
+    
+    SubClassOf: 
+        bs:011707,
+        ie:byWork some bw:0117-37
+    
+    
+Class: bi:011707007
+
+    Annotations: 
+        rdfs:label "已完工程及设备保护"@cn
+    
+    SubClassOf: 
+        bs:011707,
+        ie:byWork some bw:0117-38
+    
+    
+Class: boq:GB500854-2013
+
+    Annotations: 
+        rdfs:label "房屋建筑与装饰工程计量规范 GB 500854-2013"@cn
+    
+    SubClassOf: 
+        cost:ProductSetForBoqStandard
+    
+    
+Class: bs:0105
+
+    Annotations: 
+        rdfs:label "混凝土及钢筋混凝土工程"@cn
+    
+    SubClassOf: 
+        bt:01
+    
+    
+Class: bs:010501
+
+    Annotations: 
+        rdfs:label "现浇混凝土基础"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteFooting
+    
+    SubClassOf: 
+        bs:0105
+    
+    
+Class: bs:010502
+
+    Annotations: 
+        rdfs:label "现浇混凝土柱"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteColumn
+    
+    SubClassOf: 
+        bs:0105
+    
+    
+Class: bs:010503
+
+    Annotations: 
+        rdfs:label "现浇混凝土梁"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteBeam
+    
+    SubClassOf: 
+        bs:0105
+    
+    
+Class: bs:010504
+
+    Annotations: 
+        rdfs:label "现浇混凝土墙"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteWall
+    
+    SubClassOf: 
+        bs:0105
+    
+    
+Class: bs:010505
+
+    Annotations: 
+        rdfs:label "现浇混凝土板"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteSlab
+    
+    SubClassOf: 
+        bs:0105
+    
+    
+Class: bs:010506
+
+    Annotations: 
+        rdfs:label "现浇混凝土楼梯"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteStair
+    
+    SubClassOf: 
+        bs:0105
+    
+    
+Class: bs:010507
+
+    Annotations: 
+        rdfs:label "现浇混凝土其他构件"@cn
+    
+    SubClassOf: 
+        bs:0105,
+        ie:InsituConcreteElement
+    
+    
+Class: bs:010508
+
+    Annotations: 
+        rdfs:label "后浇带"@cn
+    
+    SubClassOf: 
+        bs:0105
+    
+    
+Class: bs:010509
+
+    Annotations: 
+        rdfs:label "预制混凝土柱"@cn
+    
+    EquivalentTo: 
+        ie:PrecastConcreteColumn
+    
+    SubClassOf: 
+        bs:0105
+    
+    
+Class: bs:010510
+
+    Annotations: 
+        rdfs:label "预制混凝土梁"@cn
+    
+    EquivalentTo: 
+        ie:PrecastConcreteBeam
+    
+    SubClassOf: 
+        bs:0105
+    
+    
+Class: bs:010511
+
+    Annotations: 
+        rdfs:label "预制混凝土屋架"@cn
+    
+    EquivalentTo: 
+        ie:PrecastConcreteRoof
+    
+    SubClassOf: 
+        bs:0105
+    
+    
+Class: bs:010512
+
+    Annotations: 
+        rdfs:label "预制混凝土板"@cn
+    
+    EquivalentTo: 
+        ie:PrecastConcreteSlab
+    
+    SubClassOf: 
+        bs:0105
+    
+    
+Class: bs:010513
+
+    Annotations: 
+        rdfs:label "预制混凝土楼梯"@cn
+    
+    EquivalentTo: 
+        ie:PrecastConcreteStair
+    
+    SubClassOf: 
+        bs:0105
+    
+    
+Class: bs:010514
+
+    Annotations: 
+        rdfs:label "其他预制构件"@cn
+    
+    SubClassOf: 
+        bs:0105,
+        ie:PrecastConcreteElement
+    
+    
+Class: bs:010515
+
+    Annotations: 
+        rdfs:label "钢筋工程"@cn
+    
+    SubClassOf: 
+        bs:0105
+    
+    
+Class: bs:010516
+
+    Annotations: 
+        rdfs:label "螺栓、铁件"@cn
+    
+    SubClassOf: 
+        bs:0105
+    
+    
+Class: bs:0117
+
+    Annotations: 
+        rdfs:label "措施项目"@cn
+    
+    SubClassOf: 
+        bt:01
+    
+    
+Class: bs:011701
+
+    Annotations: 
+        rdfs:label "脚手架工程"@cn
+    
+    SubClassOf: 
+        bs:0117
+    
+    
+Class: bs:011702
+
+    Annotations: 
+        rdfs:label "混凝土模板及支架(撑)"@cn
+    
+    SubClassOf: 
+        bs:0117
+    
+    
+Class: bs:011703
+
+    Annotations: 
+        rdfs:label "垂直运输"@cn
+    
+    SubClassOf: 
+        bs:0117
+    
+    
+Class: bs:011704
+
+    Annotations: 
+        rdfs:label "超高施工增加"@cn
+    
+    SubClassOf: 
+        bs:0117
+    
+    
+Class: bs:011705
+
+    Annotations: 
+        rdfs:label "大型机械设备进出场及安拆"@cn
+    
+    SubClassOf: 
+        bs:0117
+    
+    
+Class: bs:011706
+
+    Annotations: 
+        rdfs:label "施工排水、降水"@cn
+    
+    SubClassOf: 
+        bs:0117
+    
+    
+Class: bs:011707
+
+    Annotations: 
+        rdfs:label "安全文明施工及其他措施项目"@cn
+    
+    SubClassOf: 
+        bs:0117
+    
+    
+Class: bt:01
+
+    Annotations: 
+        rdfs:label "建筑工程"@cn
+    
+    SubClassOf: 
+        boq:GB500854-2013
+    
+    
+Class: bw:0105
+
+    SubClassOf: 
+        cost:WorkForBoqStandard
+    
+    
+Class: bw:0105-1
+
+    Annotations: 
+        rdfs:label "模板及支撑制作、安装、拆除、堆放、运输及清理模内杂物、刷隔离剂等"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-10
+
+    Annotations: 
+        rdfs:label "混凝土制作、运输、浇筑、振捣、养护及混凝土交接面、钢筋等的清理"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-11
+
+    Annotations: 
+        rdfs:label "模板制作、安装、拆除、堆放、运输及清理模内杂物、刷隔离剂等"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-12
+
+    Annotations: 
+        rdfs:label "构件运输、安装"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-13
+
+    Annotations: 
+        rdfs:label "砂浆制作、运输"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-14
+
+    Annotations: 
+        rdfs:label "接头灌缝、养护"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-15
+
+    Annotations: 
+        rdfs:label "混凝土制作运输、浇筑、振捣、养护"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-16
+
+    Annotations: 
+        rdfs:label "钢筋制作、运输"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-17
+
+    Annotations: 
+        rdfs:label "钢筋安装"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-18
+
+    Annotations: 
+        rdfs:label "焊接（绑扎）"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-19
+
+    Annotations: 
+        rdfs:label "钢筋网制作、运输"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-2
+
+    Annotations: 
+        rdfs:label "混凝土制作、运输、浇筑、振捣、养护"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-20
+
+    Annotations: 
+        rdfs:label "钢筋网安装"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-21
+
+    Annotations: 
+        rdfs:label "钢筋笼制作、运输"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-22
+
+    Annotations: 
+        rdfs:label "钢筋笼安装"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-23
+
+    Annotations: 
+        rdfs:label "钢筋张拉"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-24
+
+    Annotations: 
+        rdfs:label "钢筋、钢丝、钢绞线制作、运输"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-25
+
+    Annotations: 
+        rdfs:label "钢筋、钢丝、钢绞线安装"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-26
+
+    Annotations: 
+        rdfs:label "预埋管孔道铺设"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-27
+
+    Annotations: 
+        rdfs:label "锚具安装"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-28
+
+    Annotations: 
+        rdfs:label "孔道压浆、养护"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-29
+
+    Annotations: 
+        rdfs:label "钢筋制作、焊接、安装"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-3
+
+    Annotations: 
+        rdfs:label "模板及支架(撑）制作、安装、拆除、堆放、运输及清理模内杂物、刷隔离剂等"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-30
+
+    Annotations: 
+        rdfs:label "检测管截断、封头"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-31
+
+    Annotations: 
+        rdfs:label "套管制作、焊接"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-32
+
+    Annotations: 
+        rdfs:label "定位、固定"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-33
+
+    Annotations: 
+        rdfs:label "螺栓、铁件制作、运输"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-34
+
+    Annotations: 
+        rdfs:label "螺栓、铁件安装"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-35
+
+    Annotations: 
+        rdfs:label "钢筋套丝"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-36
+
+    Annotations: 
+        rdfs:label "套筒连接"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-4
+
+    Annotations: 
+        rdfs:label "地基夯实"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-5
+
+    Annotations: 
+        rdfs:label "铺设垫层"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-6
+
+    Annotations: 
+        rdfs:label "变形缝填塞"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-7
+
+    Annotations: 
+        rdfs:label "挖填、运土石方"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-8
+
+    Annotations: 
+        rdfs:label "刷防护材料"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0105-9
+
+    Annotations: 
+        rdfs:label "模板及支架（撑）制作、安装、拆除、堆放、运输及清理模内杂物、刷隔离剂等"@cn
+    
+    SubClassOf: 
+        bw:0105
+    
+    
+Class: bw:0117
+
+    SubClassOf: 
+        cost:WorkForBoqStandard
+    
+    
+Class: bw:0117-1
+
+    Annotations: 
+        rdfs:label "场内、场外材料搬运"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-10
+
+    Annotations: 
+        rdfs:label "模板制作"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-11
+
+    Annotations: 
+        rdfs:label "模板安装、拆除、整理堆放及场内外运输"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-12
+
+    Annotations: 
+        rdfs:label "清理模板粘结物及模内杂物、刷隔离剂等"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-13
+
+    Annotations: 
+        rdfs:label "垂直运输机械的固定装置、基础制作、安装"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-14
+
+    Annotations: 
+        rdfs:label "行走式垂直运输机械轨道的铺设、拆除、摊销"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-15
+
+    Annotations: 
+        rdfs:label "建筑物超高引起的人工工效降低以及由于人工工效降低引起的机械降效"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-16
+
+    Annotations: 
+        rdfs:label "高层施工用水加压水泵的安装、拆除及工作台班"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-17
+
+    Annotations: 
+        rdfs:label "通信联络设备的使用及摊销"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-18
+
+    Annotations: 
+        rdfs:label "安拆费包括施工机械、设备在现场进行安装拆卸所需人工、材料、机械和试运转费用以及机械辅助设施的折旧、搭设、拆除等费用"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-19
+
+    Annotations: 
+        rdfs:label "进出场费包括施工机械、设备整体或分体自停放地点运至施工现场或由一施工地点运至另一施工地点所发生的运输、装卸、辅助材料等费用"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-2
+
+    Annotations: 
+        rdfs:label "搭、拆脚手架、斜道、上料平台"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-20
+
+    Annotations: 
+        rdfs:label "准备钻孔机械、埋设护筒、钻机就位；泥浆制作、固壁；成孔、出渣、清孔等"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-21
+
+    Annotations: 
+        rdfs:label "对接上、下井管（滤管），焊接，安放，下滤料，洗井，连接试抽等"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-22
+
+    Annotations: 
+        rdfs:label "管道安装、拆除，场内搬运等"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-23
+
+    Annotations: 
+        rdfs:label "抽水、值班、降水设备维修等"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-24
+
+    Annotations: 
+        rdfs:label "环境保护：现场施工机械设备降低噪声、防扰民措施；水泥和其他易飞扬细颗粒建筑材料密闭存放或采取覆盖措施等；工程防扬尘洒水；土石方、建渣外运车辆防护措施等；现场污染源的控制、生活垃圾清理外运、场地排水排污措施；其他环境保护措施"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-25
+
+    Annotations: 
+        rdfs:label "文明施工:“五牌一图”;现场围挡的墙面美化（包括内外粉刷、刷白、标语等）、压顶装饰；现场厕所便槽刷白、贴面砖，水泥砂浆地面或地砖，建筑物内临时便溺设施；其他施工现场临时设施的装饰装修、美化措施；现场生活卫生设施；符合卫生要求的饮水设备、淋浴、消毒等设施；生活用洁净燃料；防煤气中毒、防蚊虫叮咬等措施；施工现场操作场地的硬化；现场绿化、治安综合治理；现场配备医药保健器材、物品和急救人员培训；现场工人的防暑降温、电风扇、空调等设备及用电；其他文明施工措施"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-26
+
+    Annotations: 
+        rdfs:label "安全施工：安全资料、特殊作业专项方案的编制，安全施工标志的购置及安全宣传；“三宝”（安全帽、安全带、安全网）、“四口”（楼梯口、电梯井口、通道口、预留洞口）、“五临边”（阳台围边、楼板围边、屋面围边、槽坑围边、卸料平台两侧），水平防护架、垂直防护架、外架封闭等防护；施工安全用电，包括配电箱三级配电、两级保护装置要求、外电防护措施；起重机、塔吊等起重设备（含井架、门架）及外用电梯的安全防护措施（含警示标志）及卸料平台的临边防护、层间安全门、防护棚等设施；建筑工地起重机械的检验检测；施工机具防护棚及其围栏的安全保护设施；施工安全防护通道；工人的安全防护用品、用具购置；消防设施与消防器材的配置；电气保护、安全照明设施；其他安全防护措施"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-27
+
+    Annotations: 
+        rdfs:label "临时设施：施工现场采用彩色、定型钢板，砖、混凝土砌块等围挡的安砌、维修、拆除；施工现场临时建筑物、构筑物的搭设、维修、拆除，如临时宿舍、办公室，食堂、厨房、厕所、诊疗所、临时文化福利用房、临时仓库、加工场、搅拌台、临时简易水塔、水池等；施工现场临时设施的搭设、维修、拆除，如临时供水管道、临时供电管线、小型临时设施等；施工现场规定范围内临时简易道路铺设，临时排水沟、排水设施安砌、维修、拆除；其他临时设施搭设、维修、拆除"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-28
+
+    Annotations: 
+        rdfs:label "夜间固定照明灯具和临时可移动照明灯具的设置、拆除"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-29
+
+    Annotations: 
+        rdfs:label "夜间施工时，施工现场交通标志、安全标牌、警示灯等的设置、移动、拆除"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-3
+
+    Annotations: 
+        rdfs:label "安全网的铺设"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-30
+
+    Annotations: 
+        rdfs:label "包括夜间照明设备及照明用电、施工人员夜班补助、夜间施工劳动效率降低等"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-31
+
+    Annotations: 
+        rdfs:label "为保证工程施工正常进行，在地下室等特殊施工部位施工时所采用的照明设备的安拆、维护及照明用电等"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-32
+
+    Annotations: 
+        rdfs:label "由于施工场地条件限制而发生的材料、成品、半成品等一次运输不能到达堆放地点，必须进行的二次或多次搬运"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-33
+
+    Annotations: 
+        rdfs:label "冬雨（风）季施工时增加的临时设施（防寒保温、防雨、防风设施）的搭设、拆除"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-34
+
+    Annotations: 
+        rdfs:label "冬雨（风）季施工时，对砌体、混凝土等采用的特殊加温、保温和养护措施"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-35
+
+    Annotations: 
+        rdfs:label "冬雨（风）季施工时，施工现场的防滑处理、对影响施工的雨雪的清除"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-36
+
+    Annotations: 
+        rdfs:label "包括冬雨（风）季施工时增加的临时设施、施工人员的劳动保护用品、冬雨(风)季施工劳动效率降低等"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-37
+
+    Annotations: 
+        rdfs:label "在工程施工过程中，对已建成的地上、地下设施和建筑物进行的遮盖、封闭、隔离等必要保护措施"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-38
+
+    Annotations: 
+        rdfs:label "对已完工程及设备采取的覆盖、包裹、封闭、隔离等必要保护措施"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-4
+
+    Annotations: 
+        rdfs:label "选择附墙点与主体连接"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-5
+
+    Annotations: 
+        rdfs:label "测试电动装置、安全锁等"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-6
+
+    Annotations: 
+        rdfs:label "拆除脚手架后材料的堆放"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-7
+
+    Annotations: 
+        rdfs:label "吊篮的安装"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-8
+
+    Annotations: 
+        rdfs:label "测试电动装置、安全锁、平衡控制器等"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: bw:0117-9
+
+    Annotations: 
+        rdfs:label "吊篮的拆卸"@cn
+    
+    SubClassOf: 
+        bw:0117
+    
+    
+Class: cost:ProductSetForBoqStandard
+
+    
+Class: cost:ProductSetForQuotaStandard
+
+    
+Class: cost:WorkForBoqStandard
+
+    
+Class: cost:WorkForQuotaStandard
+
+    
+Class: ie:1DShape
+
+    SubClassOf: 
+        ie:Shape
+    
+    
+Class: ie:2DShape
+
+    SubClassOf: 
+        ie:Shape
+    
+    
+Class: ie:AntiEarthquake
+
+    SubClassOf: 
+        ie:Function
+    
+    
+Class: ie:AntiEarthquakeElement
+
+    EquivalentTo: 
+        ifc:Element
+         and (ie:hasFunction some ie:AntiEarthquake)
+    
+    
+Class: ie:BearLoadOnGround
+
+    SubClassOf: 
+        ie:Function
+    
+    
+Class: ie:Concrete
+
+    SubClassOf: 
+        ie:Material
+    
+    
+Class: ie:ConcreteElement
+
+    EquivalentTo: 
+        ifc:Element
+         and (ie:hasMaterial some ie:Concrete)
+    
+    
+Class: ie:Curve
+
+    SubClassOf: 
+        ie:1DShape
+    
+    
+Class: ie:CurvedElement
+
+    EquivalentTo: 
+        ifc:Element
+         and (ie:hasAxisShape some ie:Curve)
+    
+    
+Class: ie:FishBelly
+
+    SubClassOf: 
+        ie:2DShape
+    
+    
+Class: ie:Function
+
+    
+Class: ie:Insitu
+
+    SubClassOf: 
+        ie:Method
+    
+    
+Class: ie:InsituConcreteBeam
+
+    EquivalentTo: 
+        bs:010503,
+        qs:010503,
+        ifc:Beam
+         and ie:InsituConcreteElement
+    
+    
+Class: ie:InsituConcreteColumn
+
+    EquivalentTo: 
+        bs:010502,
+        qs:010502,
+        ifc:Column
+         and ie:InsituConcreteElement
+    
+    
+Class: ie:InsituConcreteCurvedBeam
+
+    EquivalentTo: 
+        bi:010503006,
+        ie:CurvedElement
+         and ie:InsituConcreteBeam
+    
+    
+Class: ie:InsituConcreteCurvedStair
+
+    EquivalentTo: 
+        bi:010506002,
+        ie:CurvedElement
+         and ie:InsituConcreteStair
+    
+    
+Class: ie:InsituConcreteCurvedWall
+
+    EquivalentTo: 
+        bi:010504002,
+        ie:CurvedElement
+         and ie:InsituConcreteWall
+    
+    
+Class: ie:InsituConcreteElement
+
+    EquivalentTo: 
+        ie:ConcreteElement
+         and (ie:byMethod some ie:Insitu)
+    
+    SubClassOf: 
+        ie:other some bi:010507007,
+        ie:other some bs:010507,
+        ie:other some qi:5-48,
+        ie:other some qs:010507
+    
+    
+Class: ie:InsituConcreteFooting
+
+    EquivalentTo: 
+        bs:010501,
+        qs:010501,
+        ifc:Footing
+         and ie:InsituConcreteElement
+    
+    
+Class: ie:InsituConcreteFootingBeam
+
+    EquivalentTo: 
+        bi:010503001,
+        ie:InsituConcreteBeam
+         and (ie:hasFunction some ie:BearLoadOnGround)
+    
+    
+Class: ie:InsituConcreteFootingForEquipment
+
+    EquivalentTo: 
+        bi:010501006,
+        ie:InsituConcreteFooting
+         and (ie:hasFunction some ie:SupportEquipment)
+    
+    
+Class: ie:InsituConcreteLintel
+
+    EquivalentTo: 
+        bi:010503005,
+        ie:InsituConcreteBeam
+         and ie:Lintel
+    
+    
+Class: ie:InsituConcreteRailing
+
+    EquivalentTo: 
+        bi:010507005,
+        ifc:Railing
+         and ie:InsituConcreteElement
+    
+    
+Class: ie:InsituConcreteRamp
+
+    EquivalentTo: 
+        bi:010507001,
+        ifc:Ramp
+         and ie:InsituConcreteElement
+    
+    
+Class: ie:InsituConcreteRectangularBeam
+
+    EquivalentTo: 
+        bi:010503002,
+        ie:InsituConcreteBeam
+         and ie:RectangularElement
+    
+    
+Class: ie:InsituConcreteRectangularColumn
+
+    EquivalentTo: 
+        bi:010502001,
+        ie:InsituConcreteColumn
+         and ie:RectangularElement
+    
+    
+Class: ie:InsituConcreteRetainingWall
+
+    EquivalentTo: 
+        bi:010504004,
+        ie:InsituConcreteWall
+         and ie:RetainingWall
+    
+    
+Class: ie:InsituConcreteRingBeam
+
+    EquivalentTo: 
+        bi:010503004,
+        ie:AntiEarthquakeElement
+         and ie:InsituConcreteBeam
+    
+    
+Class: ie:InsituConcreteShortLimbShearWall
+
+    EquivalentTo: 
+        bi:010504003,
+        ie:InsituConcreteWall
+         and ie:ShortLimbShearWall
+    
+    
+Class: ie:InsituConcreteSlab
+
+    EquivalentTo: 
+        bs:010505,
+        qs:010505,
+        ifc:Slab
+         and ie:InsituConcreteElement
+    
+    
+Class: ie:InsituConcreteSpecialProfiledBeam
+
+    EquivalentTo: 
+        bi:010503003,
+        ie:InsituConcreteBeam
+         and ie:SpecialProfiledElement
+    
+    
+Class: ie:InsituConcreteSpecialProfiledColumn
+
+    EquivalentTo: 
+        bi:010502003,
+        ie:InsituConcreteColumn
+         and ie:SpecialProfiledElement
+    
+    
+Class: ie:InsituConcreteStair
+
+    EquivalentTo: 
+        bs:010506,
+        qs:010506,
+        ifc:Stair
+         and ie:InsituConcreteElement
+    
+    
+Class: ie:InsituConcreteStraightStair
+
+    EquivalentTo: 
+        bi:010506001,
+        ie:InsituConcreteStair
+         and ie:StraightElement
+    
+    
+Class: ie:InsituConcreteStraightWall
+
+    EquivalentTo: 
+        bi:010504001,
+        ie:InsituConcreteWall
+         and ie:StraightElement
+    
+    
+Class: ie:InsituConcreteStructuralColumn
+
+    EquivalentTo: 
+        bi:010502002,
+        ie:AntiEarthquakeElement
+         and ie:InsituConcreteColumn
+    
+    
+Class: ie:InsituConcreteWall
+
+    EquivalentTo: 
+        bs:010504,
+        qs:010504,
+        ifc:Wall
+         and ie:InsituConcreteElement
+    
+    
+Class: ie:Line
+
+    SubClassOf: 
+        ie:1DShape
+    
+    
+Class: ie:Lintel
+
+    EquivalentTo: 
+        ifc:Beam
+         and (ie:hasFunction some ie:SupportOpening)
+    
+    
+Class: ie:Material
+
+    
+Class: ie:Method
+
+    
+Class: ie:Precast
+
+    SubClassOf: 
+        ie:Method
+    
+    
+Class: ie:PrecastConcreteBeam
+
+    EquivalentTo: 
+        bs:010510,
+        qs:010508,
+        qs:010510,
+        ifc:Beam
+         and ie:PrecastConcreteElement
+    
+    SubClassOf: 
+        ie:other some bi:010510006
+    
+    
+Class: ie:PrecastConcreteColumn
+
+    EquivalentTo: 
+        bs:010509,
+        qs:010509,
+        ifc:Column
+         and ie:PrecastConcreteElement
+    
+    
+Class: ie:PrecastConcreteCurvedBeam
+
+    EquivalentTo: 
+        bi:010510004,
+        ie:CurvedElement
+         and ie:PrecastConcreteBeam
+    
+    
+Class: ie:PrecastConcreteElement
+
+    EquivalentTo: 
+        ie:ConcreteElement
+         and (ie:byMethod some ie:Precast)
+    
+    SubClassOf: 
+        ie:other some bi:010514002,
+        ie:other some bs:010514,
+        ie:other some qi:5-104,
+        ie:other some qs:010514
+    
+    
+Class: ie:PrecastConcreteFishBelliedCraneBeam
+
+    EquivalentTo: 
+        bi:010510005,
+        ie:PrecastConcreteBeam
+         and (ie:hasAxialSectionShape some ie:FishBelly)
+         and (ie:hasFunction some ie:SupportCrane)
+    
+    
+Class: ie:PrecastConcreteLintel
+
+    EquivalentTo: 
+        bi:010510003,
+        ie:Lintel
+         and ie:PrecastConcreteBeam
+    
+    
+Class: ie:PrecastConcreteRectangularBeam
+
+    EquivalentTo: 
+        bi:010510001,
+        ie:PrecastConcreteBeam
+         and ie:RectangularElement
+    
+    
+Class: ie:PrecastConcreteRectangularColumn
+
+    EquivalentTo: 
+        bi:010509001,
+        ie:PrecastConcreteColumn
+         and ie:RectangularElement
+    
+    
+Class: ie:PrecastConcreteRoof
+
+    EquivalentTo: 
+        bs:010511,
+        qs:010511,
+        ifc:Roof
+         and ie:PrecastConcreteElement
+    
+    
+Class: ie:PrecastConcreteSlab
+
+    EquivalentTo: 
+        bs:010512,
+        qs:010512,
+        ifc:Slab
+         and ie:PrecastConcreteElement
+    
+    
+Class: ie:PrecastConcreteSpecialProfiledBeam
+
+    EquivalentTo: 
+        bi:010510002,
+        ie:PrecastConcreteBeam
+         and ie:SpecialProfiledElement
+    
+    
+Class: ie:PrecastConcreteSpecialProfiledColumn
+
+    EquivalentTo: 
+        bi:010509002,
+        ie:PrecastConcreteColumn
+         and ie:SpecialProfiledElement
+    
+    
+Class: ie:PrecastConcreteStair
+
+    EquivalentTo: 
+        bi:010513001,
+        bs:010513,
+        qs:010513,
+        ifc:Stair
+         and ie:PrecastConcreteElement
+    
+    
+Class: ie:Rectangle
+
+    SubClassOf: 
+        ie:2DShape
+    
+    
+Class: ie:RectangularElement
+
+    EquivalentTo: 
+        ifc:Element
+         and (ie:hasProfileShape some ie:Rectangle)
+    
+    
+Class: ie:ResistShearForce
+
+    SubClassOf: 
+        ie:Function
+    
+    
+Class: ie:RetainEarth
+
+    SubClassOf: 
+        ie:Function
+    
+    
+Class: ie:RetainingWall
+
+    EquivalentTo: 
+        ifc:Wall
+         and (ie:hasFunction some ie:RetainEarth)
+    
+    
+Class: ie:Shape
+
+    
+Class: ie:ShearWall
+
+    EquivalentTo: 
+        ifc:Wall
+         and (ie:hasFunction some ie:ResistShearForce)
+    
+    
+Class: ie:ShortLimb
+
+    SubClassOf: 
+        ie:2DShape
+    
+    
+Class: ie:ShortLimbShearWall
+
+    EquivalentTo: 
+        ie:ShearWall
+         and (ie:hasProfile some ie:ShortLimb)
+    
+    
+Class: ie:SpecialProfile
+
+    SubClassOf: 
+        ie:2DShape
+    
+    
+Class: ie:SpecialProfiledElement
+
+    EquivalentTo: 
+        ifc:Element
+         and (ie:hasProfileShape some ie:SpecialProfile)
+    
+    
+Class: ie:StraightElement
+
+    EquivalentTo: 
+        ifc:Element
+         and (ie:hasAxisShape some ie:Line)
+    
+    
+Class: ie:SupportCrane
+
+    SubClassOf: 
+        ie:Function
+    
+    
+Class: ie:SupportEquipment
+
+    SubClassOf: 
+        ie:Function
+    
+    
+Class: ie:SupportOpening
+
+    SubClassOf: 
+        ie:Function
+    
+    
+Class: ie:Work
+
+    
+Class: ifc:Actuator
+
+    SubClassOf: 
+        ifc:DistributionControlElement
+    
+    
+Class: ifc:AirTerminal
+
+    SubClassOf: 
+        ifc:FlowTerminal
+    
+    
+Class: ifc:AirTerminalBox
+
+    SubClassOf: 
+        ifc:FlowController
+    
+    
+Class: ifc:AirToAirHeatRecovery
+
+    SubClassOf: 
+        ifc:EnergyConversionDevice
+    
+    
+Class: ifc:Alarm
+
+    SubClassOf: 
+        ifc:DistributionControlElement
+    
+    
+Class: ifc:Annotation
+
+    SubClassOf: 
+        ifc:Product
+    
+    
+Class: ifc:AudioVisualAppliance
+
+    SubClassOf: 
+        ifc:FlowTerminal
+    
+    
+Class: ifc:Beam
+
+    SubClassOf: 
+        ifc:BuildingElement
+    
+    
+Class: ifc:BeamStandardCase
+
+    SubClassOf: 
+        ifc:Beam
+    
+    
+Class: ifc:Boiler
+
+    SubClassOf: 
+        ifc:EnergyConversionDevice
+    
+    
+Class: ifc:Building
+
+    SubClassOf: 
+        ifc:SpatialStructureElement
+    
+    
+Class: ifc:BuildingElement
+
+    SubClassOf: 
+        ifc:Element
+    
+    
+Class: ifc:BuildingElementPart
+
+    SubClassOf: 
+        ifc:ElementComponent
+    
+    
+Class: ifc:BuildingElementProxy
+
+    SubClassOf: 
+        ifc:BuildingElement
+    
+    
+Class: ifc:BuildingStorey
+
+    SubClassOf: 
+        ifc:SpatialStructureElement
+    
+    
+Class: ifc:Burner
+
+    SubClassOf: 
+        ifc:EnergyConversionDevice
+    
+    
+Class: ifc:CableCarrierFitting
+
+    SubClassOf: 
+        ifc:FlowFitting
+    
+    
+Class: ifc:CableCarrierSegment
+
+    SubClassOf: 
+        ifc:FlowSegment
+    
+    
+Class: ifc:CableFitting
+
+    SubClassOf: 
+        ifc:FlowFitting
+    
+    
+Class: ifc:CableSegment
+
+    SubClassOf: 
+        ifc:FlowSegment
+    
+    
+Class: ifc:Chiller
+
+    SubClassOf: 
+        ifc:EnergyConversionDevice
+    
+    
+Class: ifc:Chimney
+
+    SubClassOf: 
+        ifc:BuildingElement
+    
+    
+Class: ifc:CivilElement
+
+    SubClassOf: 
+        ifc:Element
+    
+    
+Class: ifc:Coil
+
+    SubClassOf: 
+        ifc:EnergyConversionDevice
+    
+    
+Class: ifc:Column
+
+    SubClassOf: 
+        ifc:BuildingElement
+    
+    
+Class: ifc:ColumnStandardCase
+
+    SubClassOf: 
+        ifc:Column
+    
+    
+Class: ifc:CommunicationsAppliance
+
+    SubClassOf: 
+        ifc:FlowTerminal
+    
+    
+Class: ifc:Compressor
+
+    SubClassOf: 
+        ifc:FlowMovingDevice
+    
+    
+Class: ifc:Condenser
+
+    SubClassOf: 
+        ifc:EnergyConversionDevice
+    
+    
+Class: ifc:Controller
+
+    SubClassOf: 
+        ifc:DistributionControlElement
+    
+    
+Class: ifc:CooledBeam
+
+    SubClassOf: 
+        ifc:EnergyConversionDevice
+    
+    
+Class: ifc:CoolingTower
+
+    SubClassOf: 
+        ifc:EnergyConversionDevice
+    
+    
+Class: ifc:Covering
+
+    SubClassOf: 
+        ifc:BuildingElement
+    
+    
+Class: ifc:CurtainWall
+
+    SubClassOf: 
+        ifc:BuildingElement
+    
+    
+Class: ifc:Damper
+
+    SubClassOf: 
+        ifc:FlowController
+    
+    
+Class: ifc:DiscreteAccessory
+
+    SubClassOf: 
+        ifc:ElementComponent
+    
+    
+Class: ifc:DistributionChamberElement
+
+    SubClassOf: 
+        ifc:DistributionFlowElement
+    
+    
+Class: ifc:DistributionControlElement
+
+    SubClassOf: 
+        ifc:DistributionElement
+    
+    
+Class: ifc:DistributionElement
+
+    SubClassOf: 
+        ifc:Element
+    
+    
+Class: ifc:DistributionFlowElement
+
+    SubClassOf: 
+        ifc:DistributionElement
+    
+    
+Class: ifc:DistributionPort
+
+    SubClassOf: 
+        ifc:Port
+    
+    
+Class: ifc:Door
+
+    SubClassOf: 
+        ifc:BuildingElement
+    
+    
+Class: ifc:DoorStandardCase
+
+    SubClassOf: 
+        ifc:Door
+    
+    
+Class: ifc:DuctFitting
+
+    SubClassOf: 
+        ifc:FlowFitting
+    
+    
+Class: ifc:DuctSegment
+
+    SubClassOf: 
+        ifc:FlowSegment
+    
+    
+Class: ifc:DuctSilencer
+
+    SubClassOf: 
+        ifc:FlowTreatmentDevice
+    
+    
+Class: ifc:ElectricAppliance
+
+    SubClassOf: 
+        ifc:FlowTerminal
+    
+    
+Class: ifc:ElectricDistributionBoard
+
+    SubClassOf: 
+        ifc:FlowController
+    
+    
+Class: ifc:ElectricFlowStorageDevice
+
+    SubClassOf: 
+        ifc:FlowStorageDevice
+    
+    
+Class: ifc:ElectricGenerator
+
+    SubClassOf: 
+        ifc:EnergyConversionDevice
+    
+    
+Class: ifc:ElectricMotor
+
+    SubClassOf: 
+        ifc:EnergyConversionDevice
+    
+    
+Class: ifc:ElectricTimeControl
+
+    SubClassOf: 
+        ifc:FlowController
+    
+    
+Class: ifc:Element
+
+    SubClassOf: 
+        ifc:Product
+    
+    
+Class: ifc:ElementAssembly
+
+    SubClassOf: 
+        ifc:Element
+    
+    
+Class: ifc:ElementComponent
+
+    SubClassOf: 
+        ifc:Element
+    
+    
+Class: ifc:EnergyConversionDevice
+
+    SubClassOf: 
+        ifc:DistributionFlowElement
+    
+    
+Class: ifc:Engine
+
+    SubClassOf: 
+        ifc:EnergyConversionDevice
+    
+    
+Class: ifc:EvaporativeCooler
+
+    SubClassOf: 
+        ifc:EnergyConversionDevice
+    
+    
+Class: ifc:Evaporator
+
+    SubClassOf: 
+        ifc:EnergyConversionDevice
+    
+    
+Class: ifc:ExternalSpatialElement
+
+    SubClassOf: 
+        ifc:ExternalSpatialStructureElement
+    
+    
+Class: ifc:ExternalSpatialStructureElement
+
+    SubClassOf: 
+        ifc:SpatialElement
+    
+    
+Class: ifc:Fan
+
+    SubClassOf: 
+        ifc:FlowMovingDevice
+    
+    
+Class: ifc:Fastener
+
+    SubClassOf: 
+        ifc:ElementComponent
+    
+    
+Class: ifc:FeatureElement
+
+    SubClassOf: 
+        ifc:Element
+    
+    
+Class: ifc:FeatureElementAddition
+
+    SubClassOf: 
+        ifc:FeatureElement
+    
+    
+Class: ifc:FeatureElementSubtraction
+
+    SubClassOf: 
+        ifc:FeatureElement
+    
+    
+Class: ifc:Filter
+
+    SubClassOf: 
+        ifc:FlowTreatmentDevice
+    
+    
+Class: ifc:FireSuppressionTerminal
+
+    SubClassOf: 
+        ifc:FlowTerminal
+    
+    
+Class: ifc:FlowController
+
+    SubClassOf: 
+        ifc:DistributionFlowElement
+    
+    
+Class: ifc:FlowFitting
+
+    SubClassOf: 
+        ifc:DistributionFlowElement
+    
+    
+Class: ifc:FlowInstrument
+
+    SubClassOf: 
+        ifc:DistributionControlElement
+    
+    
+Class: ifc:FlowMeter
+
+    SubClassOf: 
+        ifc:FlowController
+    
+    
+Class: ifc:FlowMovingDevice
+
+    SubClassOf: 
+        ifc:DistributionFlowElement
+    
+    
+Class: ifc:FlowSegment
+
+    SubClassOf: 
+        ifc:DistributionFlowElement
+    
+    
+Class: ifc:FlowStorageDevice
+
+    SubClassOf: 
+        ifc:DistributionFlowElement
+    
+    
+Class: ifc:FlowTerminal
+
+    SubClassOf: 
+        ifc:DistributionFlowElement
+    
+    
+Class: ifc:FlowTreatmentDevice
+
+    SubClassOf: 
+        ifc:DistributionFlowElement
+    
+    
+Class: ifc:Footing
+
+    SubClassOf: 
+        ifc:BuildingElement
+    
+    
+Class: ifc:FurnishingElement
+
+    SubClassOf: 
+        ifc:Element
+    
+    
+Class: ifc:Furniture
+
+    SubClassOf: 
+        ifc:FurnishingElement
+    
+    
+Class: ifc:GeographicElement
+
+    SubClassOf: 
+        ifc:Element
+    
+    
+Class: ifc:Grid
+
+    SubClassOf: 
+        ifc:Product
+    
+    
+Class: ifc:HeatExchanger
+
+    SubClassOf: 
+        ifc:EnergyConversionDevice
+    
+    
+Class: ifc:Humidifier
+
+    SubClassOf: 
+        ifc:EnergyConversionDevice
+    
+    
+Class: ifc:Interceptor
+
+    SubClassOf: 
+        ifc:FlowTreatmentDevice
+    
+    
+Class: ifc:JunctionBox
+
+    SubClassOf: 
+        ifc:FlowFitting
+    
+    
+Class: ifc:Lamp
+
+    SubClassOf: 
+        ifc:FlowTerminal
+    
+    
+Class: ifc:LightFixture
+
+    SubClassOf: 
+        ifc:FlowTerminal
+    
+    
+Class: ifc:MechanicalFastener
+
+    SubClassOf: 
+        ifc:ElementComponent
+    
+    
+Class: ifc:MedicalDevice
+
+    SubClassOf: 
+        ifc:FlowTerminal
+    
+    
+Class: ifc:Member
+
+    SubClassOf: 
+        ifc:BuildingElement
+    
+    
+Class: ifc:MemberStandardCase
+
+    SubClassOf: 
+        ifc:Member
+    
+    
+Class: ifc:MotorConnection
+
+    SubClassOf: 
+        ifc:EnergyConversionDevice
+    
+    
+Class: ifc:OpeningElement
+
+    SubClassOf: 
+        ifc:FeatureElementSubtraction
+    
+    
+Class: ifc:OpeningStandardCase
+
+    SubClassOf: 
+        ifc:OpeningElement
+    
+    
+Class: ifc:Outlet
+
+    SubClassOf: 
+        ifc:FlowTerminal
+    
+    
+Class: ifc:Pile
+
+    SubClassOf: 
+        ifc:BuildingElement
+    
+    
+Class: ifc:PipeFitting
+
+    SubClassOf: 
+        ifc:FlowFitting
+    
+    
+Class: ifc:PipeSegment
+
+    SubClassOf: 
+        ifc:FlowSegment
+    
+    
+Class: ifc:Plate
+
+    SubClassOf: 
+        ifc:BuildingElement
+    
+    
+Class: ifc:PlateStandardCase
+
+    SubClassOf: 
+        ifc:Plate
+    
+    
+Class: ifc:Port
+
+    SubClassOf: 
+        ifc:Product
+    
+    
+Class: ifc:Product
+
+    SubClassOf: 
+        owl:Thing
+    
+    
+Class: ifc:ProjectionElement
+
+    SubClassOf: 
+        ifc:FeatureElementAddition
+    
+    
+Class: ifc:ProtectiveDevice
+
+    SubClassOf: 
+        ifc:FlowController
+    
+    
+Class: ifc:ProtectiveDeviceTrippingUnit
+
+    SubClassOf: 
+        ifc:DistributionControlElement
+    
+    
+Class: ifc:Proxy
+
+    SubClassOf: 
+        ifc:Product
+    
+    
+Class: ifc:Pump
+
+    SubClassOf: 
+        ifc:FlowMovingDevice
+    
+    
+Class: ifc:Railing
+
+    SubClassOf: 
+        ifc:BuildingElement
+    
+    
+Class: ifc:Ramp
+
+    SubClassOf: 
+        ifc:BuildingElement
+    
+    
+Class: ifc:RampFlight
+
+    SubClassOf: 
+        ifc:BuildingElement
+    
+    
+Class: ifc:ReinforcingBar
+
+    SubClassOf: 
+        ifc:ReinforcingElement
+    
+    
+Class: ifc:ReinforcingElement
+
+    SubClassOf: 
+        ifc:ElementComponent
+    
+    
+Class: ifc:ReinforcingMesh
+
+    SubClassOf: 
+        ifc:ReinforcingElement
+    
+    
+Class: ifc:Roof
+
+    SubClassOf: 
+        ifc:BuildingElement
+    
+    
+Class: ifc:SanitaryTerminal
+
+    SubClassOf: 
+        ifc:FlowTerminal
+    
+    
+Class: ifc:Sensor
+
+    SubClassOf: 
+        ifc:DistributionControlElement
+    
+    
+Class: ifc:ShadingDevice
+
+    SubClassOf: 
+        ifc:BuildingElement
+    
+    
+Class: ifc:Site
+
+    SubClassOf: 
+        ifc:SpatialStructureElement
+    
+    
+Class: ifc:Slab
+
+    SubClassOf: 
+        ifc:BuildingElement
+    
+    
+Class: ifc:SlabElementedCase
+
+    SubClassOf: 
+        ifc:Slab
+    
+    
+Class: ifc:SlabStandardCase
+
+    SubClassOf: 
+        ifc:Slab
+    
+    
+Class: ifc:SolarDevice
+
+    SubClassOf: 
+        ifc:EnergyConversionDevice
+    
+    
+Class: ifc:Space
+
+    SubClassOf: 
+        ifc:SpatialStructureElement
+    
+    
+Class: ifc:SpaceHeater
+
+    SubClassOf: 
+        ifc:FlowTerminal
+    
+    
+Class: ifc:SpatialElement
+
+    SubClassOf: 
+        ifc:Product
+    
+    
+Class: ifc:SpatialStructureElement
+
+    SubClassOf: 
+        ifc:SpatialElement
+    
+    
+Class: ifc:SpatialZone
+
+    SubClassOf: 
+        ifc:SpatialElement
+    
+    
+Class: ifc:StackTerminal
+
+    SubClassOf: 
+        ifc:FlowTerminal
+    
+    
+Class: ifc:Stair
+
+    SubClassOf: 
+        ifc:BuildingElement
+    
+    
+Class: ifc:StairFlight
+
+    SubClassOf: 
+        ifc:BuildingElement
+    
+    
+Class: ifc:StructuralAction
+
+    SubClassOf: 
+        ifc:StructuralActivity
+    
+    
+Class: ifc:StructuralActivity
+
+    SubClassOf: 
+        ifc:Product
+    
+    
+Class: ifc:StructuralConnection
+
+    SubClassOf: 
+        ifc:StructuralItem
+    
+    
+Class: ifc:StructuralCurveAction
+
+    SubClassOf: 
+        ifc:StructuralAction
+    
+    
+Class: ifc:StructuralCurveConnection
+
+    SubClassOf: 
+        ifc:StructuralConnection
+    
+    
+Class: ifc:StructuralCurveMember
+
+    SubClassOf: 
+        ifc:StructuralMember
+    
+    
+Class: ifc:StructuralCurveMemberVarying
+
+    SubClassOf: 
+        ifc:StructuralCurveMember
+    
+    
+Class: ifc:StructuralCurveReaction
+
+    SubClassOf: 
+        ifc:StructuralReaction
+    
+    
+Class: ifc:StructuralItem
+
+    SubClassOf: 
+        ifc:Product
+    
+    
+Class: ifc:StructuralLinearAction
+
+    SubClassOf: 
+        ifc:StructuralCurveAction
+    
+    
+Class: ifc:StructuralMember
+
+    SubClassOf: 
+        ifc:StructuralItem
+    
+    
+Class: ifc:StructuralPlanarAction
+
+    SubClassOf: 
+        ifc:StructuralSurfaceAction
+    
+    
+Class: ifc:StructuralPointAction
+
+    SubClassOf: 
+        ifc:StructuralAction
+    
+    
+Class: ifc:StructuralPointConnection
+
+    SubClassOf: 
+        ifc:StructuralConnection
+    
+    
+Class: ifc:StructuralPointReaction
+
+    SubClassOf: 
+        ifc:StructuralReaction
+    
+    
+Class: ifc:StructuralReaction
+
+    SubClassOf: 
+        ifc:StructuralActivity
+    
+    
+Class: ifc:StructuralSurfaceAction
+
+    SubClassOf: 
+        ifc:StructuralAction
+    
+    
+Class: ifc:StructuralSurfaceConnection
+
+    SubClassOf: 
+        ifc:StructuralConnection
+    
+    
+Class: ifc:StructuralSurfaceMember
+
+    SubClassOf: 
+        ifc:StructuralMember
+    
+    
+Class: ifc:StructuralSurfaceMemberVarying
+
+    SubClassOf: 
+        ifc:StructuralSurfaceMember
+    
+    
+Class: ifc:StructuralSurfaceReaction
+
+    SubClassOf: 
+        ifc:StructuralReaction
+    
+    
+Class: ifc:SurfaceFeature
+
+    SubClassOf: 
+        ifc:FeatureElement
+    
+    
+Class: ifc:SwitchingDevice
+
+    SubClassOf: 
+        ifc:FlowController
+    
+    
+Class: ifc:SystemFurnitureElement
+
+    SubClassOf: 
+        ifc:FurnishingElement
+    
+    
+Class: ifc:Tank
+
+    SubClassOf: 
+        ifc:FlowStorageDevice
+    
+    
+Class: ifc:Tendon
+
+    SubClassOf: 
+        ifc:ReinforcingElement
+    
+    
+Class: ifc:TendonAnchor
+
+    SubClassOf: 
+        ifc:ReinforcingElement
+    
+    
+Class: ifc:Transformer
+
+    SubClassOf: 
+        ifc:EnergyConversionDevice
+    
+    
+Class: ifc:TransportElement
+
+    SubClassOf: 
+        ifc:Element
+    
+    
+Class: ifc:TubeBundle
+
+    SubClassOf: 
+        ifc:EnergyConversionDevice
+    
+    
+Class: ifc:UnitaryControlElement
+
+    SubClassOf: 
+        ifc:DistributionControlElement
+    
+    
+Class: ifc:UnitaryEquipment
+
+    SubClassOf: 
+        ifc:EnergyConversionDevice
+    
+    
+Class: ifc:Valve
+
+    SubClassOf: 
+        ifc:FlowController
+    
+    
+Class: ifc:VibrationIsolator
+
+    SubClassOf: 
+        ifc:ElementComponent
+    
+    
+Class: ifc:VirtualElement
+
+    SubClassOf: 
+        ifc:Element
+    
+    
+Class: ifc:VoidingFeature
+
+    SubClassOf: 
+        ifc:FeatureElementSubtraction
+    
+    
+Class: ifc:Wall
+
+    SubClassOf: 
+        ifc:BuildingElement
+    
+    
+Class: ifc:WallElementedCase
+
+    SubClassOf: 
+        ifc:Wall
+    
+    
+Class: ifc:WallStandardCase
+
+    SubClassOf: 
+        ifc:Wall
+    
+    
+Class: ifc:WasteTerminal
+
+    SubClassOf: 
+        ifc:FlowTerminal
+    
+    
+Class: ifc:Window
+
+    SubClassOf: 
+        ifc:BuildingElement
+    
+    
+Class: ifc:WindowStandardCase
+
+    SubClassOf: 
+        ifc:Window
+    
+    
+Class: owl:Thing
+
+    
+Class: qi:17-1
+
+    Annotations: 
+        rdfs:label "综合脚手架 单层建筑 檐高6m以下 搭拆"@cn
+    
+    SubClassOf: 
+        qs:01120101,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-10
+
+    Annotations: 
+        rdfs:label "综合脚手架 ±0.000以上工程 全现浇结构 6层以下 租赁"@cn
+    
+    SubClassOf: 
+        qs:01120101,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-100
+
+    Annotations: 
+        rdfs:label "弧形墙 清水装饰混凝土模板"@cn
+    
+    SubClassOf: 
+        qs:01120204,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-101
+
+    Annotations: 
+        rdfs:label "短肢剪力墙 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120204,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-102
+
+    Annotations: 
+        rdfs:label "短肢剪力墙 组合钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120204,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-103
+
+    Annotations: 
+        rdfs:label "短肢剪力墙 大钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120204,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-104
+
+    Annotations: 
+        rdfs:label "短肢剪力墙 清水装饰混凝土模板"@cn
+    
+    SubClassOf: 
+        qs:01120204,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-105
+
+    Annotations: 
+        rdfs:label "电梯井壁墙 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120204,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-106
+
+    Annotations: 
+        rdfs:label "电梯井壁墙 组合钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120204,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-107
+
+    Annotations: 
+        rdfs:label "电梯井壁墙 大钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120204,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-108
+
+    Annotations: 
+        rdfs:label "电梯井壁墙 清水装饰混凝土模板"@cn
+    
+    SubClassOf: 
+        qs:01120204,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-109
+
+    Annotations: 
+        rdfs:label "墙支撑高度3.6m以上每增1m"@cn
+    
+    SubClassOf: 
+        qs:01120204,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-11
+
+    Annotations: 
+        rdfs:label "综合脚手架 ±0.000以上工程 全现浇结构 12层以下 搭拆"@cn
+    
+    SubClassOf: 
+        qs:01120101,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-110
+
+    Annotations: 
+        rdfs:label "墙后浇带"@cn
+    
+    SubClassOf: 
+        qs:01120204,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-111
+
+    Annotations: 
+        rdfs:label "止水螺栓增加费"@cn
+    
+    SubClassOf: 
+        qs:01120204,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-112
+
+    Annotations: 
+        rdfs:label "有梁板 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120205,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-113
+
+    Annotations: 
+        rdfs:label "有梁板 组合钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120205,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-114
+
+    Annotations: 
+        rdfs:label "有梁板 清水装饰混凝土模板"@cn
+    
+    SubClassOf: 
+        qs:01120205,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-115
+
+    Annotations: 
+        rdfs:label "无梁板 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120205,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-116
+
+    Annotations: 
+        rdfs:label "无梁板 组合钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120205,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-117
+
+    Annotations: 
+        rdfs:label "无梁板 清水装饰混凝土模板"@cn
+    
+    SubClassOf: 
+        qs:01120205,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-118
+
+    Annotations: 
+        rdfs:label "平板 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120205,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-119
+
+    Annotations: 
+        rdfs:label "平板 组合钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120205,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-12
+
+    Annotations: 
+        rdfs:label "综合脚手架 ±0.000以上工程 全现浇结构 12层以下 租赁"@cn
+    
+    SubClassOf: 
+        qs:01120101,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-120
+
+    Annotations: 
+        rdfs:label "平板 清水装饰混凝土模板"@cn
+    
+    SubClassOf: 
+        qs:01120205,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-121
+
+    Annotations: 
+        rdfs:label "斜屋面板 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120205,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-122
+
+    Annotations: 
+        rdfs:label "斜屋面板 组合钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120205,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-123
+
+    Annotations: 
+        rdfs:label "异形板 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120205,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-124
+
+    Annotations: 
+        rdfs:label "异形板 组合钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120205,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-125
+
+    Annotations: 
+        rdfs:label "现浇空心楼板 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120205,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-126
+
+    Annotations: 
+        rdfs:label "现浇空心楼板 组合钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120205,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-127
+
+    Annotations: 
+        rdfs:label "拱板 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120205,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-128
+
+    Annotations: 
+        rdfs:label "拱板 定型钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120205,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-129
+
+    Annotations: 
+        rdfs:label "补板缝"@cn
+    
+    SubClassOf: 
+        qs:01120205,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-13
+
+    Annotations: 
+        rdfs:label "综合脚手架 ±0.000以上工程 全现浇结构 12层以上 搭拆"@cn
+    
+    SubClassOf: 
+        qs:01120101,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-130
+
+    Annotations: 
+        rdfs:label "板支撑高度3.6m以上每增1m"@cn
+    
+    SubClassOf: 
+        qs:01120205,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-131
+
+    Annotations: 
+        rdfs:label "板后浇带"@cn
+    
+    SubClassOf: 
+        qs:01120205,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-132
+
+    Annotations: 
+        rdfs:label "斜挑檐 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120206,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-133
+
+    Annotations: 
+        rdfs:label "斜挑檐 木模板"@cn
+    
+    SubClassOf: 
+        qs:01120206,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-134
+
+    Annotations: 
+        rdfs:label "栏板"@cn
+    
+    SubClassOf: 
+        qs:01120206,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-135
+
+    Annotations: 
+        rdfs:label "天沟檐沟"@cn
+    
+    SubClassOf: 
+        qs:01120206,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-136
+
+    Annotations: 
+        rdfs:label "阳台板雨篷挑檐"@cn
+    
+    SubClassOf: 
+        qs:01120206,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-137
+
+    Annotations: 
+        rdfs:label "楼梯 直形"@cn
+    
+    SubClassOf: 
+        qs:01120206,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-138
+
+    Annotations: 
+        rdfs:label "楼梯 弧形"@cn
+    
+    SubClassOf: 
+        qs:01120206,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-139
+
+    Annotations: 
+        rdfs:label "小型构件"@cn
+    
+    SubClassOf: 
+        qs:01120206,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-14
+
+    Annotations: 
+        rdfs:label "综合脚手架 ±0.000以上工程 全现浇结构 12层以上 租赁"@cn
+    
+    SubClassOf: 
+        qs:01120101,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-140
+
+    Annotations: 
+        rdfs:label "其他构件"@cn
+    
+    SubClassOf: 
+        qs:01120206,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-141
+
+    Annotations: 
+        rdfs:label "电缆沟、地沟"@cn
+    
+    SubClassOf: 
+        qs:01120206,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-142
+
+    Annotations: 
+        rdfs:label "台阶"@cn
+    
+    SubClassOf: 
+        qs:01120206,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-143
+
+    Annotations: 
+        rdfs:label "门附框"@cn
+    
+    SubClassOf: 
+        qs:01120206,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-144
+
+    Annotations: 
+        rdfs:label "散水"@cn
+    
+    SubClassOf: 
+        qs:01120206,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-145
+
+    Annotations: 
+        rdfs:label "垂直运输 单层 预制钢筋混凝土结构厂房 跨度18m以内 首层建筑面积2000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-146
+
+    Annotations: 
+        rdfs:label "垂直运输 单层 预制钢筋混凝土结构厂房 跨度18m以内 首层建筑面积5000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-147
+
+    Annotations: 
+        rdfs:label "垂直运输 单层 预制钢筋混凝土结构厂房 跨度18m以内 首层建筑面积每增3000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-148
+
+    Annotations: 
+        rdfs:label "垂直运输 单层 预制钢筋混凝土结构厂房 跨度18m以外 首层建筑面积2000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-149
+
+    Annotations: 
+        rdfs:label "垂直运输 单层 预制钢筋混凝土结构厂房 跨度18m以外 首层建筑面积5000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-15
+
+    Annotations: 
+        rdfs:label "综合脚手架 ±0.000以上工程 框架结构 6层以下 搭拆"@cn
+    
+    SubClassOf: 
+        qs:01120101,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-150
+
+    Annotations: 
+        rdfs:label "垂直运输 单层 预制钢筋混凝土结构厂房 跨度18m以外 首层建筑面积每增3000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-151
+
+    Annotations: 
+        rdfs:label "垂直运输 单层 钢结构厂房 跨度36m以内 首层建筑面积5000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-152
+
+    Annotations: 
+        rdfs:label "垂直运输 单层 钢结构厂房 跨度36m以内 首层建筑面积每增2500m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-153
+
+    Annotations: 
+        rdfs:label "垂直运输 单层 钢结构厂房 跨度36m以外 首层建筑面积5000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-154
+
+    Annotations: 
+        rdfs:label "垂直运输 单层 钢结构厂房 跨度36m以外 首层建筑面积每增2500m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-155
+
+    Annotations: 
+        rdfs:label "垂直运输 6层以下 混合结构 首层建筑面积500m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-156
+
+    Annotations: 
+        rdfs:label "垂直运输 6层以下 混合结构 首层建筑面积1200m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-157
+
+    Annotations: 
+        rdfs:label "垂直运输 6层以下 混合结构 首层建筑面积2500m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-158
+
+    Annotations: 
+        rdfs:label "垂直运输 6层以下 现浇框架结构 首层建筑面积1200m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-159
+
+    Annotations: 
+        rdfs:label "垂直运输 6层以下 现浇框架结构 首层建筑面积2500m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-16
+
+    Annotations: 
+        rdfs:label "综合脚手架 ±0.000以上工程 框架结构 6层以下 租赁"@cn
+    
+    SubClassOf: 
+        qs:01120101,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-160
+
+    Annotations: 
+        rdfs:label "垂直运输 6层以下 现浇框架结构 首层建筑面积每增1500m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-161
+
+    Annotations: 
+        rdfs:label "垂直运输 6层以下 全现浇剪力墙结构 首层建筑面积1200m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-162
+
+    Annotations: 
+        rdfs:label "垂直运输 6层以下 全现浇剪力墙结构 首层建筑面积2500m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-163
+
+    Annotations: 
+        rdfs:label "垂直运输 6层以下 全现浇剪力墙结构 首层建筑面积每增1500m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-164
+
+    Annotations: 
+        rdfs:label "垂直运输 6层以下 钢结构 首层建筑面积1000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-165
+
+    Annotations: 
+        rdfs:label "垂直运输 6层以下 钢结构 首层建筑面积3000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-166
+
+    Annotations: 
+        rdfs:label "垂直运输 6层以下 钢结构 首层建筑面积每增1500m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-167
+
+    Annotations: 
+        rdfs:label "垂直运输 12层以下 现浇框架结构 首层建筑面积1200m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-168
+
+    Annotations: 
+        rdfs:label "垂直运输 12层以下 现浇框架结构 首层建筑面积2500m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-169
+
+    Annotations: 
+        rdfs:label "垂直运输 12层以下 现浇框架结构 首层建筑面积每增1500m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-17
+
+    Annotations: 
+        rdfs:label "综合脚手架 ±0.000以上工程 框架结构 12层以下 搭拆"@cn
+    
+    SubClassOf: 
+        qs:01120101,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-170
+
+    Annotations: 
+        rdfs:label "垂直运输 12层以下 全现浇剪力墙结构 首层建筑面积1200m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-171
+
+    Annotations: 
+        rdfs:label "垂直运输 12层以下 全现浇剪力墙结构 首层建筑面积2500m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-172
+
+    Annotations: 
+        rdfs:label "垂直运输 12层以下 全现浇剪力墙结构 首层建筑面积每增1500m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-173
+
+    Annotations: 
+        rdfs:label "垂直运输 12层以下 钢结构 首层建筑面积1000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-174
+
+    Annotations: 
+        rdfs:label "垂直运输 12层以下 钢结构 首层建筑面积3000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-175
+
+    Annotations: 
+        rdfs:label "垂直运输 12层以下 钢结构 首层建筑面积每增1500m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-176
+
+    Annotations: 
+        rdfs:label "垂直运输 24层以下 现浇钢筋混凝土结构 首层建筑面积1200m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-177
+
+    Annotations: 
+        rdfs:label "垂直运输 24层以下 现浇钢筋混凝土结构 首层建筑面积2500m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-178
+
+    Annotations: 
+        rdfs:label "垂直运输 24层以下 现浇钢筋混凝土结构 首层建筑面积每增1500m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-179
+
+    Annotations: 
+        rdfs:label "垂直运输 24层以下 钢结构 首层建筑面积1200m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-18
+
+    Annotations: 
+        rdfs:label "综合脚手架 ±0.000以上工程 框架结构 12层以下 租赁"@cn
+    
+    SubClassOf: 
+        qs:01120101,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-180
+
+    Annotations: 
+        rdfs:label "垂直运输 24层以下 钢结构 首层建筑面积2500m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-181
+
+    Annotations: 
+        rdfs:label "垂直运输 24层以下 钢结构 首层建筑面积每增1500m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-182
+
+    Annotations: 
+        rdfs:label "垂直运输 36层以下 现浇钢筋混凝土结构 首层建筑面积2000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-183
+
+    Annotations: 
+        rdfs:label "垂直运输 36层以下 现浇钢筋混凝土结构 首层建筑面积每增1000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-184
+
+    Annotations: 
+        rdfs:label "垂直运输 36层以下 钢结构 首层建筑面积2000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-185
+
+    Annotations: 
+        rdfs:label "垂直运输 36层以下 钢结构 首层建筑面积每增1000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-186
+
+    Annotations: 
+        rdfs:label "垂直运输 48层以下 首层建筑面积2000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-187
+
+    Annotations: 
+        rdfs:label "垂直运输 48层以下 首层建筑面积每增1000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-188
+
+    Annotations: 
+        rdfs:label "垂直运输 60层以下 首层建筑面积2000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-189
+
+    Annotations: 
+        rdfs:label "垂直运输 60层以下 首层建筑面积每增1000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-19
+
+    Annotations: 
+        rdfs:label "综合脚手架 ±0.000以上工程 框架结构 24层以下 搭拆"@cn
+    
+    SubClassOf: 
+        qs:01120101,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-190
+
+    Annotations: 
+        rdfs:label "垂直运输 80层以下 首层建筑面积2000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-191
+
+    Annotations: 
+        rdfs:label "垂直运输 80层以下 首层建筑面积每增1000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-192
+
+    Annotations: 
+        rdfs:label "垂直运输 100层以下 首层建筑面积2000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-193
+
+    Annotations: 
+        rdfs:label "垂直运输 100层以下 首层建筑面积每增1000m2以内"@cn
+    
+    SubClassOf: 
+        qs:01120301,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-194
+
+    Annotations: 
+        rdfs:label "泵送混凝土增加费 汽车泵"@cn
+    
+    SubClassOf: 
+        qs:01120302,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-195
+
+    Annotations: 
+        rdfs:label "泵送混凝土增加费 地泵"@cn
+    
+    SubClassOf: 
+        qs:01120302,
+        ie:byWork some qw:0112-11,
+        ie:byWork some qw:0112-12
+    
+    
+Class: qi:17-196
+
+    Annotations: 
+        rdfs:label "超高施工增加 檐高45m以下"@cn
+    
+    SubClassOf: 
+        qs:011204,
+        ie:byWork some qw:0112-13,
+        ie:byWork some qw:0112-14,
+        ie:byWork some qw:0112-15
+    
+    
+Class: qi:17-197
+
+    Annotations: 
+        rdfs:label "超高施工增加 檐高80m以下"@cn
+    
+    SubClassOf: 
+        qs:011204,
+        ie:byWork some qw:0112-13,
+        ie:byWork some qw:0112-14,
+        ie:byWork some qw:0112-15
+    
+    
+Class: qi:17-198
+
+    Annotations: 
+        rdfs:label "超高施工增加 檐高100m以下"@cn
+    
+    SubClassOf: 
+        qs:011204,
+        ie:byWork some qw:0112-13,
+        ie:byWork some qw:0112-14,
+        ie:byWork some qw:0112-15
+    
+    
+Class: qi:17-199
+
+    Annotations: 
+        rdfs:label "超高施工增加 檐高100m以上"@cn
+    
+    SubClassOf: 
+        qs:011204,
+        ie:byWork some qw:0112-13,
+        ie:byWork some qw:0112-14,
+        ie:byWork some qw:0112-15
+    
+    
+Class: qi:17-2
+
+    Annotations: 
+        rdfs:label "综合脚手架 单层建筑 檐高6m以下 租赁"@cn
+    
+    SubClassOf: 
+        qs:01120101,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-20
+
+    Annotations: 
+        rdfs:label "综合脚手架 ±0.000以上工程 框架结构 24层以下 租赁"@cn
+    
+    SubClassOf: 
+        qs:01120101,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-200
+
+    Annotations: 
+        rdfs:label "单项管井成井 降水井成井 反循环钻机 井深 15m以内"@cn
+    
+    SubClassOf: 
+        qs:0112050101,
+        ie:byWork some qw:0112-16,
+        ie:byWork some qw:0112-17,
+        ie:byWork some qw:0112-18
+    
+    
+Class: qi:17-201
+
+    Annotations: 
+        rdfs:label "单项管井成井 降水井成井 反循环钻机 井深 15m以外"@cn
+    
+    SubClassOf: 
+        qs:0112050101,
+        ie:byWork some qw:0112-16,
+        ie:byWork some qw:0112-17,
+        ie:byWork some qw:0112-18
+    
+    
+Class: qi:17-202
+
+    Annotations: 
+        rdfs:label "单项管井成井 降水井成井 冲击钻机 井深 15m以内"@cn
+    
+    SubClassOf: 
+        qs:0112050101,
+        ie:byWork some qw:0112-16,
+        ie:byWork some qw:0112-17,
+        ie:byWork some qw:0112-18
+    
+    
+Class: qi:17-203
+
+    Annotations: 
+        rdfs:label "单项管井成井 降水井成井 冲击钻机 井深 15m以外"@cn
+    
+    SubClassOf: 
+        qs:0112050101,
+        ie:byWork some qw:0112-16,
+        ie:byWork some qw:0112-17,
+        ie:byWork some qw:0112-18
+    
+    
+Class: qi:17-204
+
+    Annotations: 
+        rdfs:label "单项管井成井 疏干井成井 反循环钻机 井深 15m以内"@cn
+    
+    SubClassOf: 
+        qs:0112050101,
+        ie:byWork some qw:0112-16,
+        ie:byWork some qw:0112-17,
+        ie:byWork some qw:0112-18
+    
+    
+Class: qi:17-205
+
+    Annotations: 
+        rdfs:label "单项管井成井 疏干井成井 反循环钻机 井深 15m以外"@cn
+    
+    SubClassOf: 
+        qs:0112050101,
+        ie:byWork some qw:0112-16,
+        ie:byWork some qw:0112-17,
+        ie:byWork some qw:0112-18
+    
+    
+Class: qi:17-206
+
+    Annotations: 
+        rdfs:label "单项管井成井 疏干井成井 冲击钻机 井深 15m以内"@cn
+    
+    SubClassOf: 
+        qs:0112050101,
+        ie:byWork some qw:0112-16,
+        ie:byWork some qw:0112-17,
+        ie:byWork some qw:0112-18
+    
+    
+Class: qi:17-207
+
+    Annotations: 
+        rdfs:label "单项管井成井 疏干井成井 冲击钻机 井深 15m以外"@cn
+    
+    SubClassOf: 
+        qs:0112050101,
+        ie:byWork some qw:0112-16,
+        ie:byWork some qw:0112-17,
+        ie:byWork some qw:0112-18
+    
+    
+Class: qi:17-208
+
+    Annotations: 
+        rdfs:label "综合管井成井 反循环钻机 首层建筑面积5000m2以内 槽深10m以内"@cn
+    
+    SubClassOf: 
+        qs:0112050102,
+        ie:byWork some qw:0112-17,
+        ie:byWork some qw:0112-18,
+        ie:byWork some qw:0112-19
+    
+    
+Class: qi:17-209
+
+    Annotations: 
+        rdfs:label "综合管井成井 反循环钻机 首层建筑面积5000m2以内 槽深10m以外"@cn
+    
+    SubClassOf: 
+        qs:0112050102,
+        ie:byWork some qw:0112-17,
+        ie:byWork some qw:0112-18,
+        ie:byWork some qw:0112-19
+    
+    
+Class: qi:17-21
+
+    Annotations: 
+        rdfs:label "综合脚手架 ±0.000以上工程 框架结构 24层以上 搭拆"@cn
+    
+    SubClassOf: 
+        qs:01120101,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-210
+
+    Annotations: 
+        rdfs:label "综合管井成井 反循环钻机 首层建筑面积5000m2以外 槽深10m以内"@cn
+    
+    SubClassOf: 
+        qs:0112050102,
+        ie:byWork some qw:0112-17,
+        ie:byWork some qw:0112-18,
+        ie:byWork some qw:0112-19
+    
+    
+Class: qi:17-211
+
+    Annotations: 
+        rdfs:label "综合管井成井 反循环钻机 首层建筑面积5000m2以外 槽深10m以外"@cn
+    
+    SubClassOf: 
+        qs:0112050102,
+        ie:byWork some qw:0112-17,
+        ie:byWork some qw:0112-18,
+        ie:byWork some qw:0112-19
+    
+    
+Class: qi:17-212
+
+    Annotations: 
+        rdfs:label "综合管井成井 冲击钻机 首层建筑面积5000m2以内 槽深10m以内"@cn
+    
+    SubClassOf: 
+        qs:0112050102,
+        ie:byWork some qw:0112-17,
+        ie:byWork some qw:0112-18,
+        ie:byWork some qw:0112-19
+    
+    
+Class: qi:17-213
+
+    Annotations: 
+        rdfs:label "综合管井成井 冲击钻机 首层建筑面积5000m2以内 槽深10m以外"@cn
+    
+    SubClassOf: 
+        qs:0112050102,
+        ie:byWork some qw:0112-17,
+        ie:byWork some qw:0112-18,
+        ie:byWork some qw:0112-19
+    
+    
+Class: qi:17-214
+
+    Annotations: 
+        rdfs:label "综合管井成井 冲击钻机 首层建筑面积5000m2以外 槽深10m以内"@cn
+    
+    SubClassOf: 
+        qs:0112050102,
+        ie:byWork some qw:0112-17,
+        ie:byWork some qw:0112-18,
+        ie:byWork some qw:0112-19
+    
+    
+Class: qi:17-215
+
+    Annotations: 
+        rdfs:label "综合管井成井 冲击钻机 首层建筑面积5000m2以外 槽深10m以外"@cn
+    
+    SubClassOf: 
+        qs:0112050102,
+        ie:byWork some qw:0112-17,
+        ie:byWork some qw:0112-18,
+        ie:byWork some qw:0112-19
+    
+    
+Class: qi:17-216
+
+    Annotations: 
+        rdfs:label "轻型井点成井 井深 6m以内"@cn
+    
+    SubClassOf: 
+        qs:0112050103,
+        ie:byWork some qw:0112-20,
+        ie:byWork some qw:0112-21,
+        ie:byWork some qw:0112-22
+    
+    
+Class: qi:17-217
+
+    Annotations: 
+        rdfs:label "轻型井点成井 井深 12m以内"@cn
+    
+    SubClassOf: 
+        qs:0112050103,
+        ie:byWork some qw:0112-20,
+        ie:byWork some qw:0112-21,
+        ie:byWork some qw:0112-22
+    
+    
+Class: qi:17-218
+
+    Annotations: 
+        rdfs:label "单项管井降水 (口.天) 井深 15m以内"@cn
+    
+    SubClassOf: 
+        qs:01120502,
+        ie:byWork some qw:0112-23
+    
+    
+Class: qi:17-219
+
+    Annotations: 
+        rdfs:label "单项管井降水 (口.天) 井深 15m以外"@cn
+    
+    SubClassOf: 
+        qs:01120502,
+        ie:byWork some qw:0112-23
+    
+    
+Class: qi:17-22
+
+    Annotations: 
+        rdfs:label "综合脚手架 ±0.000以上工程 框架结构 24层以上 租赁"@cn
+    
+    SubClassOf: 
+        qs:01120101,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-220
+
+    Annotations: 
+        rdfs:label "综合管井降水 首层建筑面积5000m2以内 槽深 10m以内"@cn
+    
+    SubClassOf: 
+        qs:01120502,
+        ie:byWork some qw:0112-23
+    
+    
+Class: qi:17-221
+
+    Annotations: 
+        rdfs:label "综合管井降水 首层建筑面积5000m2以内 槽深 10m以外"@cn
+    
+    SubClassOf: 
+        qs:01120502,
+        ie:byWork some qw:0112-23
+    
+    
+Class: qi:17-222
+
+    Annotations: 
+        rdfs:label "综合管井降水 首层建筑面积5000m2以外 槽深 10m以内"@cn
+    
+    SubClassOf: 
+        qs:01120502,
+        ie:byWork some qw:0112-23
+    
+    
+Class: qi:17-223
+
+    Annotations: 
+        rdfs:label "综合管井降水 首层建筑面积5000m2以外 槽深 10m以外"@cn
+    
+    SubClassOf: 
+        qs:01120502,
+        ie:byWork some qw:0112-23
+    
+    
+Class: qi:17-224
+
+    Annotations: 
+        rdfs:label "轻型井点降水 井深 6m以内"@cn
+    
+    SubClassOf: 
+        qs:01120502,
+        ie:byWork some qw:0112-23
+    
+    
+Class: qi:17-225
+
+    Annotations: 
+        rdfs:label "轻型井点降水 井深 12m以内"@cn
+    
+    SubClassOf: 
+        qs:01120502,
+        ie:byWork some qw:0112-23
+    
+    
+Class: qi:17-226
+
+    Annotations: 
+        rdfs:label "止水帷幕桩 旋喷桩成桩φ800三重管 槽深 10m以内"@cn
+    
+    SubClassOf: 
+        qs:0112050301,
+        ie:byWork some qw:0112-24,
+        ie:byWork some qw:0112-25,
+        ie:byWork some qw:0112-26
+    
+    
+Class: qi:17-227
+
+    Annotations: 
+        rdfs:label "止水帷幕桩 旋喷桩成桩φ800三重管 槽深 10m以外"@cn
+    
+    SubClassOf: 
+        qs:0112050301,
+        ie:byWork some qw:0112-24,
+        ie:byWork some qw:0112-25,
+        ie:byWork some qw:0112-26
+    
+    
+Class: qi:17-228
+
+    Annotations: 
+        rdfs:label "止水帷幕桩二次引孔 旋喷桩汽车钻引孔"@cn
+    
+    SubClassOf: 
+        qs:0112050302,
+        ie:byWork some qw:0112-27
+    
+    
+Class: qi:17-229
+
+    Annotations: 
+        rdfs:label "明沟排水"@cn
+    
+    SubClassOf: 
+        qs:0112050303,
+        ie:byWork some qw:0112-28
+    
+    
+Class: qi:17-23
+
+    Annotations: 
+        rdfs:label "内墙装修脚手架(3.6米以上) 层高4.5m以内 搭拆"@cn
+    
+    SubClassOf: 
+        qs:01120102,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-230
+
+    Annotations: 
+        rdfs:label "安全文明施工费 建筑装饰工程 建筑面积20000m2以内 五环路以内"@cn
+    
+    SubClassOf: 
+        qs:011206
+    
+    
+Class: qi:17-231
+
+    Annotations: 
+        rdfs:label "安全文明施工费 建筑装饰工程 建筑面积20000m2以内 五环路以外"@cn
+    
+    SubClassOf: 
+        qs:011206
+    
+    
+Class: qi:17-232
+
+    Annotations: 
+        rdfs:label "安全文明施工费 建筑装饰工程 建筑面积50000m2以内 五环路以内"@cn
+    
+    SubClassOf: 
+        qs:011206
+    
+    
+Class: qi:17-233
+
+    Annotations: 
+        rdfs:label "安全文明施工费 建筑装饰工程 建筑面积50000m2以内 五环路以外"@cn
+    
+    SubClassOf: 
+        qs:011206
+    
+    
+Class: qi:17-234
+
+    Annotations: 
+        rdfs:label "安全文明施工费 建筑装饰工程 建筑面积50000m2以外 五环路以内"@cn
+    
+    SubClassOf: 
+        qs:011206
+    
+    
+Class: qi:17-235
+
+    Annotations: 
+        rdfs:label "安全文明施工费 建筑装饰工程 建筑面积50000m2以外 五环路以外"@cn
+    
+    SubClassOf: 
+        qs:011206
+    
+    
+Class: qi:17-236
+
+    Annotations: 
+        rdfs:label "安全文明施工费 钢结构工程 五环路以内"@cn
+    
+    SubClassOf: 
+        qs:011206
+    
+    
+Class: qi:17-237
+
+    Annotations: 
+        rdfs:label "安全文明施工费 钢结构工程 五环路以外"@cn
+    
+    SubClassOf: 
+        qs:011206
+    
+    
+Class: qi:17-238
+
+    Annotations: 
+        rdfs:label "安全文明施工费 其他工程 五环路以内"@cn
+    
+    SubClassOf: 
+        qs:011206
+    
+    
+Class: qi:17-239
+
+    Annotations: 
+        rdfs:label "安全文明施工费 其他工程 五环路以外"@cn
+    
+    SubClassOf: 
+        qs:011206
+    
+    
+Class: qi:17-24
+
+    Annotations: 
+        rdfs:label "内墙装修脚手架(3.6米以上) 层高4.5m以内 租赁"@cn
+    
+    SubClassOf: 
+        qs:01120102,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-25
+
+    Annotations: 
+        rdfs:label "内墙装修脚手架(3.6米以上) 层高4.5m以上每增1m 搭拆"@cn
+    
+    SubClassOf: 
+        qs:01120102,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-26
+
+    Annotations: 
+        rdfs:label "内墙装修脚手架(3.6米以上) 层高4.5m以上每增1m 租赁"@cn
+    
+    SubClassOf: 
+        qs:01120102,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-27
+
+    Annotations: 
+        rdfs:label "吊顶装修脚手架(3.6米以上) 层高4.5m以内 搭拆"@cn
+    
+    SubClassOf: 
+        qs:01120102,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-28
+
+    Annotations: 
+        rdfs:label "吊顶装修脚手架(3.6米以上) 层高4.5m以内 租赁"@cn
+    
+    SubClassOf: 
+        qs:01120102,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-29
+
+    Annotations: 
+        rdfs:label "吊顶装修脚手架(3.6米以上) 层高4.5m以上每增1m 搭拆"@cn
+    
+    SubClassOf: 
+        qs:01120102,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-3
+
+    Annotations: 
+        rdfs:label "综合脚手架 单层建筑 檐高6m以上每增1m 搭拆"@cn
+    
+    SubClassOf: 
+        qs:01120101,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-30
+
+    Annotations: 
+        rdfs:label "吊顶装修脚手架(3.6米以上) 层高4.5m以上每增1m 租赁"@cn
+    
+    SubClassOf: 
+        qs:01120102,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-31
+
+    Annotations: 
+        rdfs:label "天棚装修脚手架(3.6米以上) 层高4.5m以内 搭拆"@cn
+    
+    SubClassOf: 
+        qs:01120102,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-32
+
+    Annotations: 
+        rdfs:label "天棚装修脚手架(3.6米以上) 层高4.5m以内 租赁"@cn
+    
+    SubClassOf: 
+        qs:01120102,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-33
+
+    Annotations: 
+        rdfs:label "天棚装修脚手架(3.6米以上) 层高4.5m以上每增1m 搭拆"@cn
+    
+    SubClassOf: 
+        qs:01120102,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-34
+
+    Annotations: 
+        rdfs:label "天棚装修脚手架(3.6米以上) 层高4.5m以上每增1m 租赁"@cn
+    
+    SubClassOf: 
+        qs:01120102,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-35
+
+    Annotations: 
+        rdfs:label "外墙装修脚手架 双排脚手架 搭拆"@cn
+    
+    SubClassOf: 
+        qs:01120103,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-6,
+        ie:byWork some qw:0112-7
+    
+    
+Class: qi:17-36
+
+    Annotations: 
+        rdfs:label "外墙装修脚手架 双排脚手架 租赁"@cn
+    
+    SubClassOf: 
+        qs:01120103,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-6,
+        ie:byWork some qw:0112-7
+    
+    
+Class: qi:17-37
+
+    Annotations: 
+        rdfs:label "外墙装修脚手架 外吊脚手架 搭拆"@cn
+    
+    SubClassOf: 
+        qs:01120103,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-6,
+        ie:byWork some qw:0112-7
+    
+    
+Class: qi:17-38
+
+    Annotations: 
+        rdfs:label "外墙装修脚手架 外吊脚手架 租赁"@cn
+    
+    SubClassOf: 
+        qs:01120103,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-6,
+        ie:byWork some qw:0112-7
+    
+    
+Class: qi:17-39
+
+    Annotations: 
+        rdfs:label "外墙装修脚手架 电动吊篮"@cn
+    
+    SubClassOf: 
+        qs:01120103,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-6,
+        ie:byWork some qw:0112-7
+    
+    
+Class: qi:17-4
+
+    Annotations: 
+        rdfs:label "综合脚手架 单层建筑 檐高6m以上每增1m 租赁"@cn
+    
+    SubClassOf: 
+        qs:01120101,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-40
+
+    Annotations: 
+        rdfs:label "围墙脚手架"@cn
+    
+    SubClassOf: 
+        qs:01120103,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-6,
+        ie:byWork some qw:0112-7
+    
+    
+Class: qi:17-41
+
+    Annotations: 
+        rdfs:label "双排脚手架"@cn
+    
+    SubClassOf: 
+        qs:01120103,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-6,
+        ie:byWork some qw:0112-7
+    
+    
+Class: qi:17-42
+
+    Annotations: 
+        rdfs:label "满堂脚手架 高度3.6m以下"@cn
+    
+    SubClassOf: 
+        qs:01120103,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-6,
+        ie:byWork some qw:0112-7
+    
+    
+Class: qi:17-43
+
+    Annotations: 
+        rdfs:label "满堂脚手架 高度3.6m以上每增1m"@cn
+    
+    SubClassOf: 
+        qs:01120103,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-6,
+        ie:byWork some qw:0112-7
+    
+    
+Class: qi:17-44
+
+    Annotations: 
+        rdfs:label "垫层"@cn
+    
+    SubClassOf: 
+        qs:01120201,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-45
+
+    Annotations: 
+        rdfs:label "带形基础 有梁式"@cn
+    
+    SubClassOf: 
+        qs:01120201,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-46
+
+    Annotations: 
+        rdfs:label "带形基础 无梁式"@cn
+    
+    SubClassOf: 
+        qs:01120201,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-47
+
+    Annotations: 
+        rdfs:label "独立基础 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120201,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-48
+
+    Annotations: 
+        rdfs:label "独立基础 组合钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120201,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-49
+
+    Annotations: 
+        rdfs:label "满堂基础 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120201,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-5
+
+    Annotations: 
+        rdfs:label "综合脚手架 ±0.000以下工程 有地下室 搭拆"@cn
+    
+    SubClassOf: 
+        qs:01120101,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-50
+
+    Annotations: 
+        rdfs:label "满堂基础 组合钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120201,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-51
+
+    Annotations: 
+        rdfs:label "设备基础 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120201,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-52
+
+    Annotations: 
+        rdfs:label "设备基础 组合钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120201,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-53
+
+    Annotations: 
+        rdfs:label "杯形基础 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120201,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-54
+
+    Annotations: 
+        rdfs:label "杯形基础 组合钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120201,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-55
+
+    Annotations: 
+        rdfs:label "桩承台基础 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120201,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-56
+
+    Annotations: 
+        rdfs:label "桩承台基础 组合钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120201,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-57
+
+    Annotations: 
+        rdfs:label "基础后浇带"@cn
+    
+    SubClassOf: 
+        qs:01120201,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-58
+
+    Annotations: 
+        rdfs:label "矩形柱 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120202,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-59
+
+    Annotations: 
+        rdfs:label "矩形柱 组合钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120202,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-6
+
+    Annotations: 
+        rdfs:label "综合脚手架 ±0.000以下工程 有地下室 租赁"@cn
+    
+    SubClassOf: 
+        qs:01120101,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-60
+
+    Annotations: 
+        rdfs:label "矩形柱 定型钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120202,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-61
+
+    Annotations: 
+        rdfs:label "矩形柱 清水装饰混凝土模板"@cn
+    
+    SubClassOf: 
+        qs:01120202,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-62
+
+    Annotations: 
+        rdfs:label "构造柱 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120202,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-63
+
+    Annotations: 
+        rdfs:label "圆形柱 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120202,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-64
+
+    Annotations: 
+        rdfs:label "圆形柱 木模板"@cn
+    
+    SubClassOf: 
+        qs:01120202,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-65
+
+    Annotations: 
+        rdfs:label "圆形柱 定型钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120202,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-66
+
+    Annotations: 
+        rdfs:label "圆形柱 清水装饰混凝土模板"@cn
+    
+    SubClassOf: 
+        qs:01120202,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-67
+
+    Annotations: 
+        rdfs:label "异形柱 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120202,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-68
+
+    Annotations: 
+        rdfs:label "异形柱 木模板"@cn
+    
+    SubClassOf: 
+        qs:01120202,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-69
+
+    Annotations: 
+        rdfs:label "异形柱 定型钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120202,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-7
+
+    Annotations: 
+        rdfs:label "综合脚手架 ±0.000以上工程 混合结构 搭拆"@cn
+    
+    SubClassOf: 
+        qs:01120101,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-70
+
+    Annotations: 
+        rdfs:label "异形柱 清水装饰混凝土模板"@cn
+    
+    SubClassOf: 
+        qs:01120202,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-71
+
+    Annotations: 
+        rdfs:label "柱支撑高度3.6m以上每增1m"@cn
+    
+    SubClassOf: 
+        qs:01120202,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-72
+
+    Annotations: 
+        rdfs:label "基础梁 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120203,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-73
+
+    Annotations: 
+        rdfs:label "基础梁 组合钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120203,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-74
+
+    Annotations: 
+        rdfs:label "矩形梁 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120203,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-75
+
+    Annotations: 
+        rdfs:label "矩形梁 组合钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120203,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-76
+
+    Annotations: 
+        rdfs:label "矩形梁 清水装饰混凝土模板"@cn
+    
+    SubClassOf: 
+        qs:01120203,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-77
+
+    Annotations: 
+        rdfs:label "异形梁 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120203,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-78
+
+    Annotations: 
+        rdfs:label "异形梁 组合钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120203,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-79
+
+    Annotations: 
+        rdfs:label "异形梁 木模板"@cn
+    
+    SubClassOf: 
+        qs:01120203,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-8
+
+    Annotations: 
+        rdfs:label "综合脚手架 ±0.000以上工程 混合结构 租赁"@cn
+    
+    SubClassOf: 
+        qs:01120101,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-80
+
+    Annotations: 
+        rdfs:label "异形梁 清水装饰混凝土模板"@cn
+    
+    SubClassOf: 
+        qs:01120203,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-81
+
+    Annotations: 
+        rdfs:label "圈梁 直形 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120203,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-82
+
+    Annotations: 
+        rdfs:label "圈梁 直形 组合钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120203,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-83
+
+    Annotations: 
+        rdfs:label "圈梁 弧形 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120203,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-84
+
+    Annotations: 
+        rdfs:label "圈梁 弧形 组合钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120203,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-85
+
+    Annotations: 
+        rdfs:label "过梁 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120203,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-86
+
+    Annotations: 
+        rdfs:label "过梁 组合钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120203,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-87
+
+    Annotations: 
+        rdfs:label "弧形、拱形梁 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120203,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-88
+
+    Annotations: 
+        rdfs:label "弧形、拱形梁 组合钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120203,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-89
+
+    Annotations: 
+        rdfs:label "弧形、拱形梁 定型钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120203,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-9
+
+    Annotations: 
+        rdfs:label "综合脚手架 ±0.000以上工程 全现浇结构 6层以下 搭拆"@cn
+    
+    SubClassOf: 
+        qs:01120101,
+        ie:byWork some qw:0112-1,
+        ie:byWork some qw:0112-2,
+        ie:byWork some qw:0112-3,
+        ie:byWork some qw:0112-4,
+        ie:byWork some qw:0112-5,
+        ie:byWork some qw:0112-6
+    
+    
+Class: qi:17-90
+
+    Annotations: 
+        rdfs:label "弧形、拱形梁 清水装饰混凝土模板"@cn
+    
+    SubClassOf: 
+        qs:01120203,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-91
+
+    Annotations: 
+        rdfs:label "梁支撑高度3.6m以上每增1m"@cn
+    
+    SubClassOf: 
+        qs:01120203,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-92
+
+    Annotations: 
+        rdfs:label "梁后浇带"@cn
+    
+    SubClassOf: 
+        qs:01120203,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-93
+
+    Annotations: 
+        rdfs:label "直形墙 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120204,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-94
+
+    Annotations: 
+        rdfs:label "直形墙 组合钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120204,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-95
+
+    Annotations: 
+        rdfs:label "直形墙 大钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120204,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-96
+
+    Annotations: 
+        rdfs:label "直形墙 清水装饰混凝土模板"@cn
+    
+    SubClassOf: 
+        qs:01120204,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-97
+
+    Annotations: 
+        rdfs:label "弧形墙 复合模板"@cn
+    
+    SubClassOf: 
+        qs:01120204,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-98
+
+    Annotations: 
+        rdfs:label "弧形墙 组合钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120204,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:17-99
+
+    Annotations: 
+        rdfs:label "弧形墙 定型钢模板"@cn
+    
+    SubClassOf: 
+        qs:01120204,
+        ie:byWork some qw:0112-10,
+        ie:byWork some qw:0112-8,
+        ie:byWork some qw:0112-9
+    
+    
+Class: qi:5-1
+
+    Annotations: 
+        rdfs:label "现浇混凝土 带型基础"@cn
+    
+    SubClassOf: 
+        qs:010501,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-10
+
+    Annotations: 
+        rdfs:label "现浇混凝土 芯柱"@cn
+    
+    SubClassOf: 
+        qs:010502,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-100
+
+    Annotations: 
+        rdfs:label "预制混凝土 休息板"@cn
+    
+    SubClassOf: 
+        qs:010513,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-101
+
+    Annotations: 
+        rdfs:label "预制混凝土 架空隔热板"@cn
+    
+    SubClassOf: 
+        qs:010514,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-102
+
+    Annotations: 
+        rdfs:label "预制混凝土 阳台板"@cn
+    
+    SubClassOf: 
+        qs:010514,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-103
+
+    Annotations: 
+        rdfs:label "预制混凝土 小型构件"@cn
+    
+    SubClassOf: 
+        qs:010514,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-104
+
+    Annotations: 
+        rdfs:label "预制混凝土 其他构件"@cn
+    
+    SubClassOf: 
+        ie:PrecastConcreteElement,
+        qs:010514,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-105
+
+    Annotations: 
+        rdfs:label "预制混凝土外墙 大墙板"@cn
+    
+    SubClassOf: 
+        qs:010514,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-106
+
+    Annotations: 
+        rdfs:label "预制混凝土外墙 槽形墙板"@cn
+    
+    SubClassOf: 
+        qs:010514,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-107
+
+    Annotations: 
+        rdfs:label "预制混凝土天窗板 天窗侧板"@cn
+    
+    SubClassOf: 
+        qs:010514,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-108
+
+    Annotations: 
+        rdfs:label "预制混凝土天窗板 天窗端壁板"@cn
+    
+    SubClassOf: 
+        qs:010514,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-109
+
+    Annotations: 
+        rdfs:label "预制混凝土内墙 混凝土板"@cn
+    
+    SubClassOf: 
+        qs:010514,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-11
+
+    Annotations: 
+        rdfs:label "现浇混凝土 钢管混凝土柱"@cn
+    
+    SubClassOf: 
+        qs:010502,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-110
+
+    Annotations: 
+        rdfs:label "预制混凝土内墙 陶粒混凝土板"@cn
+    
+    SubClassOf: 
+        qs:010514,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-111
+
+    Annotations: 
+        rdfs:label "预制混凝土漏空花格"@cn
+    
+    SubClassOf: 
+        qs:010514,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-112
+
+    Annotations: 
+        rdfs:label "钢筋制作 φ10以内"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-113
+
+    Annotations: 
+        rdfs:label "钢筋制作 φ10以外"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-114
+
+    Annotations: 
+        rdfs:label "钢筋制作 冷轧带肋φ5~φ12"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-115
+
+    Annotations: 
+        rdfs:label "钢筋安装 φ10以内"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-116
+
+    Annotations: 
+        rdfs:label "钢筋安装 φ10以外"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-117
+
+    Annotations: 
+        rdfs:label "钢筋安装 冷轧带肋φ5~φ12"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-118
+
+    Annotations: 
+        rdfs:label "冷轧带肋钢筋网片安装"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-119
+
+    Annotations: 
+        rdfs:label "支撑钢筋(铁马)安装"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-12
+
+    Annotations: 
+        rdfs:label "现浇混凝土 基础梁"@cn
+    
+    SubClassOf: 
+        qs:010503,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-120
+
+    Annotations: 
+        rdfs:label "桩基钢筋笼 制作"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-121
+
+    Annotations: 
+        rdfs:label "桩基钢筋笼 安装 长度 15m以内"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-122
+
+    Annotations: 
+        rdfs:label "桩基钢筋笼 安装 长度 25m以内"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-123
+
+    Annotations: 
+        rdfs:label "桩基钢筋笼 安装 长度 25m以外"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-124
+
+    Annotations: 
+        rdfs:label "桩基护壁钢筋制安"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-125
+
+    Annotations: 
+        rdfs:label "地下连续墙钢筋制安 槽深 15m以内"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-126
+
+    Annotations: 
+        rdfs:label "地下连续墙钢筋制安 槽深 25m以内"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-127
+
+    Annotations: 
+        rdfs:label "地下连续墙钢筋制安 槽深 25m以外"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-128
+
+    Annotations: 
+        rdfs:label "预应力钢丝束 有粘结"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-129
+
+    Annotations: 
+        rdfs:label "预应力钢丝束 无粘结"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-13
+
+    Annotations: 
+        rdfs:label "现浇混凝土 矩形梁"@cn
+    
+    SubClassOf: 
+        qs:010503,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-130
+
+    Annotations: 
+        rdfs:label "预应力钢绞线 有粘结"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-131
+
+    Annotations: 
+        rdfs:label "预应力钢绞线 无粘结"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-132
+
+    Annotations: 
+        rdfs:label "预应力钢丝束、钢绞线张拉"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-133
+
+    Annotations: 
+        rdfs:label "锚具安装 单锚"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-134
+
+    Annotations: 
+        rdfs:label "锚具安装 群锚"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-135
+
+    Annotations: 
+        rdfs:label "预埋管孔道铺设灌浆"@cn
+    
+    SubClassOf: 
+        qs:010515,
+        ie:byWork some qw:0105-6,
+        ie:byWork some qw:0105-7,
+        ie:byWork some qw:0105-8,
+        ie:byWork some qw:0105-9
+    
+    
+Class: qi:5-136
+
+    Annotations: 
+        rdfs:label "预埋铁件安装"@cn
+    
+    SubClassOf: 
+        qs:010516,
+        ie:byWork some qw:0105-10
+    
+    
+Class: qi:5-137
+
+    Annotations: 
+        rdfs:label "铁件安装"@cn
+    
+    SubClassOf: 
+        qs:010516,
+        ie:byWork some qw:0105-10
+    
+    
+Class: qi:5-138
+
+    Annotations: 
+        rdfs:label "直螺纹接头 φ25以内"@cn
+    
+    SubClassOf: 
+        qs:010516,
+        ie:byWork some qw:0105-11
+    
+    
+Class: qi:5-139
+
+    Annotations: 
+        rdfs:label "直螺纹接头 φ25以外"@cn
+    
+    SubClassOf: 
+        qs:010516,
+        ie:byWork some qw:0105-11
+    
+    
+Class: qi:5-14
+
+    Annotations: 
+        rdfs:label "现浇混凝土 异形梁"@cn
+    
+    SubClassOf: 
+        qs:010503,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-140
+
+    Annotations: 
+        rdfs:label "冷挤压接头 φ25以内"@cn
+    
+    SubClassOf: 
+        qs:010516,
+        ie:byWork some qw:0105-11
+    
+    
+Class: qi:5-141
+
+    Annotations: 
+        rdfs:label "冷挤压接头 φ25以外"@cn
+    
+    SubClassOf: 
+        qs:010516,
+        ie:byWork some qw:0105-11
+    
+    
+Class: qi:5-142
+
+    Annotations: 
+        rdfs:label "植筋 φ10以内 孔深15d"@cn
+    
+    SubClassOf: 
+        qs:010516,
+        ie:byWork some qw:0105-12
+    
+    
+Class: qi:5-143
+
+    Annotations: 
+        rdfs:label "植筋 φ10以内 孔深每增减10mm"@cn
+    
+    SubClassOf: 
+        qs:010516,
+        ie:byWork some qw:0105-12
+    
+    
+Class: qi:5-144
+
+    Annotations: 
+        rdfs:label "植筋 φ16以内 孔深15d"@cn
+    
+    SubClassOf: 
+        qs:010516,
+        ie:byWork some qw:0105-12
+    
+    
+Class: qi:5-145
+
+    Annotations: 
+        rdfs:label "植筋 φ16以内 孔深每增减10mm"@cn
+    
+    SubClassOf: 
+        qs:010516,
+        ie:byWork some qw:0105-12
+    
+    
+Class: qi:5-146
+
+    Annotations: 
+        rdfs:label "植筋 φ25以内 孔深15d"@cn
+    
+    SubClassOf: 
+        qs:010516,
+        ie:byWork some qw:0105-12
+    
+    
+Class: qi:5-147
+
+    Annotations: 
+        rdfs:label "植筋 φ25以内 孔深每增减10mm"@cn
+    
+    SubClassOf: 
+        qs:010516,
+        ie:byWork some qw:0105-12
+    
+    
+Class: qi:5-148
+
+    Annotations: 
+        rdfs:label "植筋 φ25以外 孔深15d"@cn
+    
+    SubClassOf: 
+        qs:010516,
+        ie:byWork some qw:0105-12
+    
+    
+Class: qi:5-149
+
+    Annotations: 
+        rdfs:label "植筋 φ25以外 孔深每增减10mm"@cn
+    
+    SubClassOf: 
+        qs:010516,
+        ie:byWork some qw:0105-12
+    
+    
+Class: qi:5-15
+
+    Annotations: 
+        rdfs:label "现浇混凝土 圈梁"@cn
+    
+    SubClassOf: 
+        qs:010503,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-150
+
+    Annotations: 
+        rdfs:label "混凝土垫层"@cn
+    
+    SubClassOf: 
+        qs:01051701,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-151
+
+    Annotations: 
+        rdfs:label "楼地面垫层 混凝土"@cn
+    
+    SubClassOf: 
+        qs:01051702,
+        ie:byWork some qw:0105-13
+    
+    
+Class: qi:5-152
+
+    Annotations: 
+        rdfs:label "楼地面垫层 细石混凝土"@cn
+    
+    SubClassOf: 
+        qs:01051702,
+        ie:byWork some qw:0105-13
+    
+    
+Class: qi:5-153
+
+    Annotations: 
+        rdfs:label "楼地面垫层 陶粒混凝土"@cn
+    
+    SubClassOf: 
+        qs:01051702,
+        ie:byWork some qw:0105-13
+    
+    
+Class: qi:5-154
+
+    Annotations: 
+        rdfs:label "现场搅拌混凝土调整费"@cn
+    
+    SubClassOf: 
+        qs:010518
+    
+    
+Class: qi:5-16
+
+    Annotations: 
+        rdfs:label "现浇混凝土 过梁"@cn
+    
+    SubClassOf: 
+        qs:010503,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-17
+
+    Annotations: 
+        rdfs:label "现浇混凝土 弧形、拱形梁"@cn
+    
+    SubClassOf: 
+        qs:010503,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-18
+
+    Annotations: 
+        rdfs:label "现浇混凝土 直形墙"@cn
+    
+    SubClassOf: 
+        qs:010504,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-19
+
+    Annotations: 
+        rdfs:label "现浇混凝土 弧形墙"@cn
+    
+    SubClassOf: 
+        qs:010504,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-2
+
+    Annotations: 
+        rdfs:label "现浇混凝土 独立基础"@cn
+    
+    SubClassOf: 
+        qs:010501,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-20
+
+    Annotations: 
+        rdfs:label "现浇混凝土 短肢剪力墙"@cn
+    
+    SubClassOf: 
+        qs:010504,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-21
+
+    Annotations: 
+        rdfs:label "现浇混凝土 挡土墙"@cn
+    
+    SubClassOf: 
+        qs:010504,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-22
+
+    Annotations: 
+        rdfs:label "现浇混凝土 有梁板"@cn
+    
+    SubClassOf: 
+        qs:010505,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-23
+
+    Annotations: 
+        rdfs:label "现浇混凝土 无梁板"@cn
+    
+    SubClassOf: 
+        qs:010505,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-24
+
+    Annotations: 
+        rdfs:label "现浇混凝土 平板"@cn
+    
+    SubClassOf: 
+        qs:010505,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-25
+
+    Annotations: 
+        rdfs:label "现浇混凝土 拱板"@cn
+    
+    SubClassOf: 
+        qs:010505,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-26
+
+    Annotations: 
+        rdfs:label "现浇混凝土 薄壳板 筒壳"@cn
+    
+    SubClassOf: 
+        qs:010505,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-27
+
+    Annotations: 
+        rdfs:label "现浇混凝土 薄壳板 双曲"@cn
+    
+    SubClassOf: 
+        qs:010505,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-28
+
+    Annotations: 
+        rdfs:label "现浇混凝土 栏板 直形"@cn
+    
+    SubClassOf: 
+        qs:010505,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-29
+
+    Annotations: 
+        rdfs:label "现浇混凝土 栏板 弧形"@cn
+    
+    SubClassOf: 
+        qs:010505,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-3
+
+    Annotations: 
+        rdfs:label "现浇混凝土 杯形基础"@cn
+    
+    SubClassOf: 
+        qs:010501,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-30
+
+    Annotations: 
+        rdfs:label "现浇混凝土 天沟、挑檐(檐沟)"@cn
+    
+    SubClassOf: 
+        qs:010505,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-31
+
+    Annotations: 
+        rdfs:label "现浇混凝土 雨篷、悬挑板、阳台板"@cn
+    
+    SubClassOf: 
+        qs:010505,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-32
+
+    Annotations: 
+        rdfs:label "现浇混凝土 迭合板"@cn
+    
+    SubClassOf: 
+        qs:010505,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-33
+
+    Annotations: 
+        rdfs:label "现浇混凝土 空调板飘窗板"@cn
+    
+    SubClassOf: 
+        qs:010505,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-34
+
+    Annotations: 
+        rdfs:label "现浇混凝土 斜板"@cn
+    
+    SubClassOf: 
+        qs:010505,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-35
+
+    Annotations: 
+        rdfs:label "现浇混凝土 看台板"@cn
+    
+    SubClassOf: 
+        qs:010505,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-36
+
+    Annotations: 
+        rdfs:label "现浇混凝土 压型钢板混凝土板"@cn
+    
+    SubClassOf: 
+        qs:010505,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-37
+
+    Annotations: 
+        rdfs:label "现浇混凝土 空心楼板内芯管安装 直径100mm以内"@cn
+    
+    SubClassOf: 
+        qs:010505,
+        ie:byWork some qw:0105-2
+    
+    
+Class: qi:5-38
+
+    Annotations: 
+        rdfs:label "现浇混凝土 空心楼板内芯管安装 直径200mm以内"@cn
+    
+    SubClassOf: 
+        qs:010505,
+        ie:byWork some qw:0105-2
+    
+    
+Class: qi:5-39
+
+    Annotations: 
+        rdfs:label "现浇混凝土 空心楼板内芯管安装 直径300mm以内"@cn
+    
+    SubClassOf: 
+        qs:010505,
+        ie:byWork some qw:0105-2
+    
+    
+Class: qi:5-4
+
+    Annotations: 
+        rdfs:label "现浇混凝土 满堂基础"@cn
+    
+    SubClassOf: 
+        qs:010501,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-40
+
+    Annotations: 
+        rdfs:label "现浇混凝土 楼梯 直形"@cn
+    
+    SubClassOf: 
+        qs:010506,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-41
+
+    Annotations: 
+        rdfs:label "现浇混凝土 楼梯 弧形"@cn
+    
+    SubClassOf: 
+        qs:010506,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-42
+
+    Annotations: 
+        rdfs:label "现浇混凝土 楼梯 梯段厚度每增加10mm"@cn
+    
+    SubClassOf: 
+        qs:010506,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-43
+
+    Annotations: 
+        rdfs:label "现浇混凝土 散水"@cn
+    
+    SubClassOf: 
+        qs:010507,
+        ie:byWork some qw:0105-3
+    
+    
+Class: qi:5-44
+
+    Annotations: 
+        rdfs:label "现浇混凝土 坡道"@cn
+    
+    SubClassOf: 
+        qs:010507,
+        ie:byWork some qw:0105-3
+    
+    
+Class: qi:5-45
+
+    Annotations: 
+        rdfs:label "现浇混凝土 电缆沟地沟"@cn
+    
+    SubClassOf: 
+        qs:010507,
+        ie:byWork some qw:0105-3
+    
+    
+Class: qi:5-46
+
+    Annotations: 
+        rdfs:label "现浇混凝土 台阶"@cn
+    
+    SubClassOf: 
+        qs:010507,
+        ie:byWork some qw:0105-3
+    
+    
+Class: qi:5-47
+
+    Annotations: 
+        rdfs:label "现浇混凝土 扶手、压顶"@cn
+    
+    SubClassOf: 
+        qs:010507,
+        ie:byWork some qw:0105-3
+    
+    
+Class: qi:5-48
+
+    Annotations: 
+        rdfs:label "现浇混凝土 其他构件"@cn
+    
+    SubClassOf: 
+        ie:InsituConcreteElement,
+        qs:010507,
+        ie:byWork some qw:0105-3
+    
+    
+Class: qi:5-49
+
+    Annotations: 
+        rdfs:label "现浇混凝土 小型构件"@cn
+    
+    SubClassOf: 
+        qs:010507,
+        ie:byWork some qw:0105-3
+    
+    
+Class: qi:5-5
+
+    Annotations: 
+        rdfs:label "现浇混凝土 设备基础 10m3以内"@cn
+    
+    SubClassOf: 
+        qs:010501,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-50
+
+    Annotations: 
+        rdfs:label "现浇混凝土 补板缝"@cn
+    
+    SubClassOf: 
+        qs:010507,
+        ie:byWork some qw:0105-3
+    
+    
+Class: qi:5-51
+
+    Annotations: 
+        rdfs:label "现浇混凝土 接头灌缝 柱"@cn
+    
+    SubClassOf: 
+        qs:010507,
+        ie:byWork some qw:0105-3
+    
+    
+Class: qi:5-52
+
+    Annotations: 
+        rdfs:label "现浇混凝土 接头灌缝 梁"@cn
+    
+    SubClassOf: 
+        qs:010507,
+        ie:byWork some qw:0105-3
+    
+    
+Class: qi:5-53
+
+    Annotations: 
+        rdfs:label "现浇混凝土 接头灌缝 板"@cn
+    
+    SubClassOf: 
+        qs:010507,
+        ie:byWork some qw:0105-3
+    
+    
+Class: qi:5-54
+
+    Annotations: 
+        rdfs:label "现浇混凝土 接头灌缝 圆孔板"@cn
+    
+    SubClassOf: 
+        qs:010507,
+        ie:byWork some qw:0105-3
+    
+    
+Class: qi:5-55
+
+    Annotations: 
+        rdfs:label "现浇混凝土 接头灌缝 其他构件"@cn
+    
+    SubClassOf: 
+        qs:010507,
+        ie:byWork some qw:0105-3
+    
+    
+Class: qi:5-56
+
+    Annotations: 
+        rdfs:label "现浇混凝土 接头灌缝 杯形基础"@cn
+    
+    SubClassOf: 
+        qs:010507,
+        ie:byWork some qw:0105-3
+    
+    
+Class: qi:5-57
+
+    Annotations: 
+        rdfs:label "现浇混凝土 后浇带 基础底板"@cn
+    
+    SubClassOf: 
+        qs:010508,
+        ie:byWork some qw:0105-4
+    
+    
+Class: qi:5-58
+
+    Annotations: 
+        rdfs:label "现浇混凝土 后浇带 梁"@cn
+    
+    SubClassOf: 
+        qs:010508,
+        ie:byWork some qw:0105-4
+    
+    
+Class: qi:5-59
+
+    Annotations: 
+        rdfs:label "现浇混凝土 后浇带 楼板"@cn
+    
+    SubClassOf: 
+        qs:010508,
+        ie:byWork some qw:0105-4
+    
+    
+Class: qi:5-6
+
+    Annotations: 
+        rdfs:label "现浇混凝土 设备基础 10m3以外"@cn
+    
+    SubClassOf: 
+        qs:010501,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-60
+
+    Annotations: 
+        rdfs:label "现浇混凝土 后浇带 墙"@cn
+    
+    SubClassOf: 
+        qs:010508,
+        ie:byWork some qw:0105-4
+    
+    
+Class: qi:5-61
+
+    Annotations: 
+        rdfs:label "预制混凝土 矩形柱"@cn
+    
+    SubClassOf: 
+        qs:010509,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-62
+
+    Annotations: 
+        rdfs:label "预制混凝土 异形柱"@cn
+    
+    SubClassOf: 
+        qs:010509,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-63
+
+    Annotations: 
+        rdfs:label "预制混凝土 矩形梁"@cn
+    
+    SubClassOf: 
+        qs:010510,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-64
+
+    Annotations: 
+        rdfs:label "预制混凝土 异形梁 实腹式"@cn
+    
+    SubClassOf: 
+        qs:010510,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-65
+
+    Annotations: 
+        rdfs:label "预制混凝土 异形梁 格构式"@cn
+    
+    SubClassOf: 
+        qs:010510,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-66
+
+    Annotations: 
+        rdfs:label "预制混凝土 吊车梁 鱼腹式"@cn
+    
+    SubClassOf: 
+        qs:010510,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-67
+
+    Annotations: 
+        rdfs:label "预制混凝土 吊车梁 T形"@cn
+    
+    SubClassOf: 
+        qs:010510,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-68
+
+    Annotations: 
+        rdfs:label "预制混凝土 过梁"@cn
+    
+    SubClassOf: 
+        qs:010510,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-69
+
+    Annotations: 
+        rdfs:label "预制混凝土 拱形梁"@cn
+    
+    SubClassOf: 
+        qs:010510,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-7
+
+    Annotations: 
+        rdfs:label "现浇混凝土 矩形柱"@cn
+    
+    SubClassOf: 
+        qs:010502,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-70
+
+    Annotations: 
+        rdfs:label "预制混凝土 屋面梁 单坡"@cn
+    
+    SubClassOf: 
+        qs:010510,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-71
+
+    Annotations: 
+        rdfs:label "预制混凝土 屋面梁 双坡"@cn
+    
+    SubClassOf: 
+        qs:010510,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-72
+
+    Annotations: 
+        rdfs:label "预制混凝土 折线形屋架"@cn
+    
+    SubClassOf: 
+        qs:010511,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-73
+
+    Annotations: 
+        rdfs:label "预制混凝土 组合屋架"@cn
+    
+    SubClassOf: 
+        qs:010511,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-74
+
+    Annotations: 
+        rdfs:label "预制混凝土 薄腹屋架"@cn
+    
+    SubClassOf: 
+        qs:010511,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-75
+
+    Annotations: 
+        rdfs:label "预制混凝土 门式钢架屋架"@cn
+    
+    SubClassOf: 
+        qs:010511,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-76
+
+    Annotations: 
+        rdfs:label "预制混凝土 天窗架屋架"@cn
+    
+    SubClassOf: 
+        qs:010511,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-77
+
+    Annotations: 
+        rdfs:label "预制混凝土 平板"@cn
+    
+    SubClassOf: 
+        qs:010512,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-78
+
+    Annotations: 
+        rdfs:label "预制混凝土 遮阳板"@cn
+    
+    SubClassOf: 
+        qs:010512,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-79
+
+    Annotations: 
+        rdfs:label "预制混凝土 雨篷"@cn
+    
+    SubClassOf: 
+        qs:010512,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-8
+
+    Annotations: 
+        rdfs:label "现浇混凝土 构造柱"@cn
+    
+    SubClassOf: 
+        qs:010502,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-80
+
+    Annotations: 
+        rdfs:label "预制混凝土 挑檐"@cn
+    
+    SubClassOf: 
+        qs:010512,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-81
+
+    Annotations: 
+        rdfs:label "预制混凝土 天沟板"@cn
+    
+    SubClassOf: 
+        qs:010512,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-82
+
+    Annotations: 
+        rdfs:label "预制混凝土 栏板"@cn
+    
+    SubClassOf: 
+        qs:010512,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-83
+
+    Annotations: 
+        rdfs:label "预制混凝土 飘窗板"@cn
+    
+    SubClassOf: 
+        qs:010512,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-84
+
+    Annotations: 
+        rdfs:label "预制混凝土 SP(D)空心板"@cn
+    
+    SubClassOf: 
+        qs:010512,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-85
+
+    Annotations: 
+        rdfs:label "预制混凝土 预应力圆孔板 短向"@cn
+    
+    SubClassOf: 
+        qs:010512,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-86
+
+    Annotations: 
+        rdfs:label "预制混凝土 预应力圆孔板 长向"@cn
+    
+    SubClassOf: 
+        qs:010512,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-87
+
+    Annotations: 
+        rdfs:label "预制混凝土 预应力圆孔板 超长"@cn
+    
+    SubClassOf: 
+        qs:010512,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-88
+
+    Annotations: 
+        rdfs:label "预制混凝土 槽形板"@cn
+    
+    SubClassOf: 
+        qs:010512,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-89
+
+    Annotations: 
+        rdfs:label "预制混凝土 网架板"@cn
+    
+    SubClassOf: 
+        qs:010512,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-9
+
+    Annotations: 
+        rdfs:label "现浇混凝土 异形柱"@cn
+    
+    SubClassOf: 
+        qs:010502,
+        ie:byWork some qw:0105-1
+    
+    
+Class: qi:5-90
+
+    Annotations: 
+        rdfs:label "预制混凝土 折线板"@cn
+    
+    SubClassOf: 
+        qs:010512,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-91
+
+    Annotations: 
+        rdfs:label "预制混凝土 带肋板"@cn
+    
+    SubClassOf: 
+        qs:010512,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-92
+
+    Annotations: 
+        rdfs:label "预制混凝土 F形板"@cn
+    
+    SubClassOf: 
+        qs:010512,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-93
+
+    Annotations: 
+        rdfs:label "预制混凝土 双T型板"@cn
+    
+    SubClassOf: 
+        qs:010512,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-94
+
+    Annotations: 
+        rdfs:label "预制混凝土 单肋板"@cn
+    
+    SubClassOf: 
+        qs:010512,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-95
+
+    Annotations: 
+        rdfs:label "预制混凝土 大型楼板"@cn
+    
+    SubClassOf: 
+        qs:010512,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-96
+
+    Annotations: 
+        rdfs:label "预制混凝土 预应力大型屋面板"@cn
+    
+    SubClassOf: 
+        qs:010512,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-97
+
+    Annotations: 
+        rdfs:label "预制混凝土 拱形屋面板"@cn
+    
+    SubClassOf: 
+        qs:010512,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-98
+
+    Annotations: 
+        rdfs:label "预制混凝土 沟盖板、井盖板、井圈"@cn
+    
+    SubClassOf: 
+        qs:010512,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qi:5-99
+
+    Annotations: 
+        rdfs:label "预制混凝土 楼梯踏步"@cn
+    
+    SubClassOf: 
+        qs:010513,
+        ie:byWork some qw:0105-5
+    
+    
+Class: qs:0105
+
+    Annotations: 
+        rdfs:label "混凝土及钢筋混凝土工程"@cn
+    
+    SubClassOf: 
+        qt:10
+    
+    
+Class: qs:010501
+
+    Annotations: 
+        rdfs:label "现浇混凝土基础"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteFooting
+    
+    SubClassOf: 
+        qs:0105
+    
+    
+Class: qs:010502
+
+    Annotations: 
+        rdfs:label "现浇混凝土柱"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteColumn
+    
+    SubClassOf: 
+        qs:0105
+    
+    
+Class: qs:010503
+
+    Annotations: 
+        rdfs:label "现浇混凝土梁"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteBeam
+    
+    SubClassOf: 
+        qs:0105
+    
+    
+Class: qs:010504
+
+    Annotations: 
+        rdfs:label "现浇混凝土墙"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteWall
+    
+    SubClassOf: 
+        qs:0105
+    
+    
+Class: qs:010505
+
+    Annotations: 
+        rdfs:label "现浇混凝土板"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteSlab
+    
+    SubClassOf: 
+        qs:0105
+    
+    
+Class: qs:010506
+
+    Annotations: 
+        rdfs:label "现浇混凝土楼梯"@cn
+    
+    EquivalentTo: 
+        ie:InsituConcreteStair
+    
+    SubClassOf: 
+        qs:0105
+    
+    
+Class: qs:010507
+
+    Annotations: 
+        rdfs:label "现浇混凝土其他构件"@cn
+    
+    SubClassOf: 
+        ie:InsituConcreteElement,
+        qs:0105
+    
+    
+Class: qs:010508
+
+    Annotations: 
+        rdfs:label "现浇混凝土后浇带"@cn
+    
+    EquivalentTo: 
+        ie:PrecastConcreteBeam
+    
+    SubClassOf: 
+        qs:0105
+    
+    
+Class: qs:010509
+
+    Annotations: 
+        rdfs:label "预制混凝土柱"@cn
+    
+    EquivalentTo: 
+        ie:PrecastConcreteColumn
+    
+    SubClassOf: 
+        qs:0105
+    
+    
+Class: qs:010510
+
+    Annotations: 
+        rdfs:label "预制混凝土梁"@cn
+    
+    EquivalentTo: 
+        ie:PrecastConcreteBeam
+    
+    SubClassOf: 
+        qs:0105
+    
+    
+Class: qs:010511
+
+    Annotations: 
+        rdfs:label "预制混凝土屋架"@cn
+    
+    EquivalentTo: 
+        ie:PrecastConcreteRoof
+    
+    SubClassOf: 
+        qs:0105
+    
+    
+Class: qs:010512
+
+    Annotations: 
+        rdfs:label "预制混凝土板"@cn
+    
+    EquivalentTo: 
+        ie:PrecastConcreteSlab
+    
+    SubClassOf: 
+        qs:0105
+    
+    
+Class: qs:010513
+
+    Annotations: 
+        rdfs:label "预制混凝土楼梯"@cn
+    
+    EquivalentTo: 
+        ie:PrecastConcreteStair
+    
+    SubClassOf: 
+        qs:0105
+    
+    
+Class: qs:010514
+
+    Annotations: 
+        rdfs:label "其他预制构件"@cn
+    
+    SubClassOf: 
+        ie:PrecastConcreteElement,
+        qs:0105
+    
+    
+Class: qs:010515
+
+    Annotations: 
+        rdfs:label "钢筋工程"@cn
+    
+    SubClassOf: 
+        qs:0105
+    
+    
+Class: qs:010516
+
+    Annotations: 
+        rdfs:label "铁件"@cn
+    
+    SubClassOf: 
+        qs:0105
+    
+    
+Class: qs:010517
+
+    Annotations: 
+        rdfs:label "现浇混凝土垫层"@cn
+    
+    SubClassOf: 
+        qs:0105
+    
+    
+Class: qs:01051701
+
+    Annotations: 
+        rdfs:label "基础垫层"@cn
+    
+    SubClassOf: 
+        qs:010517
+    
+    
+Class: qs:01051702
+
+    Annotations: 
+        rdfs:label "楼地面垫层"@cn
+    
+    SubClassOf: 
+        qs:010517
+    
+    
+Class: qs:010518
+
+    Annotations: 
+        rdfs:label "现场搅拌混凝土调整费"@cn
+    
+    SubClassOf: 
+        qs:0105
+    
+    
+Class: qs:0112
+
+    Annotations: 
+        rdfs:label "措施项目"@cn
+    
+    SubClassOf: 
+        qt:10
+    
+    
+Class: qs:011201
+
+    Annotations: 
+        rdfs:label "脚手架工程"@cn
+    
+    SubClassOf: 
+        qs:0112
+    
+    
+Class: qs:01120101
+
+    Annotations: 
+        rdfs:label "综合脚手架"@cn
+    
+    SubClassOf: 
+        qs:011201
+    
+    
+Class: qs:01120102
+
+    Annotations: 
+        rdfs:label "室内装修脚手架"@cn
+    
+    SubClassOf: 
+        qs:011201
+    
+    
+Class: qs:01120103
+
+    Annotations: 
+        rdfs:label "其他脚手架"@cn
+    
+    SubClassOf: 
+        qs:011201
+    
+    
+Class: qs:011202
+
+    Annotations: 
+        rdfs:label "现浇混凝土模板及支架工程"@cn
+    
+    SubClassOf: 
+        qs:0112
+    
+    
+Class: qs:01120201
+
+    Annotations: 
+        rdfs:label "基础"@cn
+    
+    SubClassOf: 
+        qs:011202
+    
+    
+Class: qs:01120202
+
+    Annotations: 
+        rdfs:label "柱"@cn
+    
+    SubClassOf: 
+        qs:011202
+    
+    
+Class: qs:01120203
+
+    Annotations: 
+        rdfs:label "梁"@cn
+    
+    SubClassOf: 
+        qs:011202
+    
+    
+Class: qs:01120204
+
+    Annotations: 
+        rdfs:label "墙"@cn
+    
+    SubClassOf: 
+        qs:011202
+    
+    
+Class: qs:01120205
+
+    Annotations: 
+        rdfs:label "板"@cn
+    
+    SubClassOf: 
+        qs:011202
+    
+    
+Class: qs:01120206
+
+    Annotations: 
+        rdfs:label "其他"@cn
+    
+    SubClassOf: 
+        qs:011202
+    
+    
+Class: qs:011203
+
+    Annotations: 
+        rdfs:label "垂直运输"@cn
+    
+    SubClassOf: 
+        qs:0112
+    
+    
+Class: qs:01120301
+
+    Annotations: 
+        rdfs:label "垂直运输"@cn
+    
+    SubClassOf: 
+        qs:011203
+    
+    
+Class: qs:01120302
+
+    Annotations: 
+        rdfs:label "其他"@cn
+    
+    SubClassOf: 
+        qs:011203
+    
+    
+Class: qs:011204
+
+    Annotations: 
+        rdfs:label "超高施工增加"@cn
+    
+    SubClassOf: 
+        qs:0112
+    
+    
+Class: qs:011205
+
+    Annotations: 
+        rdfs:label "施工排水、降水工程"@cn
+    
+    SubClassOf: 
+        qs:0112
+    
+    
+Class: qs:01120501
+
+    Annotations: 
+        rdfs:label "成井"@cn
+    
+    SubClassOf: 
+        qs:011205
+    
+    
+Class: qs:0112050101
+
+    Annotations: 
+        rdfs:label "单项管井成井"@cn
+    
+    SubClassOf: 
+        qs:01120501
+    
+    
+Class: qs:0112050102
+
+    Annotations: 
+        rdfs:label "综合管井成井"@cn
+    
+    SubClassOf: 
+        qs:01120501
+    
+    
+Class: qs:0112050103
+
+    Annotations: 
+        rdfs:label "轻型井点成井"@cn
+    
+    SubClassOf: 
+        qs:01120501
+    
+    
+Class: qs:01120502
+
+    Annotations: 
+        rdfs:label "降水"@cn
+    
+    SubClassOf: 
+        qs:011205
+    
+    
+Class: qs:01120503
+
+    Annotations: 
+        rdfs:label "其他"@cn
+    
+    SubClassOf: 
+        qs:011205
+    
+    
+Class: qs:0112050301
+
+    Annotations: 
+        rdfs:label "止水帷幕桩"@cn
+    
+    SubClassOf: 
+        qs:01120503
+    
+    
+Class: qs:0112050302
+
+    Annotations: 
+        rdfs:label "止水帷幕桩二次引孔"@cn
+    
+    SubClassOf: 
+        qs:01120503
+    
+    
+Class: qs:0112050303
+
+    Annotations: 
+        rdfs:label "基坑明沟排水"@cn
+    
+    SubClassOf: 
+        qs:01120503
+    
+    
+Class: qs:011206
+
+    Annotations: 
+        rdfs:label "安全文明施工费"@cn
+    
+    SubClassOf: 
+        qs:0112
+    
+    
+Class: qt:10
+
+    Annotations: 
+        rdfs:label "建筑工程"@cn
+    
+    SubClassOf: 
+        quota:Quota-Beijing-2012-01
+    
+    
+Class: quota:Quota-Beijing-2012-01
+
+    Annotations: 
+        rdfs:label "北京市建设工程预算定额 2012 - 房屋建筑与装饰工程"@cn
+    
+    SubClassOf: 
+        cost:ProductSetForQuotaStandard
+    
+    
+Class: qw:0105
+
+    SubClassOf: 
+        cost:WorkForQuotaStandard
+    
+    
+Class: qw:0105-1
+
+    Annotations: 
+        rdfs:label "混凝土浇筑、振捣、养护等"@cn
+    
+    SubClassOf: 
+        qw:0105
+    
+    
+Class: qw:0105-10
+
+    Annotations: 
+        rdfs:label "埋设、焊接、固定等"@cn
+    
+    SubClassOf: 
+        qw:0105
+    
+    
+Class: qw:0105-11
+
+    Annotations: 
+        rdfs:label "套筒连接等"@cn
+    
+    SubClassOf: 
+        qw:0105
+    
+    
+Class: qw:0105-12
+
+    Annotations: 
+        rdfs:label "钻孔、清孔、注胶、植筋等"@cn
+    
+    SubClassOf: 
+        qw:0105
+    
+    
+Class: qw:0105-13
+
+    Annotations: 
+        rdfs:label "垫层铺设、抹平等"@cn
+    
+    SubClassOf: 
+        qw:0105
+    
+    
+Class: qw:0105-2
+
+    Annotations: 
+        rdfs:label "内芯管敷设等"@cn
+    
+    SubClassOf: 
+        qw:0105
+    
+    
+Class: qw:0105-3
+
+    Annotations: 
+        rdfs:label "清理基层、混凝土浇筑、振捣、养护等"@cn
+    
+    SubClassOf: 
+        qw:0105
+    
+    
+Class: qw:0105-4
+
+    Annotations: 
+        rdfs:label "清理、混凝土浇筑、振捣、养护等"@cn
+    
+    SubClassOf: 
+        qw:0105
+    
+    
+Class: qw:0105-5
+
+    Annotations: 
+        rdfs:label "构件翻身、就位、加固、安装、校正、垫实节点、焊接锚固、吊环切割等"@cn
+    
+    SubClassOf: 
+        qw:0105
+    
+    
+Class: qw:0105-6
+
+    Annotations: 
+        rdfs:label "钢筋(网、笼、铁马)、钢丝束、钢绞线制作、安装"@cn
+    
+    SubClassOf: 
+        qw:0105
+    
+    
+Class: qw:0105-7
+
+    Annotations: 
+        rdfs:label "钢丝束、钢绞线张拉"@cn
+    
+    SubClassOf: 
+        qw:0105
+    
+    
+Class: qw:0105-8
+
+    Annotations: 
+        rdfs:label "预埋管孔道铺设、锚具安装"@cn
+    
+    SubClassOf: 
+        qw:0105
+    
+    
+Class: qw:0105-9
+
+    Annotations: 
+        rdfs:label "砂浆拌合、孔道注浆等"@cn
+    
+    SubClassOf: 
+        qw:0105
+    
+    
+Class: qw:0112
+
+    SubClassOf: 
+        cost:WorkForQuotaStandard
+    
+    
+Class: qw:0112-1
+
+    Annotations: 
+        rdfs:label "场内、场外材料搬运等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-10
+
+    Annotations: 
+        rdfs:label "清理模板粘结物及模内杂物、刷隔离剂等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-11
+
+    Annotations: 
+        rdfs:label "建筑材料、成品、半成品、构配件的吊装及配合用工; 塔式起重机接高和机械安拆费; 吊装机械的进退场费以及机上人工费. 垂直运输机械的固定装置、基础制作、安装及拆除; 行走式垂直运输机械轨道的铺设、拆除、摊销等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-12
+
+    Annotations: 
+        rdfs:label "输送泵安装、调试; 管道安装、移位、清洗泵管及泵车等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-13
+
+    Annotations: 
+        rdfs:label "建筑物超高引起的人工工效降低以及由于人工工效降低引起的机械降效等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-14
+
+    Annotations: 
+        rdfs:label "高层施工用水加压水泵的安装、拆除及工作台班等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-15
+
+    Annotations: 
+        rdfs:label "通讯联络设备的使用及摊销等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-16
+
+    Annotations: 
+        rdfs:label "单项成井: 机械设备进出场、准备钻孔机械、埋设护筒、钻机就位; 泥浆制作、固壁; 成孔、出渣、清孔等; 对接上下井管(滤管)、下滤料、洗井; 井口保护、沉淀池砌筑; 降水、配电、排水设施安拆, 连接试抽等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-17
+
+    Annotations: 
+        rdfs:label "成井土方场内及场外运输(综合运距15km以内)等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-18
+
+    Annotations: 
+        rdfs:label "疏干井维护降水、疏干井处理、坑外降水井回填处理等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-19
+
+    Annotations: 
+        rdfs:label "成井(含疏干井): 机械设备进出场、准备钻孔机械、埋设护筒、钻机就位; 泥浆制作、固壁; 成孔、出渣、清孔等; 对接上下井管(滤管)、下滤料、洗井; 井口保护、沉淀池砌筑; 降水、配电、排水设施安拆, 连接试抽等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-2
+
+    Annotations: 
+        rdfs:label "搭、拆脚手架、斜道、上料平台等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-20
+
+    Annotations: 
+        rdfs:label "降水井(含砂井): 降水井成孔、护壁、安装井管、填滤料、洗井、井口封井、沉淀池砌筑、安装降排水设施、机械设备进出场、坑外降水井回填处理等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-21
+
+    Annotations: 
+        rdfs:label "成井土方场内及场外运输(运距15km以内)等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-22
+
+    Annotations: 
+        rdfs:label "拔除井管、拆除降排水设施等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-23
+
+    Annotations: 
+        rdfs:label "包括抽水、值班、井管堵漏、降水设备维护维修等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-24
+
+    Annotations: 
+        rdfs:label "机械就位、钻孔、制浆、提钻、高压旋喷水泥浆、机械进出场等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-25
+
+    Annotations: 
+        rdfs:label "疏干井: 降水井成孔、护壁、安装井管、填滤料、洗井、井口保护、沉淀池砌筑、安拆降水设施、安拆配电设施、安拆排水设施、机械设备进出场、疏干井维护降水、疏干井处理等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-26
+
+    Annotations: 
+        rdfs:label "成桩土方场内及场外运输(运距15km以内)等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-27
+
+    Annotations: 
+        rdfs:label "机械就位、钻孔、泥浆护壁、提钻、机械进出场等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-28
+
+    Annotations: 
+        rdfs:label "挖填排水沟、排水沟填滤料、挖填集水井、安拆抽水设施、排水作业以及地面排水的临时设施等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-3
+
+    Annotations: 
+        rdfs:label "安全网的铺设等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-4
+
+    Annotations: 
+        rdfs:label "选择附墙点与主体连接等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-5
+
+    Annotations: 
+        rdfs:label "测试电动装置、安全锁等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-6
+
+    Annotations: 
+        rdfs:label "拆除脚手架后材料的堆放等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-7
+
+    Annotations: 
+        rdfs:label "吊篮的安装、测试电动装置、安全锁、平衡控制器等及拆卸等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-8
+
+    Annotations: 
+        rdfs:label "模板制作等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    
+Class: qw:0112-9
+
+    Annotations: 
+        rdfs:label "模板安装、拆除、整理堆放及场内外运输等"@cn
+    
+    SubClassOf: 
+        qw:0112
+    
+    

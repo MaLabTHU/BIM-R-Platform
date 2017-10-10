@@ -1,0 +1,137 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../bower_components/iron-resizable-behavior/iron-resizable-behavior.html">
+
+<script src="jointjs/jquery.js"></script>
+<script src="jointjs/lodash.js"></script>
+<script src="jointjs/backbone.js"></script>
+<script src="dagre/dagre.js"></script>
+<script src="graphlib/graphlib.js"></script>
+<script src="jointjs/joint.js"></script>
+<link rel="stylesheet" type="text/css" href="jointjs/joint.css">
+
+<script>
+    'use strict';
+    Polymer.JointJSBehaviorImpl = {
+        properties: {
+            scaleFactor: {
+                type: Number,
+                value: 500,
+            },
+        },
+        listeners: {
+            'iron-resize': '_onIronResize',
+            'mousemove': 'onMouseMove',
+            'mouseup': 'onMouseUp',
+            'wheel': 'onMouseWheel',
+        },
+        _onIronResize: function () {
+            if (this.paper && this.offsetHeight) {
+                clearInterval(this._resizeInterval);
+                this.paper.setDimensions(this.offsetWidth, this.offsetHeight);
+                if (!this._initialized && this.init) {
+                    this.init();
+                }
+                this._initialized = true;
+            }
+        },
+        _initialized: false,
+
+        onMouseMove: function (event) {
+            if (this.panning) {
+                this.paper.setOrigin(this.ox + event.movementX, this.oy + event.movementY);
+            }
+        },
+        onMouseUp: function () {
+            this.panning = false;
+        },
+        onMouseWheel: function (event) {
+            this.zoom((1 - event.deltaY / this.scaleFactor));
+        },
+
+        attached: function () {
+            this.style.overflow = 'hidden';
+            this.graph = new joint.dia.Graph;
+            this.paper = new joint.dia.Paper({
+                el: this,
+                model: this.graph,
+                width: this.offsetWidth,
+                height: this.offsetHeight,
+                interactive: this.interactive,
+            });
+            if (!this.offsetHeight) {
+                this._resizeInterval = setInterval(_=> {
+                    this._onIronResize();
+                }, 500);
+            }
+            this.paper.on('scale', (scaleRate)=> {
+                this.scaleRate = scaleRate;
+                this.setStyleVariable('--scale', scaleRate);
+                $('.resizable').css('zoom', scaleRate);
+            });
+            this.paper.on('translate', (ox, oy)=> {
+                this.ox = ox;
+                this.oy = oy;
+                this.setStyleVariable('--translate-x', 'calc(' + ox + 'px / var(--scale, 1))');
+                this.setStyleVariable('--translate-y', 'calc(' + oy + 'px / var(--scale, 1))');
+            });
+            this.paper.on('blank:pointerdown', (event, x, y)=> {
+                this.panning = true;
+            });
+            this.paper.on('cell:pointerdblclick', (cellView, event, x, y)=> {
+                this.onCellDblClick(cellView, event, x, y);
+            });
+        },
+        scaleRate: 1,
+        ox: 0,
+        oy: 0,
+        panning: false,
+        init: null,
+        _resizeInterval: null,
+
+        setStyleVariable: function (key, value) {
+            document.documentElement.style.setProperty(key, value);
+        },
+
+        interactive: function (cellView) {
+            if (cellView.model instanceof joint.dia.Link) {
+                // Disable the default vertex add functionality on pointerdown.
+                return {
+                    vertexAdd: false,
+                };
+            }
+            return true;
+        },
+
+        layout: function (graphOrCell, options) {
+            joint.layout.DirectedGraph.layout(graphOrCell || this.graph, options || {rankDir: 'TB', padding: 100});
+            this.zoomAll(options);
+        },
+
+        zoomAll: function (options) {
+            this.paper.scaleContentToFit(options || {padding: 100});
+            this.center();
+        },
+
+        center: function () {
+            let bbox = this.paper.getContentBBox();
+            this.paper.setOrigin((this.offsetWidth - bbox.width ) / 2, (this.offsetHeight - bbox.height) / 2);
+        },
+
+        zoom: function (rate) {
+            let scaleRate = this.scaleRate * rate;
+            this.paper.scale(scaleRate, scaleRate);
+            let factor = (1 - rate) / 2;
+            this.paper.setOrigin(this.ox * rate + this.offsetWidth * factor, this.oy * rate + this.offsetHeight * factor);
+        },
+
+        onCellDblClick: function (cellView, event, x, y) {
+            console.log(cellView, event, x, y);
+        },
+    };
+
+    Polymer.JointJSBehavior = [
+        Polymer.IronResizableBehavior,
+        Polymer.JointJSBehaviorImpl,
+    ];
+</script>

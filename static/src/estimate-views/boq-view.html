@@ -1,0 +1,185 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../src/app-framework/app-view-behavior.html">
+
+<link rel="import" href="../../src/app-framework/app-shared-styles.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../src/app-framework/app-view-behavior.html">
+
+<link rel="import" href="../../src/app-framework/app-shared-styles.html">
+
+<link rel="import" href="../../bower_components/vaadin-split-layout/vaadin-split-layout.modified.html">
+<link rel="import" href="../../bower_components/paper-material/paper-material.html">
+<link rel="import" href="../../src/paper-collapses/paper-collapses.html">
+
+<link rel="import" href="../../src/estimate-tables/table-tree.html">
+<link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
+
+<!--<link rel="import" href="../../src/estimate-tables/">-->
+<link rel="import" href="../../src/estimate-tables/projects-summary-table.html">
+<link rel="import" href="../../src/estimate-tables/project-summary-table.html">
+<link rel="import" href="../../src/estimate-tables/subproject-summary-table.html">
+<link rel="import" href="../../src/estimate-tables/subproject-summary-table.html">
+<link rel="import" href="../../src/estimate-tables/direct-boq-table.html">
+<link rel="import" href="../../src/estimate-tables/price-analysis-table-deprecated.html">
+<link rel="import" href="../../src/estimate-tables/measurement-boq-table.html">
+<link rel="import" href="../../src/estimate-tables/indirect-boq-table.html">
+<link rel="import" href="../../src/estimate-tables/other-boq-table.html">
+<link rel="import" href="../../src/estimate-tables/detail-provision-table.html">
+<link rel="import" href="../../src/estimate-tables/other-provision-table.html">
+<link rel="import" href="../../src/estimate-tables/specialty-provision-table.html">
+<link rel="import" href="../../src/estimate-tables/resource-boq-table.html">
+<link rel="import" href="../../src/estimate-tables/contract-service-table.html">
+<link rel="import" href="../../src/estimate-tables/fee-boq-table.html">
+
+<link rel="import" href="../../src/paper-fabs/paper-fabs.html">
+<link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
+
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="boq-view">
+    <template>
+        <style include="iron-flex iron-flex-alignment iron-positioning"></style>
+        <style include="app-shared-styles"></style>
+        <style>
+            :host {
+                display: block;
+                --basic-color: #e6e6e6;
+                @apply(--layout-vertical);
+            }
+
+            #left {
+                display: none;
+                background: white;
+            }
+
+            @media (min-width: 600px) {
+                #left {
+                    display: inherit;
+                    width: 20%;
+                }
+
+                #right {
+                    width: 80%;
+                }
+            }
+
+            /*#top {*/
+            /*height: 80%;*/
+            /*}*/
+
+            /*#bottom {*/
+            /*height: 20%;*/
+            /*}*/
+
+            owl-viewer {
+                background: var(--basic-color);
+            }
+
+            owl-viewer ::content .label rect {
+                fill: var(--basic-color);
+            }
+        </style>
+        <vaadin-split-layout class="flex" invisible>
+            <paper-material id="left" class="layout vertical" elevation="1">
+                <paper-collapses id="collapses" class="flex">
+                    <table-tree id="tree" label="清单表格"></table-tree>
+                </paper-collapses>
+            </paper-material>
+            <div id="right" class="layout vertical">
+                <iron-pages id="pages" class="flex layout vertical" selected="{{selected}}" attr-for-selected="id">
+                    <projects-summary-table id="projectsSummaryTable" class="flex"
+                                            api="[[api]]"></projects-summary-table>
+                    <project-summary-table id="projectSummaryTable" class="flex" api="[[api]]"></project-summary-table>
+                    <subproject-summary-table id="subprojectSummaryTable" class="flex"
+                                              api="[[api]]"></subproject-summary-table>
+                    <direct-boq-table id="directBoqTable" class="flex" api="[[api]]"></direct-boq-table>
+                    <price-analysis-table id="priceAnalysisTable" class="flex" api="[[api]]"></price-analysis-table>
+                    <measurement-boq-table id="measurementBoqTable" class="flex" api="[[api]]"></measurement-boq-table>
+                    <indirect-boq-table id="indirectBoqTable" class="flex" api="[[api]]"></indirect-boq-table>
+                    <other-boq-table id="otherBoqTable" class="flex" api="[[api]]"></other-boq-table>
+                    <detail-provision-table id="detailProvisionTable" class="flex"
+                                            api="[[api]]"></detail-provision-table>
+                    <specialty-provision-table id="specialtyProvisionTable" class="flex"
+                                               api="[[api]]"></specialty-provision-table>
+                    <resource-boq-table id="resourceBoqTable" class="flex" api="[[api]]"></resource-boq-table>
+                    <contract-service-table id="contractServiceTable" class="flex"
+                                            api="[[api]]"></contract-service-table>
+                    <fee-boq-table id="feeBoqTable" class="flex" api="[[api]]"></fee-boq-table>
+                </iron-pages>
+                <paper-fabs>
+                    <paper-fab icon="refresh" on-tap="onRefreshTap" mini></paper-fab>
+                    <paper-fab icon="save"></paper-fab>
+                </paper-fabs>
+            </div>
+        </vaadin-split-layout>
+        <owl-class-dialog id="classDialog"></owl-class-dialog>
+    </template>
+    <script>
+        Polymer({
+            is: 'boq-view',
+            properties: {
+                api: String,
+            },
+
+            attached: function () {
+                this.selected = "directBoqTable";
+                let pages = this.$.pages;
+                this.$.tree.onItemContentTap = function (index, item) {
+                    if (item.data) {
+                        pages.selected = item.data;
+                    }
+                };
+                this.$.tree.setNodes([
+                    {
+                        name: '汇总表',
+                        children: [
+                            {name: '工程项目招标控制价（投标报价）汇总表', data: 'projectsSummaryTable'},
+                            {name: '单项工程招标控制价（投标报价）汇总表', data: 'projectSummaryTable'},
+                            {name: '单位工程招标控制价（投标报价）汇总表', data: 'subprojectSummaryTable'},
+                        ],
+                    },
+                    {
+                        name: '分部分项工程清单表',
+                        children: [
+                            {name: '分部分项工程量清单与计价表', data: 'directBoqTable'},
+                            {name: '工程量清单综合单价分析表', data: 'priceAnalysisTable'},
+                        ],
+                    },
+                    {
+                        name: '措施项目清单表',
+                        children: [
+                            {name: '措施项目清单与计价表（一）', data: 'measurementBoqTable'},
+                            {name: '措施项目清单与计价表（二）', data: 'indirectBoqTable'},
+                        ],
+                    },
+                    {
+                        name: '其他项目清单表',
+                        children: [
+                            {name: '其他项目清单与计价汇总表', data: 'otherBoqTable'},
+                            {name: '暂列金额明细表', data: 'detailProvisionTable'},
+                            {name: '材料（工程设备）暂估价表', data: 'otherProvisionTable'},
+                            {name: '专业工程暂估价表', data: 'specialtyProvisionTable'},
+                            {name: '计日工表', data: 'resourceBoqTable'},
+                            {name: '总承包服务费计价表', data: 'contractServiceTable'}
+                        ],
+                    },
+                    {name: '规费、税金项目清单与计价表', data: 'feeBoqTable'},
+                ]);
+            },
+
+            load: function (project) {
+                this.$.pages.selectedItem.load(project);
+            },
+
+            onRefreshTap: function () {
+                this.$.pages.selectedItem.load();
+            },
+
+            onSaveTap: function () {
+
+            },
+        });
+    </script>
+</dom-module>

@@ -1,0 +1,248 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../src/app-framework/app-shared-styles.html">
+
+<link rel="import" href="../../bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="../../bower_components/paper-dialog-scrollable/paper-dialog-scrollable.html">
+<link rel="import" href="../../src/responsive-form-elements/responsive-dropdown-menu.html">
+<link rel="import" href="../../src/responsive-form-elements/responsive-input.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/vaadin-combo-box/vaadin-combo-box.html">
+
+<dom-module id="owl-class-dialog">
+    <template>
+        <style include="iron-flex iron-flex-alignment iron-positioning"></style>
+        <style include="app-shared-styles"></style>
+        <style>
+            :host {
+                display: block;
+                --responsive-form-label-width: 80px;
+            }
+
+            /*.title {*/
+            /*padding-left: 16px;*/
+            /*}*/
+
+            .header {
+                margin: 0 -12px;
+                padding: 4px 12px;
+                background: var(--paper-indigo-500);
+                color: white;
+                font-size: 16px;
+            }
+
+            .content {
+                margin: 1em;
+            }
+
+            .parents {
+                text-align: center;
+            }
+
+            .parents span {
+                display: inline-block;
+                margin: 4px;
+                padding: 8px;
+                border-radius: 32px;
+                background: var(--paper-indigo-100);
+            }
+
+            .parents paper-icon-button {
+                width: 16px;
+                height: 16px;
+                padding: 0;
+            }
+
+            #parents-input {
+                display: inline-block;
+                position: relative;
+                top: 4px;
+            }
+
+            .definitions {
+                margin: 0.5em 0;
+            }
+
+            @media (min-width: 600px) {
+                section {
+                    min-width: 480px;
+                }
+            }
+
+            .more {
+                margin: 1em;
+                margin-top: -0.5em;
+            }
+
+            ::content label {
+                font-size: 16px;
+            }
+        </style>
+        <paper-dialog id="dialog" modal>
+            <h2 class="title">
+                <span hidden="[[!isNew]]">添加概念</span>
+                <span hidden="[[isNew]]">编辑概念</span>
+            </h2>
+            <paper-dialog-scrollable>
+                <section>
+                    <div class="header">基本信息</div>
+                    <div class="content">
+                        <responsive-input label="概念名称" value="[[getResLabel(owlClass)]]"></responsive-input>
+                    </div>
+                </section>
+                <section>
+                    <div class="header">父级概念</div>
+                    <div class="content parents">
+                        <template is="dom-repeat" items="[[getParents(owlClass)]]">
+                            <span>[[item]]<paper-icon-button icon="close"></paper-icon-button></span>
+                        </template>
+                    </div>
+                    <paper-button raised class="more">添加父级概念</paper-button>
+                    <vaadin-combo-box id="parents-input" no-label-float="true" items="[[owlClasses]]"></vaadin-combo-box>
+                </section>
+                <section>
+                    <div class="header">概念定义</div>
+                    <div class="content">
+                        <template is="dom-repeat" items="[[owlClass.definitions]]">
+                            <div class="layout horizontal definitions">
+                                <div class="flex">
+                                    <responsive-dropdown-menu label="属性名称" origin="true"
+                                                              items="[[getOwlProperties(owlProperties)]]"
+                                                              value="{{item.propertyUri}}"></responsive-dropdown-menu>
+                                    <responsive-input label="属性取值" origin="true"
+                                                      value="{{item.valueSet}}"></responsive-input>
+                                </div>
+                                <div class="action layout vertical center-justified">
+                                    <paper-icon-button icon="close"></paper-icon-button>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <paper-button raised class="more">添加概念定义</paper-button>
+                </section>
+                </div>
+            </paper-dialog-scrollable>
+            <div class="buttons">
+                <paper-button dialog-dismiss>取消</paper-button>
+                <paper-button dialog-confirm autofocus>保存</paper-button>
+            </div>
+        </paper-dialog>
+    </template>
+    <script>
+        Polymer({
+            is: 'owl-class-dialog',
+            properties: {
+                isNew: Boolean,
+                owlClass: Object,
+                owlClasses: Array,
+                owlProperties: Array,
+            },
+
+            attached: function () {
+                this.owlClass = {
+                    resUri: 'owl-class-1',
+                    type: 'owl.Class',
+                    labels: [
+                        {
+                            resUri: 'owl-class-1',
+                            lang: 'zh-cn',
+                            label: '现浇混凝土矩形梁',
+                        },
+                    ],
+                    definitions: [
+                        {
+                            classUri: 'owl-class-1',
+                            propertyUri: 'owl-property-1',
+                            valueSet: '梁',
+                        },
+                        {
+                            classUri: 'owl-class-1',
+                            propertyUri: 'owl-property-2',
+                            valueSet: '矩形',
+                        },
+                        {
+                            classUri: 'owl-class-1',
+                            propertyUri: 'owl-property-3',
+                            valueSet: '混凝土',
+                        },
+                        {
+                            classUri: 'owl-class-1',
+                            propertyUri: 'owl-property-4',
+                            valueSet: '现场浇筑',
+                        },
+                    ],
+                };
+                this.owlClasses = ['建筑产品', '梁', '混凝土梁', '矩形梁', '混凝土矩形梁', '现浇混凝土梁'];
+                this.owlProperties = [
+                    {
+                        resUri: 'owl-propety-1',
+                        type: 'owl.Property',
+                        labels: [
+                            {
+                                resUri: 'owl-property-1',
+                                lang: 'zh-cn',
+                                label: '产品类型',
+                            },
+                        ],
+                    },
+                    {
+                        resUri: 'owl-propety-2',
+                        type: 'owl.Property',
+                        labels: [
+                            {
+                                resUri: 'owl-property-2',
+                                lang: 'zh-cn',
+                                label: '截面形状',
+                            },
+                        ],
+                    },
+                    {
+                        resUri: 'owl-propety-3',
+                        type: 'owl.Property',
+                        labels: [
+                            {
+                                resUri: 'owl-property-3',
+                                lang: 'zh-cn',
+                                label: '材料',
+                            },
+                        ],
+                    },
+                    {
+                        resUri: 'owl-propety-4',
+                        type: 'owl.Property',
+                        labels: [
+                            {
+                                resUri: 'owl-property-4',
+                                lang: 'zh-cn',
+                                label: '浇筑方法',
+                            },
+                        ],
+                    },
+                ];
+            },
+
+            open: function (owlClass) {
+                this.isNew = !owlClass;
+                this.owlClass = owlClass || this.owlClass;
+                this.$.dialog.open();
+            },
+
+            getResUri: function (resource) {
+                return resource.labels[0].resUri;
+            },
+            getResLabel: function (resource) {
+                return resource.labels[0].label;
+            },
+
+            getParents: function (owlClass) {
+                return ['建筑产品', '梁', '混凝土梁', '矩形梁', '混凝土矩形梁', '现浇混凝土梁']; // todo
+            },
+            getOwlProperties: function (owlProperties) {
+                return owlProperties.map((owlProperty)=> {
+                    return {value: this.getResUri(owlProperty), label: this.getResLabel(owlProperty)};
+                })
+            },
+        });
+    </script>
+</dom-module>

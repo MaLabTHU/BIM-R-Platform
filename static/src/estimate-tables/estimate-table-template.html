@@ -1,0 +1,33 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../src/app-framework/app-shared-styles.html">
+
+<link rel="import" href="../../src/paper-table/paper-table.html">
+
+<dom-module id="">
+    <template>
+        <style include="iron-flex iron-flex-alignment iron-positioning"></style>
+        <style include="app-shared-styles"></style>
+        <style>
+            :host {
+                display: block;
+                @apply(--layout-vertical);
+            }
+        </style>
+        <paper-table class="flex" title="" data-rows="{{dataRows}}">
+            <hot-column header="" value=""></hot-column>
+        </paper-table>
+    </template>
+    <script>
+        Polymer({
+            is: '',
+            properties: {
+                dataRows: Array,
+            },
+
+            load: function(){
+                // todo
+            },
+        });
+    </script>
+</dom-module>

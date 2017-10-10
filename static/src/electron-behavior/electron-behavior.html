@@ -1,0 +1,29 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<script>
+    'use strict';
+    Polymer.ElectronBehavior = {
+        properties: {
+            electron: {
+                type: Boolean,
+                readOnly: true,
+                value: window != undefined && window.process != undefined,
+            },
+        },
+
+        attached: function () {
+            if (this.electron) {
+                const { dialog } = require('electron').remote;
+                this._dialog = dialog;
+            }
+        },
+
+        showOpenDialog: function (options, callback = null) {
+            this._dialog.showOpenDialog(options, (result) => {
+                if (callback) {
+                    callback.call(this, result);
+                }
+            });
+        },
+    };
+</script>

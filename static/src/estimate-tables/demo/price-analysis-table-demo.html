@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../src/app-framework/app.css">
+    <link rel="import" href="../price-analysis-table-deprecated.html">
+</head>
+
+<body>
+<price-analysis-table id="app" api="http://127.0.0.1:4999/"></price-analysis-table>
+<script>
+    window.addEventListener('WebComponentsReady', function () {
+        let app = document.getElementById('app');
+        app.load({id: 1});
+    });
+</script>
+</body>
+
+</html>

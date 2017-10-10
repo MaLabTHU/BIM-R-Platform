@@ -1,0 +1,27 @@
+.label-container {
+    position: absolute;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label-content {
+    white-space: nowrap;
+    text-align: center;
+}
+
+.joint-link.joint-theme-default .connection-wrap:hover {
+    opacity: 0;
+}
+
+[data-type="owl.Transition"] .label text {
+    font-size: 12px;
+}
+
+[data-type="owl.Property"] .link-tools,
+[data-type="owl.Property"] .marker-arrowhead,
+[data-type="owl.Transition"] .link-tools,
+[data-type="owl.Transition"] .marker-arrowhead {
+    display: none;
+}

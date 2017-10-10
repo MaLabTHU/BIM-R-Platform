@@ -1,0 +1,191 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../bower_components/iron-resizable-behavior/iron-resizable-behavior.html">
+
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+
+<script src="xbim/xbim-viewer.debug.bundle.modified.js"></script>
+
+<dom-module id="ifc-viewer">
+    <template>
+        <style include="iron-flex iron-flex-alignment iron-positioning"></style>
+        <style>
+            :host {
+                display: block;
+                @apply(--layout-vertical);
+            }
+        </style>
+        <canvas id="canvas" class="flex"></canvas>
+        <iron-ajax
+                id="ajaxPostModel"
+                url$="[[api]]v1/ifcs"
+                method="POST"
+                content-type="application/json"
+                handle-as="json"
+                on-response="_onPostModelResponse"
+                on-error="_onPostModelError"></iron-ajax>
+        <iron-ajax id="ajaxGetEntities" handle-as="json"></iron-ajax>
+    </template>
+
+    <script>
+        Polymer({
+            is: 'ifc-viewer',
+            properties: {
+                api: String,
+            },
+
+            behaviors: [
+                Polymer.IronResizableBehavior,
+            ],
+            listeners: {
+                'iron-resize': '_onIronResize',
+            },
+            _onIronResize: function () {
+                this.$.canvas.style.height = '' + this.offsetHeight + 'px';
+                if (this.offsetHeight) {
+                    if (!this.viewer) {
+                        this._init();
+                    }
+                    clearTimeout(this._resizeTimeout);
+                    this._resizeTimeout = setTimeout(() => {
+                        this.viewer._userAction = true;
+                    }, 500);
+                }
+            },
+            _resizeTimeout: null,
+
+            _init: function () {
+                this._initViewer();
+                if (this._model) {
+                    this._lazyLoad();
+                }
+            },
+            _initViewer: function () {
+                this.viewer = new xViewer(this.$.canvas);
+                this.viewer.highlightingColour = [0, 255, 0, 255];
+                let eventHandlers = {
+                    loaded: "onModelLoaded",
+                    error: "onModelError",
+                    pick: "_onModelPick",
+                    dblclick: "onModelDblClick",
+                };
+                for (let eventName in eventHandlers) {
+                    this.viewer.on(eventName, (args) => {
+                        let func = this[eventHandlers[eventName]];
+                        func ? func.call(this, args) : this._onUnhandledEvent(eventName, args);
+                    });
+                }
+            },
+            viewer: null,
+
+            load: function (path) {
+                let ajax = this.$.ajaxPostModel;
+                ajax.body = {
+                    path: path
+                };
+                ajax.generateRequest();
+            },
+            _onPostModelResponse: function (response) {
+                this._load(response.detail.response);
+            },
+            _onPostModelError: function (error) {
+                switch (error.detail.request.status) {
+                    case 409:
+                        this._load(error.detail.request.xhr.response);
+                        break;
+                    default:
+                        this._onError(error);
+                        break;
+                }
+            },
+            _load: function (model) {
+                if (this._model) {
+                    this._initViewer();
+                }
+                this._model = model;
+                if (this.viewer) {
+                    this._lazyLoad();
+                }
+            },
+            _lazyLoad: function () {
+                this.viewer.load(this._model.wexbimPath);
+                this.viewer.start();
+            },
+            _model: null,
+
+            loadStructure: function (onResponse, onError) {
+                let ajax = this.$.ajaxGetEntities;
+                ajax.url = this.api + 'v1/ifcs/' + this._model.id + "/structure";
+                ajax.generateRequest().completes.then(onResponse || this._onResponse, onError || this._onError);
+            },
+
+            _onResponse: function (request) {
+                console.info(request.status, request.xhr.response);
+            },
+            _onError: function (error) {
+                console.error(error.detail.request.status, error.detail.request.xhr.response);
+            },
+
+            _onUnhandledEvent: function (eventName, args) {
+                console.info(eventName, args);
+            },
+            _onModelPick: function (args) {
+                clearTimeout(this._pickTimeout);
+                this._oldPickId = args.id;
+                if (this._singleClick || args.id != this._oldPickId) {
+                    this._singleClick = false;
+                    this._pickTimeout = setTimeout(() => {
+                        this._singleClick = true;
+                        let func = this["onModelPick"];
+                        func ? func.call(this, args) : this._onUnhandledEvent("pick", args);
+                    }, this.dblClickTimeout);
+                } else {
+                    this._singleClick = true;
+                }
+            },
+            dblClickTimeout: 500,
+            _pickTimeout: null,
+            _singleClick: true,
+            _oldPickId: null,
+
+            highlightProducts: function (productIds, zoomTo = false, xRay = false) {
+                if (productIds) {
+                    this.viewer.setState(xState.HIGHLIGHTED, productIds);
+                    this._highlightedProductIds = this._highlightedProductIds.concat(productIds);
+                } else {
+                    this.clearHighlightProducts();
+                }
+                if (zoomTo) {
+                    this.viewer.zoomTo(productIds && productIds.length == 1 ? productIds[0] : undefined);
+                } else {
+                    this.viewer.setCameraTarget(productIds && productIds.length == 1 ? productIds[0] : undefined);
+                }
+                this.viewer.renderingMode = xRay && productIds && (productIds.length > 1 || this.viewer.getProductType(productIds[0])) ? 'x-ray' : 'normal';
+            },
+            clearHighlightProducts: function () {
+                this.viewer.setState(xState.UNDEFINED, this._highlightedProductIds);
+                this._highlightedProductIds = [];
+            },
+            _highlightedProductIds: [],
+            toggleHiddenProducts: function (productIds, hidden = true) {
+                this.clearHighlightProducts();
+                this.viewer.setState(hidden ? xState.HIDDEN : xState.UNDEFINED, productIds);
+            },
+
+            onModelPick: function (args) {
+                this.clearHighlightProducts();
+                this.highlightProducts(args.id ? [args.id] : undefined);
+            },
+            onModelDblClick: function (args) {
+                this.clearHighlightProducts();
+                args.id ?
+                        this.highlightProducts(args.id, false, true) :
+                        this.highlightProducts(null, true, false);
+            },
+        });
+    </script>
+
+</dom-module>

@@ -1,0 +1,58 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="responsive-form-container">
+    <template>
+        <style include="iron-flex iron-flex-alignment"></style>
+        <style>
+            :host {
+                display: block;
+                @apply(--layout-horizontal);
+            }
+
+            #label {
+                max-width: var(--responsive-form-label-width, 280px);
+                padding-bottom: 11px;
+                padding-right: 11px;
+            }
+
+            label {
+                text-align: right;
+                white-space: nowrap;
+            }
+
+            span {
+                padding-right: 4px;
+            }
+
+            span.required {
+                color: red;
+            }
+        </style>
+        <div id="label" class="flex layout horizontal end" hidden="[[origin]]">
+            <label class="flex"><span class="required" hidden="[[!required]]">*</span><span>[[label]]</span><span>:</span></label>
+        </div>
+        <div id="form" class="flex">
+            <content></content>
+        </div>
+    </template>
+    <script>
+        Polymer({
+            is: 'responsive-form-container',
+            properties: {
+                label: String,
+                origin: Boolean,
+                required: {
+                    type: Boolean,
+                    value: false,
+                },
+            },
+
+            behaviors: [
+                Polymer.IronResizableBehavior,
+            ],
+        });
+    </script>
+</dom-module>

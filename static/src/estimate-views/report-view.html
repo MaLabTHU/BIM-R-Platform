@@ -1,0 +1,126 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../src/app-framework/app-view-behavior.html">
+
+<link rel="import" href="../../src/app-framework/app-shared-styles.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../src/app-framework/app-view-behavior.html">
+
+<link rel="import" href="../../src/app-framework/app-shared-styles.html">
+
+<link rel="import" href="../../bower_components/vaadin-split-layout/vaadin-split-layout.modified.html">
+<link rel="import" href="../../src/paper-collapses/paper-collapses.html">
+<link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../../src/paper-fabs/paper-fabs.html">
+<link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
+
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="report-view">
+    <template>
+        <style include="iron-flex iron-flex-alignment iron-positioning"></style>
+        <style include="app-shared-styles"></style>
+        <style>
+            :host {
+                display: block;
+                --basic-color: #e6e6e6;
+                @apply(--layout-vertical);
+            }
+
+            #left {
+                display: none;
+                background: white;
+            }
+
+            @media (min-width: 600px) {
+                #left {
+                    display: inherit;
+                    width: 20%;
+                }
+
+                #right {
+                    width: 80%;
+                }
+            }
+
+            /*#top {*/
+            /*height: 80%;*/
+            /*}*/
+
+            /*#bottom {*/
+            /*height: 20%;*/
+            /*}*/
+
+            owl-viewer {
+                background: var(--basic-color);
+            }
+
+            owl-viewer ::content .label rect {
+                fill: var(--basic-color);
+            }
+        </style>
+        <vaadin-split-layout class="flex" invisible>
+            <div id="left" class="layout vertical">
+                <paper-collapses id="collapses" class="flex" selected="{{selected}}">
+                    <table-tree id="boqTree" label="清单表格"></table-tree>
+                    <!--<table-tree id="otherTree" label="其他表格"></table-tree>-->
+                </paper-collapses>
+            </div>
+            <div id="right" class="layout vertical">
+                <!--<iron-pages class="flex layout vertical" selected="{{selected}}">-->
+                <!--</iron-pages>-->
+                <img src="report.png" style="width: 904px; margin: auto;"/>
+                <paper-fabs>
+                    <paper-fab icon="refresh" mini></paper-fab>
+                    <paper-fab icon="print"></paper-fab>
+                </paper-fabs>
+            </div>
+        </vaadin-split-layout>
+        <owl-class-dialog id="classDialog"></owl-class-dialog>
+        <iron-ajax id="ajaxGetStandardItems" handle-as="json"></iron-ajax>
+    </template>
+    <script>
+        Polymer({
+            is: 'report-view',
+
+            attached: function () {
+                this.$.boqTree.setNodes([
+                    {name: '总说明'},
+                    {
+                        name: '汇总表',
+                        children: [
+                            {name: '工程项目招标控制价（投标报价）汇总表'},
+                            {name: '单项工程招标控制价（投标报价）汇总表'},
+                            {name: '单位工程招标控制价（投标报价）汇总表'},
+                        ],
+                    },
+                    {
+                        name: '分部分项工程清单表',
+                        children: [
+                            {name: '分部分项工程量清单与计价表'},
+                            {name: '工程量清单综合单价分析表'},
+                        ],
+                    },
+                    {
+                        name: '措施项目清单表',
+                        children: [
+                            {name: '措施项目清单与计价表（一）'},
+                            {name: '措施项目清单与计价表（二）'},
+                        ],
+                    },
+                    {
+                        name: '其他项目清单表',
+                        children: [
+                            {name: '其他项目清单与计价汇总表'},
+                            {name: '暂列金额明细表'},
+                            {name: '材料（工程设备）暂估价表'},
+                            {name: '专业工程暂估价表'},
+                            {name: '计日工表'},
+                        ],
+                    },
+                ]);
+            },
+        });
+    </script>
+</dom-module>

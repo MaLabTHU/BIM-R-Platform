@@ -1,0 +1,68 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../src/app-framework/app-shared-styles.html">
+
+<link rel="import" href="../../src/paper-table/paper-table.html">
+
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="direct-boq-table">
+    <template>
+        <style include="iron-flex iron-flex-alignment iron-positioning"></style>
+        <style include="app-shared-styles"></style>
+        <style>
+            :host {
+                display: block;
+                @apply(--layout-vertical);
+            }
+        </style>
+        <!--<paper-table class="flex" data-rows="[[parse(response)]]" stretch-h="last">-->
+        <!--<hot-column header="序号" value="id" width="50" editor="false"></hot-column>-->
+        <!--<hot-column header="项目编号" value="code" width="100" editor="false"></hot-column>-->
+        <!--<hot-column header="项目名称" value="name" width="200" editor="false"></hot-column>-->
+        <!--<hot-column header="项目特征描述" value="features" width="400" editor="false"></hot-column>-->
+        <!--<hot-column header="计量单位" value="unit" width="100" editor="false"></hot-column>-->
+        <!--<hot-column header="工程量" value="quantity" width="100" editor="false"-->
+        <!--type="numeric" format="0,0.00"></hot-column>-->
+        <!--<hot-column header=" " width="1"></hot-column>-->
+        <paper-table class="flex" title="分部分项工程量清单与计价表" data-rows="[[parse(response)]]">
+            <hot-column header="序号" value="id" editor="false"></hot-column>
+            <hot-column header="项目编号" value="code" editor="false"></hot-column>
+            <hot-column header="项目名称" value="name" editor="false"></hot-column>
+            <hot-column header="项目特征描述" value="features" editor="false"></hot-column>
+            <hot-column header="计量单位" value="unit" editor="false"></hot-column>
+            <hot-column header="工程量" value="quantity" editor="false" type="numeric" format="0,0.00"></hot-column>
+            <hot-column header="综合单价" value="price" editor="false"></hot-column>
+            <hot-column header="合价" value="cost" editor="false"></hot-column>
+            <hot-column header="其中暂估价" value="provision" editor="false"></hot-column>
+        </paper-table>
+        <iron-ajax id="ajaxGetDirectBoq" handle-as="json" last-response="{{response}}"></iron-ajax>
+    </template>
+    <script>
+        Polymer({
+            is: 'direct-boq-table',
+            properties: {
+                api: String,
+            },
+
+            load: function (project) {
+                this._projectId = project ? project.id : this._projectId;
+                console.log(this.api, this._projectId);
+                let ajax = this.$.ajaxGetDirectBoq;
+                ajax.url = this.api + 'v1/projects/' + this._projectId + '/boqs/direct-boq';
+                ajax.generateRequest();
+            },
+            _projectId: null,
+
+            parse: function (response) {
+                return response.map(boqItem => {
+                    boqItem.features = this.getFeatures(boqItem);
+                    return boqItem;
+                });
+            },
+            getFeatures: function (boqItem) {
+                return boqItem.features.map(feature => feature.name + ': ' + feature.value).join('\n');
+            },
+        });
+    </script>
+</dom-module>

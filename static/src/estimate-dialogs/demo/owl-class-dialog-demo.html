@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../src/app-framework/app.css">
+    <link rel="import" href="../owl-class-dialog-ui.html">
+</head>
+
+<body>
+<div id="app"></div>
+<owl-class-dialog id="dialog"></owl-class-dialog>
+<script>
+    window.addEventListener('WebComponentsReady', function () {
+        let app = document.getElementById('app');
+        let dialog = document.getElementById('dialog');
+        dialog.open();
+    });
+</script>
+</body>
+
+</html>

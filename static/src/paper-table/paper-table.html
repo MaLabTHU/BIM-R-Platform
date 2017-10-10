@@ -1,0 +1,53 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../bower_components/iron-resizable-behavior/iron-resizable-behavior.html">
+
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<link rel="import" href="../../bower_components/hot-table/hot-table.html">
+<link rel="stylesheet" type="text/css" href="hot-table.css">
+
+<dom-module id="paper-table">
+    <template>
+        <style include="iron-flex iron-flex-alignment iron-positioning"></style>
+        <style>
+            :host {
+                display: block;
+                overflow: hidden;
+                @apply(--layout-vertical);
+            }
+
+            #title {
+                text-align: center;
+            }
+        </style>
+        <div id="title">[[title]]</div>
+        <hot-table id="table" class="flex" datarows="{{dataRows}}" stretch-h="{{stretchH}}">
+            <content></content>
+        </hot-table>
+    </template>
+    <script>
+        Polymer({
+            is: 'paper-table',
+            properties: {
+                title: String,
+                dataRows: Array,
+                stretchH: {
+                    type: String,
+                    value: 'all',
+                },
+            },
+
+            behaviors: [
+                Polymer.IronResizableBehavior,
+            ],
+            listeners: {
+                'iron-resize': '_onIronResize',
+            },
+            _onIronResize: function () {
+                this.$.table._onChanged();
+            },
+        });
+    </script>
+</dom-module>

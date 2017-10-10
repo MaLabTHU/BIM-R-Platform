@@ -1,0 +1,67 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../src/jointjs-behavior/jointjs-behavior.html">
+
+<script src="joint.shapes.owl.js"></script>
+<link rel="stylesheet" type="text/css" href="joint.shapes.owl.css">
+
+<dom-module id="owl-viewer">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+        </style>
+    </template>
+    <script>
+        Polymer({
+            is: 'owl-viewer',
+
+            behaviors: [
+                Polymer.JointJSBehavior,
+            ],
+
+            addClass: function (label, attrs, x, y) {
+                let cell = new joint.shapes.owl.Class({
+                    attrs: attrs || {},
+                    position: {x: x || 0, y: y || 0},
+                });
+                this.graph.addCell(cell);
+                cell.findView(this.paper).updateText(label);
+                return cell;
+            },
+
+            addProperty: function (source, target, label, attrs) {
+                let cell = new joint.shapes.owl.Property(this._parseLinkAttrs(source, target, label, attrs));
+                this.graph.addCell(cell);
+                return cell;
+            },
+
+            addTransition: function (source, target, label, attrs) {
+                let cell = new joint.shapes.owl.Transition(this._parseLinkAttrs(source, target, label, attrs));
+                this.graph.addCell(cell);
+                return cell;
+            },
+
+            _parseLinkAttrs: function (source, target, label, attrs) {
+                attrs = attrs || {};
+                let labelsAttrs = attrs.labels || {};
+                labelsAttrs.text = labelsAttrs.text || {};
+                labelsAttrs.text.text = label || '';
+                return {
+                    source: {id: source.id},
+                    target: {id: target.id},
+                    labels: [{
+                        attrs: labelsAttrs,
+                        position: 0.5,
+                    }],
+                    attrs: attrs.pathAttrs,
+                };
+            },
+
+            clear: function () {
+                this.graph.clear();
+            },
+        });
+    </script>
+</dom-module>

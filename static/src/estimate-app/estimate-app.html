@@ -1,0 +1,109 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../src/app-framework/app-shared-styles.html">
+
+<link rel="import" href="../../src/app-framework/app-framework.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/paper-tabs/paper-tab.html">
+
+<link rel="import" href="../../src/estimate-views/home-view.html">
+<link rel="import" href="../../src/estimate-views/project-view.html">
+<link rel="import" href="../../src/estimate-views/ontology-view.html">
+<link rel="import" href="../../src/estimate-views/bim-view.html">
+<link rel="import" href="../estimate-views/boq-view.html">
+
+<dom-module id="estimate-app">
+    <template>
+        <style include="iron-flex iron-flex-alignment iron-positioning"></style>
+        <style include="app-shared-styles"></style>
+        <style>
+            :host {
+                display: block;
+                @apply(--layout-vertical);
+            }
+        </style>
+        <app-framework id="app" class="flex" title="BIM-Estimate 3.0">
+            <paper-tab class="app-tab" disabled noink hidden>新建打开</paper-tab>
+            <paper-tab class="app-tab" disabled noink>
+                <iron-icon icon="assignment"></iron-icon>
+                <span>Info</span>
+            </paper-tab>
+            <paper-tab class="app-tab" disabled noink>
+                <iron-icon icon="spellcheck"></iron-icon>
+                <span>Standards</span>
+            </paper-tab>
+            <paper-tab class="app-tab" disabled noink>
+                <iron-icon icon="social:domain"></iron-icon>
+                <span>Analysis</span>
+            </paper-tab>
+            <paper-tab class="app-tab" disabled noink>
+                <iron-icon icon="social:poll"></iron-icon>
+                <span>Calculation</span>
+            </paper-tab>
+            <paper-tab class="app-tab" disabled noink>
+                <iron-icon icon="print"></iron-icon>
+                <span>Report</span>
+            </paper-tab>
+            <paper-icon-button class="app-icon-button" icon="close" on-tap="onCloseButtonTap"></paper-icon-button>
+            <home-view id="home" class="app-page" api="[[restifyApi]]"></home-view>
+            <project-view id="project" class="app-page" project="[[project]]" api="[[restifyApi]]"></project-view>
+            <ontology-view id="ontology" class="app-page" api="[[restifyApi]]"></ontology-view>
+            <bim-view id="bim" class="app-page" restify-api="[[restifyApi]]" nancy-api="[[nancyApi]]"></bim-view>
+            <boq-view id="boq" class="app-page" api="[[restifyApi]]"></boq-view>
+        </app-framework>
+    </template>
+    <script>
+        Polymer({
+            is: 'estimate-app',
+            properties: {
+                restifyApi: String,
+                nancyApi: String,
+                project: Object,
+            },
+
+            attached: function() {
+                this.tabs = this.$.app.$.tabs;
+                this.pages = this.$.app.$.pages;
+                this.$.home.routeNew = () => {
+                    this.tabs.items[1].disabled = false;
+                    this.$.app.selected = 1;
+                };
+
+                let app = this;
+
+                function openProject(project) {
+                    if (!app.project) {
+                        app.tabs.items[1].disabled = false;
+                        app.tabs.items[2].disabled = false;
+                        app.tabs.items[3].disabled = false;
+                        app.$.ontology.load(project);
+                        app.$.bim.load(project);
+                        app.$.boq.load(project);
+                        app.$.app.selected = 3;
+                    }
+                    app.project = project;
+                }
+
+                this.$.home.routeOpen = openProject;
+                this.$.project.routeSubmit = openProject;
+                this.$.bim.routeAnalyze = () => {
+                    this.tabs.items[4].disabled = false;
+                    this.tabs.items[5].disabled = false;
+                };
+            },
+
+            onCloseButtonTap: function() {
+                if (this.project || this.$.app.selected == 1) {
+                    this.project = null;
+                    for (let item of this.tabs.items) {
+                        item.disabled = true;
+                    }
+                    this.$.app.selected = 0;
+                    this.$.app.resetAll();
+                } else {
+                    alert('closed');
+                }
+            },
+        });
+    </script>
+</dom-module>

@@ -1,0 +1,110 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../src/app-framework/app-shared-styles.html">
+
+<link rel="import" href="../../bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="../../bower_components/paper-dialog-scrollable/paper-dialog-scrollable.html">
+
+<link rel="import" href="../../bower_components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="../../src/responsive-form-elements/responsive-dropdown-menu.html">
+<link rel="import" href="../../src/responsive-form-elements/responsive-input.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+
+<dom-module id="boq-unclassified-dialog">
+    <template>
+        <style include="iron-flex iron-flex-alignment iron-positioning"></style>
+        <style include="app-shared-styles"></style>
+        <style>
+            :host {
+                display: block;
+                --basic-color: #e6e6e6;
+                --responsive-form-label-width: 80px;
+            }
+
+            /*.title {*/
+            /*padding-left: 16px;*/
+            /*}*/
+
+            .header {
+                margin: 0 -12px;
+                padding: 4px 12px;
+                /*background: var(--paper-indigo-500);*/
+                /*color: white;*/
+                font-size: 16px;
+            }
+
+            .content {
+                margin: 1em;
+            }
+
+            .parents {
+                text-align: center;
+            }
+
+            .definitions {
+                margin: 0.5em 0;
+            }
+
+            @media (min-width: 600px) {
+                section {
+                    min-width: 480px;
+                }
+            }
+
+            .more {
+                margin: 1em;
+                margin-top: -0.5em;
+            }
+
+            ::content label {
+                font-size: 16px;
+            }
+
+            ::content .underline {
+                display: none;
+            }
+        </style>
+        <paper-dialog id="dialog" modal>
+            <h2 class="title">选择信息补充方案</h2>
+            <paper-dialog-scrollable>
+                <section>
+                    <hr>
+                    <div class="header">
+                        <paper-checkbox>方案1：套用 010503003-现浇混凝土梁-异形梁 等</div> </paper-checkbox>
+                    <div class="content">
+                        <responsive-input label="浇注方法" value="现场浇筑"></responsive-input>
+                    </div>
+                </section>
+                <section>
+                    <hr>
+                    <div class="header">
+                        <paper-checkbox disabled>方案2：套用 010510003-预制混凝土梁-异形梁 等</paper-checkbox>
+                    </div>
+                    <div class="content">
+                        <responsive-input label="浇注方法" value="工厂预制"></responsive-input>
+                    </div>
+                </section>
+            </paper-dialog-scrollable>
+            <div class="buttons">
+                <paper-button dialog-dismiss>取消</paper-button>
+                <paper-button dialog-confirm autofocus>保存</paper-button>
+            </div>
+        </paper-dialog>
+    </template>
+    <script>
+        Polymer({
+            is: 'boq-unclassified-dialog',
+            properties: {
+            },
+
+            attached: function () {
+
+            },
+
+            open: function (owlClass) {
+                this.$.dialog.open();
+            },
+        });
+    </script>
+</dom-module>

@@ -1,0 +1,17 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../bower_components/iron-resizable-behavior/iron-resizable-behavior.html">
+
+<script>
+    'use strict';
+    Polymer.AppViewBehaviorImpl = {
+        reset: function () {
+            // todo
+        },
+    };
+
+    Polymer.AppViewBehavior = [
+        Polymer.IronResizableBehavior,
+        Polymer.AppViewBehaviorImpl,
+    ];
+</script>

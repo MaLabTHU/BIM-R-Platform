@@ -1,0 +1,92 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../src/app-framework/app-view-behavior.html">
+<link rel="import" href="../../src/electron-behavior/electron-behavior.html">
+
+<link rel="import" href="../../src/app-framework/app-shared-styles.html">
+
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item.html">
+
+<link rel="import" href="../../src/paper-fabs/paper-fabs.html">
+<link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
+
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="home-view">
+    <template>
+        <style include="iron-flex iron-flex-alignment iron-positioning"></style>
+        <style include="app-shared-styles"></style>
+        <style>
+            :host {
+                display: block;
+                @apply(--layout-horizontal);
+                @apply(--layout-center-justified);
+            }
+
+            paper-item {
+                min-height: 64px;
+                padding: 0 2em;
+            }
+        </style>
+        <div class="flex card-list">
+            <paper-card heading="最新消息">
+                <template is="dom-repeat" items="[[news]]">
+                    <paper-item>[[item.name]]</paper-item>
+                </template>
+                <paper-item hidden="[[news.length]]">无</paper-item>
+            </paper-card>
+            <paper-card heading="最近打开">
+                <template is="dom-repeat" items="[[recents]]">
+                    <paper-item on-tap="onRecentItemTap">[[item.projectName]]</paper-item>
+                </template>
+                <paper-item hidden="[[recents.length]]">无</paper-item>
+            </paper-card>
+            <paper-fabs>
+                <paper-fab icon="add" on-tap="onNewButtonTap"></paper-fab>
+                <paper-fab icon="folder" on-tap="onBrowseButtonTap" hidden="[[!electron]]"></paper-fab>
+            </paper-fabs>
+        </div>
+
+        <iron-ajax id="ajaxGetProjects" url$="[[api]]v1/projects?limit=5" last-response="{{recents}}"></iron-ajax>
+
+    </template>
+    <script>
+        Polymer({
+            is: 'home-view',
+            properties: {
+                api: String,
+            },
+
+            behaviors: [
+                Polymer.AppViewBehavior,
+                Polymer.ElectronBehavior,
+            ],
+
+            attached: function () {
+                this.reset();
+            },
+
+            reset: function () {
+                this.$.ajaxGetProjects.generateRequest();
+                this.scrollTop = 0;
+            },
+
+            onNewButtonTap: function () {
+                this.routeNew();
+            },
+            routeNew: null,
+
+            onBrowseButtonTap: function () {
+                let project = null; // todo
+                this.routeOpen(project);
+            },
+            onRecentItemTap: function (event) {
+                this.routeOpen(event.model.item);
+            },
+            routeOpen: function (project) {
+                // todo
+            },
+        });
+    </script>
+</dom-module>

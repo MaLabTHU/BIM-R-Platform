@@ -1,0 +1,110 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../bower_components/iron-resizable-behavior/iron-resizable-behavior.html">
+
+<link rel="import" href="../../src/app-framework/app-shared-styles.html">
+<link rel="import" href="../../bower_components/iron-icons/social-icons.html">
+
+<link rel="import" href="../../bower_components/paper-material/paper-material.html">
+
+<link rel="import" href="../../bower_components/paper-toolbar/paper-toolbar.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+
+<link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
+
+<dom-module id="app-framework">
+    <template>
+        <style include="iron-flex iron-flex-alignment iron-positioning"></style>
+        <style include="app-shared-styles"></style>
+        <style>
+            :host {
+                display: block;
+                @apply(--layout-vertical);
+            }
+
+            paper-toolbar {
+                height: 80px;
+                --paper-toolbar-title: {
+                    font-size: 20px;
+                }
+            }
+
+            paper-toolbar ::content #topBar {
+                height: 54px;
+                padding: 0 8px
+            }
+
+            #tabs {
+                padding: 0 3em;
+            }
+
+            ::content paper-tab span {
+                display: none;
+            }
+
+            @media (min-width: 600px) {
+                #tabs {
+                    position: static;
+                }
+
+                ::content paper-tab span {
+                    display: inline-block;
+                }
+            }
+
+            #pages {
+                overflow-y: auto;
+                background: var(--paper-indigo-50);
+            }
+        </style>
+        <div id="header">
+            <paper-material elevation="2">
+                <paper-toolbar>
+                    <paper-icon-button icon="menu" on-tap="onMenuButtonTap"></paper-icon-button>
+                    <span class="title">[[title]]</span>
+                    <paper-tabs id="tabs" class="fit bottom self-end" selected="{{selected}}" autoselect>
+                        <content select=".app-tab"></content>
+                    </paper-tabs>
+                    <content select=".app-icon-button"></content>
+                </paper-toolbar>
+            </paper-material>
+        </div>
+        <div id="content" class="flex layout vertical">
+            <iron-pages id="pages" selected="{{selected}}" class="flex layout vertical">
+                <content select=".app-page"></content>
+            </iron-pages>
+        </div>
+        <div id="footer">
+            <paper-material elevation="2"></paper-material>
+        </div>
+    </template>
+    <script>
+        Polymer({
+            is: 'app-framework',
+            properties: {
+                title: String,
+                selected: {
+                    type: Number,
+                    value: 0,
+                },
+            },
+
+            behaviors: [
+                Polymer.IronResizableBehavior,
+            ],
+
+            onMenuButtonTap: function () {
+                // todo
+            },
+
+            resetAll: function () {
+                for (let item of this.$.pages.items) {
+                    if (item.reset) {
+                        item.reset();
+                    }
+                }
+            },
+        });
+    </script>
+</dom-module>
