@@ -1,0 +1,137 @@
+{
+  "IfcProcess": {
+    ".translation": [
+      ""
+    ],
+    "children": {
+      "IfcEvent": {
+        "enumeration": {
+          "ENDEVENT": [
+            ""
+          ],
+          "INTERMEDIATEEVENT": [
+            ""
+          ],
+          "STARTEVENT": [
+            ""
+          ]
+        }
+      },
+      "IfcProcedure": {
+        "enumeration": {
+          "ADVICE_CAUTION": [
+            ""
+          ],
+          "ADVICE_NOTE": [
+            ""
+          ],
+          "ADVICE_WARNING": [
+            ""
+          ],
+          "CALIBRATION": [
+            ""
+          ],
+          "DIAGNOSTIC": [
+            ""
+          ],
+          "SHUTDOWN": [
+            ""
+          ],
+          "STARTUP": [
+            ""
+          ]
+        }
+      },
+      "IfcTask": {
+        "enumeration": {
+          "ATTENDANCE": [
+            ""
+          ],
+          "CONSTRUCTION": [
+            ""
+          ],
+          "DEMOLITION": [
+            ""
+          ],
+          "DISMANTLE": [
+            ""
+          ],
+          "DISPOSAL": [
+            ""
+          ],
+          "INSTALLATION": [
+            ""
+          ],
+          "LOGISTIC": [
+            ""
+          ],
+          "MAINTENANCE": [
+            ""
+          ],
+          "MOVE": [
+          ],
+          "OPERATION": [
+            ""
+          ],
+          "REMOVAL": [
+            ""
+          ],
+          "RENOVATION": [
+            ""
+          ],
+          "_install_": [
+            "安装"
+          ],
+          "_remove_": [
+            "拆除",
+            "铲除",
+            "截"
+          ],
+          "_installation_and_removal_": [
+            "安拆"
+          ],
+          "_move_": [
+            "搬运",
+            "进出场",
+            "弃置",
+            "运输"
+          ],
+          "_void_": [
+            "成井",
+            "打洞",
+            "开孔",
+            "开挖",
+            "挖",
+            "凿"
+          ],
+          "_fill_": [
+            "喷射",
+            "注浆",
+            "铺设",
+            "回填",
+            "换填"
+          ],
+          "_enhance_": [
+            "夯实",
+            "强夯",
+            "加固",
+            "平整",
+            "振冲",
+            "压浆",
+            "预压",
+            "灌注"
+          ],
+          "_paint_": [
+            "抹灰",
+            "油漆"
+          ],
+          "_other_": [
+            "施工",
+            "照明",
+            "排水、降水"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2799 @@
+{
+  "IfcProduct": {
+    ".translation": [
+      ""
+    ],
+    "children": {
+      "IfcAnnotation": {
+        ".translation": [
+          ""
+        ]
+      },
+      "IfcElement": {
+        ".translation": [
+          ""
+        ],
+        "children": {
+          "IfcBuildingElement": {
+            ".translation": [
+              ""
+            ],
+            "children": {
+              "IfcBeam": {
+                "children": {
+                  "IfcBeamStandardCase": {
+                    ".translation": [
+                      "梁"
+                    ]
+                  }
+                },
+                "enumeration": {
+                  "BEAM": [
+                    "梁"
+                  ],
+                  "HOLLOWCORE": [
+                    ""
+                  ],
+                  "JOIST": [
+                    ""
+                  ],
+                  "LINTEL": [
+                    "过梁"
+                  ],
+                  "SPANDREL": [
+                    ""
+                  ],
+                  "T_BEAM": [
+                    ""
+                  ],
+                  "_crane_": [
+                    "吊车梁"
+                  ]
+                }
+              },
+              "IfcBuildingElementProxy": {
+                "enumeration": {
+                  "COMPLEX": [
+                    ""
+                  ],
+                  "ELEMENT": [
+                    ""
+                  ],
+                  "PARTIAL": [
+                    ""
+                  ],
+                  "PROVISIONFORVOID": [
+                    ""
+                  ],
+                  "_unknown_": [
+                    "网架",
+                    "托架",
+                    "桁架",
+                    "拉条",
+                    "檩条",
+                    "平台",
+                    "走道",
+                    "支撑",
+                    "检查井",
+                    "勒脚",
+                    "护坡",
+                    "检查井",
+                    "化粪池",
+                    "后浇带",
+                    "声测管",
+                    "螺栓",
+                    "钢架桥",
+                    "挡风架",
+                    "漏斗",
+                    "支架",
+                    "信报箱",
+                    "灯箱",
+                    "标箱",
+                    "招牌",
+                    "旗杆",
+                    "镜箱",
+                    "肥皂盒",
+                    "卫生纸盒",
+                    "毛巾环",
+                    "毛巾杆",
+                    "浴缸拉手",
+                    "帘子杆",
+                    "晒衣架",
+                    "洗漱台",
+                    "暖气罩",
+                    "装饰线条",
+                    "装饰线",
+                    "玻璃线",
+                    "散水",
+                    "脚手架"
+                  ]
+                }
+              },
+              "IfcChimney": {
+                ".translation": [
+                  "烟囱",
+                  "烟道"
+                ]
+              },
+              "IfcColumn": {
+                "children": {
+                  "IfcColumnStandardCase": {
+                    ".translation": [
+                      "柱"
+                    ]
+                  }
+                },
+                "enumeration": {
+                  "COLUMN": [
+                    "柱"
+                  ],
+                  "PILASTER": [
+                    "壁柱"
+                  ]
+                }
+              },
+              "IfcCovering": {
+                "enumeration": {
+                  "CEILING": [
+                    ""
+                  ],
+                  "CLADDING": [
+                    ""
+                  ],
+                  "FLOORING": [
+                    ""
+                  ],
+                  "INSULATION": [
+                    ""
+                  ],
+                  "MEMBRANE": [
+                    ""
+                  ],
+                  "MOLDING": [
+                    ""
+                  ],
+                  "ROOFING": [
+                    ""
+                  ],
+                  "SKIRTINGBOARD": [
+                    "踢脚线"
+                  ],
+                  "SLEEVING": [
+                    ""
+                  ],
+                  "WRAPPING": [
+                    ""
+                  ]
+                }
+              },
+              "IfcCurtainWall": {
+                ".translation": [
+                  "幕墙"
+                ]
+              },
+              "IfcDoor": {
+                "children": {
+                  "IfcDoorStandardCase": {
+                    ".translation": [
+                      "门"
+                    ]
+                  }
+                },
+                "enumeration": {
+                  "DOOR": [
+                    "门"
+                  ],
+                  "GATE": [
+                    "门"
+                  ],
+                  "TRAPDOOR": [
+                    "地板门"
+                  ],
+                  "_grille_": [
+                    "格栅门"
+                  ]
+                }
+              },
+              "IfcFooting": {
+                ".translation": [
+                  "基础",
+                  "地基",
+                  "垫层"
+                ],
+                "enumeration": {
+                  "CAISSON_FOUNDATION": [
+                    "沉箱基础"
+                  ],
+                  "FOOTING_BEAM": [
+                    "基础梁"
+                  ],
+                  "PAD_FOOTING": [
+                    "独立基础"
+                  ],
+                  "PILE_CAP": [
+                    "桩承台基础"
+                  ],
+                  "STRIP_FOOTING": [
+                    "带形基础"
+                  ]
+                }
+              },
+              "IfcMember": {
+                "children": {
+                  "IfcMemberStandardCase": {
+                    ".translation": [
+                      ""
+                    ]
+                  }
+                },
+                "enumeration": {
+                  "BRACE": [
+                    ""
+                  ],
+                  "CHORD": [
+                    ""
+                  ],
+                  "COLLAR": [
+                    ""
+                  ],
+                  "MEMBER": [
+                    ""
+                  ],
+                  "MULLION": [
+                    ""
+                  ],
+                  "PLATE": [
+                    ""
+                  ],
+                  "POST": [
+                    ""
+                  ],
+                  "PURLIN": [
+                    ""
+                  ],
+                  "RAFTER": [
+                    ""
+                  ],
+                  "STRINGER": [
+                    ""
+                  ],
+                  "STRUT": [
+                    ""
+                  ],
+                  "STUD": [
+                    ""
+                  ]
+                }
+              },
+              "IfcPile": {
+                ".translation": [
+                  "桩"
+                ],
+                "enumeration": {
+                  "BORED": [
+                    "螺旋钻孔桩"
+                  ],
+                  "COHESION": [
+                    ""
+                  ],
+                  "DRIVEN": [
+                    ""
+                  ],
+                  "FRICTION": [
+                    ""
+                  ],
+                  "JETGROUTING": [
+                    ""
+                  ],
+                  "SUPPORT": [
+                    ""
+                  ],
+                  "_sheet_": [
+                    "板桩"
+                  ]
+                }
+              },
+              "IfcPlate": {
+                "children": {
+                  "IfcPlateStandardCase": {
+                    ".translation": [
+                      ""
+                    ]
+                  }
+                },
+                "enumeration": {
+                  "CURTAIN_PANEL": [
+                    ""
+                  ],
+                  "SHEET": [
+                    ""
+                  ]
+                }
+              },
+              "IfcRailing": {
+                ".translation": [
+                  "扶手",
+                  "栏杆",
+                  "护栏",
+                  "栅栏"
+                ],
+                "enumeration": {
+                  "BALUSTRADE": [
+                    ""
+                  ],
+                  "GUARDRAIL": [
+                    ""
+                  ],
+                  "HANDRAIL": [
+                    ""
+                  ]
+                }
+              },
+              "IfcRamp": {
+                ".translation": [
+                  "坡道"
+                ],
+                "enumeration": {
+                  "HALF_TURN_RAMP": [
+                    ""
+                  ],
+                  "QUARTER_TURN_RAMP": [
+                    ""
+                  ],
+                  "SPIRAL_RAMP": [
+                    ""
+                  ],
+                  "STRAIGHT_RUN_RAMP": [
+                    ""
+                  ],
+                  "TWO_QUARTER_TURN_RAMP": [
+                    ""
+                  ],
+                  "TWO_STRAIGHT_RUN_RAMP": [
+                    ""
+                  ]
+                }
+              },
+              "IfcRampFlight": {
+                ".translation": [
+                  "台阶"
+                ],
+                "enumeration": {
+                  "SPIRAL": [
+                    ""
+                  ],
+                  "STRAIGHT": [
+                    ""
+                  ]
+                }
+              },
+              "IfcRoof": {
+                ".translation": [
+                  "屋架"
+                ],
+                "enumeration": {
+                  "BARREL_ROOF": [
+                    ""
+                  ],
+                  "BUTTERFLY_ROOF": [
+                    ""
+                  ],
+                  "DOME_ROOF": [
+                    ""
+                  ],
+                  "FLAT_ROOF": [
+                    ""
+                  ],
+                  "FREEFORM": [
+                    ""
+                  ],
+                  "GABLE_ROOF": [
+                    ""
+                  ],
+                  "GAMBREL_ROOF": [
+                    ""
+                  ],
+                  "HIPPED_GABLE_ROOF": [
+                    ""
+                  ],
+                  "HIP_ROOF": [
+                    ""
+                  ],
+                  "MANSARD_ROOF": [
+                    ""
+                  ],
+                  "PAVILION_ROOF": [
+                    ""
+                  ],
+                  "RAINBOW_ROOF": [
+                    ""
+                  ],
+                  "SHED_ROOF": [
+                    ""
+                  ]
+                }
+              },
+              "IfcShadingDevice": {
+                "enumeration": {
+                  "AWNING": [
+                    "雨篷",
+                    "悬挑板",
+                    "阳台板"
+                  ],
+                  "JALOUSIE": [
+                    "百叶窗"
+                  ],
+                  "SHUTTER": [
+                    "百叶窗"
+                  ]
+                }
+              },
+              "IfcSlab": {
+                "children": {
+                  "IfcSlabElementedCase": {
+                    ".translation": [
+                      "板"
+                    ]
+                  },
+                  "IfcSlabStandardCase": {
+                    ".translation": [
+                      "板"
+                    ]
+                  }
+                },
+                "enumeration": {
+                  "BASESLAB": [
+                    ""
+                  ],
+                  "FLOOR": [
+                    "楼板"
+                  ],
+                  "LANDING": [
+                    "楼梯平台"
+                  ],
+                  "ROOF": [
+                    "屋顶",
+                    "屋架"
+                  ]
+                }
+              },
+              "IfcStair": {
+                ".translation": [
+                  "楼梯",
+                  "梯"
+                ],
+                "enumeration": {
+                  "CURVED_RUN_STAIR": [
+                    "弧形楼梯"
+                  ],
+                  "DOUBLE_RETURN_STAIR": [
+                    ""
+                  ],
+                  "HALF_TURN_STAIR": [
+                    ""
+                  ],
+                  "HALF_WINDING_STAIR": [
+                    ""
+                  ],
+                  "QUARTER_TURN_STAIR": [
+                    ""
+                  ],
+                  "QUARTER_WINDING_STAIR": [
+                    ""
+                  ],
+                  "SPIRAL_STAIR": [
+                    ""
+                  ],
+                  "STRAIGHT_RUN_STAIR": [
+                    "直形楼梯"
+                  ],
+                  "THREE_QUARTER_TURN_STAIR": [
+                    ""
+                  ],
+                  "THREE_QUARTER_WINDING_STAIR": [
+                    ""
+                  ],
+                  "TWO_CURVED_RUN_STAIR": [
+                    ""
+                  ],
+                  "TWO_QUARTER_TURN_STAIR": [
+                    ""
+                  ],
+                  "TWO_QUARTER_WINDING_STAIR": [
+                    ""
+                  ],
+                  "TWO_STRAIGHT_RUN_STAIR": [
+                    ""
+                  ]
+                }
+              },
+              "IfcStairFlight": {
+                ".translation": [
+                  "台阶"
+                ],
+                "enumeration": {
+                  "CURVED": [
+                    ""
+                  ],
+                  "FREEFORM": [
+                    ""
+                  ],
+                  "SPIRAL": [
+                    ""
+                  ],
+                  "STRAIGHT": [
+                    ""
+                  ],
+                  "WINDER": [
+                    ""
+                  ]
+                }
+              },
+              "IfcWall": {
+                "children": {
+                  "IfcWallElementedCase": {
+                    ".translation": [
+                      ""
+                    ]
+                  },
+                  "IfcWallStandardCase": {
+                    ".translation": [
+                      "墙"
+                    ]
+                  }
+                },
+                "enumeration": {
+                  "ELEMENTEDWALL": [
+                    ""
+                  ],
+                  "MOVABLE": [
+                    ""
+                  ],
+                  "PARAPET": [
+                    "女儿墙",
+                    "栏板"
+                  ],
+                  "PARTITIONING": [
+                    ""
+                  ],
+                  "PLUMBINGWALL": [
+                    ""
+                  ],
+                  "POLYGONAL": [
+                    ""
+                  ],
+                  "SHEAR": [
+                    ""
+                  ],
+                  "SOLIDWALL": [
+                    ""
+                  ],
+                  "STANDARD": [
+                    "墙"
+                  ],
+                  "_retaining_": [
+                    "挡土墙"
+                  ]
+                }
+              },
+              "IfcWindow": {
+                "children": {
+                  "IfcWindowStandardCase": {
+                    ".translation": [
+                      "窗"
+                    ]
+                  }
+                },
+                "enumeration": {
+                  "LIGHTDOME": [
+                    ""
+                  ],
+                  "SKYLIGHT": [
+                    "天窗"
+                  ],
+                  "WINDOW": [
+                    "窗"
+                  ],
+                  "_screen_": [
+                    "纱窗"
+                  ],
+                  "_grille_": [
+                    "格栅窗"
+                  ]
+                }
+              }
+            }
+          },
+          "IfcCivilElement": {
+            ".translation": [
+              ""
+            ]
+          },
+          "IfcDistributionElement": {
+            ".translation": [
+              ""
+            ],
+            "children": {
+              "IfcDistributionControlElement": {
+                ".translation": [
+                  ""
+                ],
+                "children": {
+                  "IfcActuator": {
+                    "enumeration": {
+                      "ELECTRICACTUATOR": [
+                        ""
+                      ],
+                      "HANDOPERATEDACTUATOR": [
+                        ""
+                      ],
+                      "HYDRAULICACTUATOR": [
+                        ""
+                      ],
+                      "PNEUMATICACTUATOR": [
+                        ""
+                      ],
+                      "THERMOSTATICACTUATOR": [
+                        ""
+                      ]
+                    }
+                  },
+                  "IfcAlarm": {
+                    "enumeration": {
+                      "BELL": [
+                        ""
+                      ],
+                      "BREAKGLASSBUTTON": [
+                        ""
+                      ],
+                      "LIGHT": [
+                        ""
+                      ],
+                      "MANUALPULLBOX": [
+                        ""
+                      ],
+                      "SIREN": [
+                        ""
+                      ],
+                      "WHISTLE": [
+                        ""
+                      ]
+                    }
+                  },
+                  "IfcController": {
+                    "enumeration": {
+                      "FLOATING": [
+                        ""
+                      ],
+                      "MULTIPOSITION": [
+                        ""
+                      ],
+                      "PROGRAMMABLE": [
+                        ""
+                      ],
+                      "PROPORTIONAL": [
+                        ""
+                      ],
+                      "TWOPOSITION": [
+                        ""
+                      ]
+                    }
+                  },
+                  "IfcFlowInstrument": {
+                    "enumeration": {
+                      "AMMETER": [
+                        ""
+                      ],
+                      "FREQUENCYMETER": [
+                        ""
+                      ],
+                      "PHASEANGLEMETER": [
+                        ""
+                      ],
+                      "POWERFACTORMETER": [
+                        ""
+                      ],
+                      "PRESSUREGAUGE": [
+                        ""
+                      ],
+                      "THERMOMETER": [
+                        ""
+                      ],
+                      "VOLTMETER_PEAK": [
+                        ""
+                      ],
+                      "VOLTMETER_RMS": [
+                        ""
+                      ]
+                    }
+                  },
+                  "IfcProtectiveDeviceTrippingUnit": {
+                    "enumeration": {
+                      "ELECTROMAGNETIC": [
+                        ""
+                      ],
+                      "ELECTRONIC": [
+                        ""
+                      ],
+                      "RESIDUALCURRENT": [
+                        ""
+                      ],
+                      "THERMAL": [
+                        ""
+                      ]
+                    }
+                  },
+                  "IfcSensor": {
+                    "enumeration": {
+                      "CONDUCTANCESENSOR": [
+                        ""
+                      ],
+                      "CONTACTSENSOR": [
+                        ""
+                      ],
+                      "FIRESENSOR": [
+                        ""
+                      ],
+                      "FLOWSENSOR": [
+                        ""
+                      ],
+                      "GASSENSOR": [
+                        ""
+                      ],
+                      "HEATSENSOR": [
+                        ""
+                      ],
+                      "HUMIDITYSENSOR": [
+                        ""
+                      ],
+                      "IONCONCENTRATIONSENSOR": [
+                        ""
+                      ],
+                      "LEVELSENSOR": [
+                        ""
+                      ],
+                      "LIGHTSENSOR": [
+                        ""
+                      ],
+                      "MOISTURESENSOR": [
+                        ""
+                      ],
+                      "MOVEMENTSENSOR": [
+                        ""
+                      ],
+                      "PHSENSOR": [
+                        ""
+                      ],
+                      "PRESSURESENSOR": [
+                        ""
+                      ],
+                      "RADIATIONSENSOR": [
+                        ""
+                      ],
+                      "RADIOACTIVITYSENSOR": [
+                        ""
+                      ],
+                      "SMOKESENSOR": [
+                        ""
+                      ],
+                      "SOUNDSENSOR": [
+                        ""
+                      ],
+                      "TEMPERATURESENSOR": [
+                        ""
+                      ],
+                      "WINDSENSOR": [
+                        ""
+                      ]
+                    }
+                  },
+                  "IfcUnitaryControlElement": {
+                    "enumeration": {
+                      "ALARMPANEL": [
+                        ""
+                      ],
+                      "CONTROLPANEL": [
+                        ""
+                      ],
+                      "GASDETECTIONPANEL": [
+                        ""
+                      ],
+                      "HUMIDISTAT": [
+                        ""
+                      ],
+                      "INDICATORPANEL": [
+                        ""
+                      ],
+                      "MIMICPANEL": [
+                        ""
+                      ],
+                      "THERMOSTAT": [
+                        ""
+                      ],
+                      "WEATHERSTATION": [
+                        ""
+                      ]
+                    }
+                  }
+                }
+              },
+              "IfcDistributionFlowElement": {
+                ".translation": [
+                  ""
+                ],
+                "children": {
+                  "IfcDistributionChamberElement": {
+                    "enumeration": {
+                      "FORMEDDUCT": [
+                        ""
+                      ],
+                      "INSPECTIONCHAMBER": [
+                        ""
+                      ],
+                      "INSPECTIONPIT": [
+                        ""
+                      ],
+                      "MANHOLE": [
+                        ""
+                      ],
+                      "METERCHAMBER": [
+                        ""
+                      ],
+                      "SUMP": [
+                        ""
+                      ],
+                      "TRENCH": [
+                        ""
+                      ],
+                      "VALVECHAMBER": [
+                        ""
+                      ]
+                    }
+                  },
+                  "IfcEnergyConversionDevice": {
+                    ".translation": [
+                      ""
+                    ],
+                    "children": {
+                      "IfcAirToAirHeatRecovery": {
+                        "enumeration": {
+                          "FIXEDPLATECOUNTERFLOWEXCHANGER": [
+                            ""
+                          ],
+                          "FIXEDPLATECROSSFLOWEXCHANGER": [
+                            ""
+                          ],
+                          "FIXEDPLATEPARALLELFLOWEXCHANGER": [
+                            ""
+                          ],
+                          "HEATPIPE": [
+                            ""
+                          ],
+                          "ROTARYWHEEL": [
+                            ""
+                          ],
+                          "RUNAROUNDCOILLOOP": [
+                            ""
+                          ],
+                          "THERMOSIPHONCOILTYPEHEATEXCHANGERS": [
+                            ""
+                          ],
+                          "THERMOSIPHONSEALEDTUBEHEATEXCHANGERS": [
+                            ""
+                          ],
+                          "TWINTOWERENTHALPYRECOVERYLOOPS": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcBoiler": {
+                        "enumeration": {
+                          "STEAM": [
+                            ""
+                          ],
+                          "WATER": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcBurner": {
+                        ".translation": [
+                          ""
+                        ]
+                      },
+                      "IfcChiller": {
+                        "enumeration": {
+                          "AIRCOOLED": [
+                            ""
+                          ],
+                          "HEATRECOVERY": [
+                            ""
+                          ],
+                          "WATERCOOLED": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcCoil": {
+                        "enumeration": {
+                          "DXCOOLINGCOIL": [
+                            ""
+                          ],
+                          "ELECTRICHEATINGCOIL": [
+                            ""
+                          ],
+                          "GASHEATINGCOIL": [
+                            ""
+                          ],
+                          "HYDRONICCOIL": [
+                            ""
+                          ],
+                          "STEAMHEATINGCOIL": [
+                            ""
+                          ],
+                          "WATERCOOLINGCOIL": [
+                            ""
+                          ],
+                          "WATERHEATINGCOIL": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcCondenser": {
+                        "enumeration": {
+                          "AIRCOOLED": [
+                            ""
+                          ],
+                          "EVAPORATIVECOOLED": [
+                            ""
+                          ],
+                          "WATERCOOLED": [
+                            ""
+                          ],
+                          "WATERCOOLEDBRAZEDPLATE": [
+                            ""
+                          ],
+                          "WATERCOOLEDSHELLCOIL": [
+                            ""
+                          ],
+                          "WATERCOOLEDSHELLTUBE": [
+                            ""
+                          ],
+                          "WATERCOOLEDTUBEINTUBE": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcCooledBeam": {
+                        "enumeration": {
+                          "ACTIVE": [
+                            ""
+                          ],
+                          "PASSIVE": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcCoolingTower": {
+                        "enumeration": {
+                          "MECHANICALFORCEDDRAFT": [
+                            ""
+                          ],
+                          "MECHANICALINDUCEDDRAFT": [
+                            ""
+                          ],
+                          "NATURALDRAFT": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcElectricGenerator": {
+                        "enumeration": {
+                          "CHP": [
+                            ""
+                          ],
+                          "ENGINEGENERATOR": [
+                            ""
+                          ],
+                          "STANDALONE": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcElectricMotor": {
+                        "enumeration": {
+                          "DC": [
+                            ""
+                          ],
+                          "INDUCTION": [
+                            ""
+                          ],
+                          "POLYPHASE": [
+                            ""
+                          ],
+                          "RELUCTANCESYNCHRONOUS": [
+                            ""
+                          ],
+                          "SYNCHRONOUS": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcEngine": {
+                        "enumeration": {
+                          "EXTERNALCOMBUSTION": [
+                            ""
+                          ],
+                          "INTERNALCOMBUSTION": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcEvaporativeCooler": {
+                        "enumeration": {
+                          "DIRECTEVAPORATIVEAIRWASHER": [
+                            ""
+                          ],
+                          "DIRECTEVAPORATIVEPACKAGEDROTARYAIRCOOLER": [
+                            ""
+                          ],
+                          "DIRECTEVAPORATIVERANDOMMEDIAAIRCOOLER": [
+                            ""
+                          ],
+                          "DIRECTEVAPORATIVERIGIDMEDIAAIRCOOLER": [
+                            ""
+                          ],
+                          "DIRECTEVAPORATIVESLINGERSPACKAGEDAIRCOOLER": [
+                            ""
+                          ],
+                          "INDIRECTDIRECTCOMBINATION": [
+                            ""
+                          ],
+                          "INDIRECTEVAPORATIVECOOLINGTOWERORCOILCOOLER": [
+                            ""
+                          ],
+                          "INDIRECTEVAPORATIVEPACKAGEAIRCOOLER": [
+                            ""
+                          ],
+                          "INDIRECTEVAPORATIVEWETCOIL": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcEvaporator": {
+                        "enumeration": {
+                          "DIRECTEXPANSION": [
+                            ""
+                          ],
+                          "DIRECTEXPANSIONBRAZEDPLATE": [
+                            ""
+                          ],
+                          "DIRECTEXPANSIONSHELLANDTUBE": [
+                            ""
+                          ],
+                          "DIRECTEXPANSIONTUBEINTUBE": [
+                            ""
+                          ],
+                          "FLOODEDSHELLANDTUBE": [
+                            ""
+                          ],
+                          "SHELLANDCOIL": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcHeatExchanger": {
+                        "enumeration": {
+                          "PLATE": [
+                            ""
+                          ],
+                          "SHELLANDTUBE": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcHumidifier": {
+                        "enumeration": {
+                          "ADIABATICAIRWASHER": [
+                            ""
+                          ],
+                          "ADIABATICATOMIZING": [
+                            ""
+                          ],
+                          "ADIABATICCOMPRESSEDAIRNOZZLE": [
+                            ""
+                          ],
+                          "ADIABATICPAN": [
+                            ""
+                          ],
+                          "ADIABATICRIGIDMEDIA": [
+                            ""
+                          ],
+                          "ADIABATICULTRASONIC": [
+                            ""
+                          ],
+                          "ADIABATICWETTEDELEMENT": [
+                            ""
+                          ],
+                          "ASSISTEDBUTANE": [
+                            ""
+                          ],
+                          "ASSISTEDELECTRIC": [
+                            ""
+                          ],
+                          "ASSISTEDNATURALGAS": [
+                            ""
+                          ],
+                          "ASSISTEDPROPANE": [
+                            ""
+                          ],
+                          "ASSISTEDSTEAM": [
+                            ""
+                          ],
+                          "STEAMINJECTION": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcMotorConnection": {
+                        "enumeration": {
+                          "BELTDRIVE": [
+                            ""
+                          ],
+                          "COUPLING": [
+                            ""
+                          ],
+                          "DIRECTDRIVE": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcSolarDevice": {
+                        "enumeration": {
+                          "SOLARCOLLECTOR": [
+                            ""
+                          ],
+                          "SOLARPANEL": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcTransformer": {
+                        "enumeration": {
+                          "CURRENT": [
+                            ""
+                          ],
+                          "FREQUENCY": [
+                            ""
+                          ],
+                          "INVERTER": [
+                            ""
+                          ],
+                          "RECTIFIER": [
+                            ""
+                          ],
+                          "VOLTAGE": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcTubeBundle": {
+                        "enumeration": {
+                          "FINNED": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcUnitaryEquipment": {
+                        "enumeration": {
+                          "AIRCONDITIONINGUNIT": [
+                            ""
+                          ],
+                          "AIRHANDLER": [
+                            ""
+                          ],
+                          "DEHUMIDIFIER": [
+                            ""
+                          ],
+                          "ROOFTOPUNIT": [
+                            ""
+                          ],
+                          "SPLITSYSTEM": [
+                            ""
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "IfcFlowController": {
+                    ".translation": [
+                      ""
+                    ],
+                    "children": {
+                      "IfcAirTerminalBox": {
+                        "enumeration": {
+                          "CONSTANTFLOW": [
+                            ""
+                          ],
+                          "VARIABLEFLOWPRESSUREDEPENDANT": [
+                            ""
+                          ],
+                          "VARIABLEFLOWPRESSUREINDEPENDANT": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcDamper": {
+                        "enumeration": {
+                          "BACKDRAFTDAMPER": [
+                            ""
+                          ],
+                          "BALANCINGDAMPER": [
+                            ""
+                          ],
+                          "BLASTDAMPER": [
+                            ""
+                          ],
+                          "CONTROLDAMPER": [
+                            ""
+                          ],
+                          "FIREDAMPER": [
+                            ""
+                          ],
+                          "FIRESMOKEDAMPER": [
+                            ""
+                          ],
+                          "FUMEHOODEXHAUST": [
+                            ""
+                          ],
+                          "GRAVITYDAMPER": [
+                            ""
+                          ],
+                          "GRAVITYRELIEFDAMPER": [
+                            ""
+                          ],
+                          "RELIEFDAMPER": [
+                            ""
+                          ],
+                          "SMOKEDAMPER": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcElectricDistributionBoard": {
+                        "enumeration": {
+                          "CONSUMERUNIT": [
+                            ""
+                          ],
+                          "DISTRIBUTIONBOARD": [
+                            ""
+                          ],
+                          "MOTORCONTROLCENTRE": [
+                            ""
+                          ],
+                          "SWITCHBOARD": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcElectricTimeControl": {
+                        "enumeration": {
+                          "RELAY": [
+                            ""
+                          ],
+                          "TIMECLOCK": [
+                            ""
+                          ],
+                          "TIMEDELAY": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcFlowMeter": {
+                        "enumeration": {
+                          "ENERGYMETER": [
+                            ""
+                          ],
+                          "GASMETER": [
+                            ""
+                          ],
+                          "OILMETER": [
+                            ""
+                          ],
+                          "WATERMETER": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcProtectiveDevice": {
+                        "enumeration": {
+                          "CIRCUITBREAKER": [
+                            ""
+                          ],
+                          "EARTHINGSWITCH": [
+                            ""
+                          ],
+                          "EARTHLEAKAGECIRCUITBREAKER": [
+                            ""
+                          ],
+                          "FUSEDISCONNECTOR": [
+                            ""
+                          ],
+                          "RESIDUALCURRENTCIRCUITBREAKER": [
+                            ""
+                          ],
+                          "RESIDUALCURRENTSWITCH": [
+                            ""
+                          ],
+                          "VARISTOR": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcSwitchingDevice": {
+                        "enumeration": {
+                          "CONTACTOR": [
+                            ""
+                          ],
+                          "DIMMERSWITCH": [
+                            ""
+                          ],
+                          "EMERGENCYSTOP": [
+                            ""
+                          ],
+                          "KEYPAD": [
+                            ""
+                          ],
+                          "MOMENTARYSWITCH": [
+                            ""
+                          ],
+                          "SELECTORSWITCH": [
+                            ""
+                          ],
+                          "STARTER": [
+                            ""
+                          ],
+                          "SWITCHDISCONNECTOR": [
+                            ""
+                          ],
+                          "TOGGLESWITCH": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcValve": {
+                        "enumeration": {
+                          "AIRRELEASE": [
+                            ""
+                          ],
+                          "ANTIVACUUM": [
+                            ""
+                          ],
+                          "CHANGEOVER": [
+                            ""
+                          ],
+                          "CHECK": [
+                            ""
+                          ],
+                          "COMMISSIONING": [
+                            ""
+                          ],
+                          "DIVERTING": [
+                            ""
+                          ],
+                          "DOUBLECHECK": [
+                            ""
+                          ],
+                          "DOUBLEREGULATING": [
+                            ""
+                          ],
+                          "DRAWOFFCOCK": [
+                            ""
+                          ],
+                          "FAUCET": [
+                            ""
+                          ],
+                          "FLUSHING": [
+                            ""
+                          ],
+                          "GASCOCK": [
+                            ""
+                          ],
+                          "GASTAP": [
+                            ""
+                          ],
+                          "ISOLATING": [
+                            ""
+                          ],
+                          "MIXING": [
+                            ""
+                          ],
+                          "PRESSUREREDUCING": [
+                            ""
+                          ],
+                          "PRESSURERELIEF": [
+                            ""
+                          ],
+                          "REGULATING": [
+                            ""
+                          ],
+                          "SAFETYCUTOFF": [
+                            ""
+                          ],
+                          "STEAMTRAP": [
+                            ""
+                          ],
+                          "STOPCOCK": [
+                            ""
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "IfcFlowFitting": {
+                    ".translation": [
+                      ""
+                    ],
+                    "children": {
+                      "IfcCableCarrierFitting": {
+                        "enumeration": {
+                          "BEND": [
+                            ""
+                          ],
+                          "CROSS": [
+                            ""
+                          ],
+                          "REDUCER": [
+                            ""
+                          ],
+                          "TEE": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcCableFitting": {
+                        "enumeration": {
+                          "CONNECTOR": [
+                            ""
+                          ],
+                          "ENTRY": [
+                            ""
+                          ],
+                          "EXIT": [
+                            ""
+                          ],
+                          "JUNCTION": [
+                            ""
+                          ],
+                          "TRANSITION": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcDuctFitting": {
+                        "enumeration": {
+                          "BEND": [
+                            ""
+                          ],
+                          "CONNECTOR": [
+                            ""
+                          ],
+                          "ENTRY": [
+                            ""
+                          ],
+                          "EXIT": [
+                            ""
+                          ],
+                          "JUNCTION": [
+                            ""
+                          ],
+                          "OBSTRUCTION": [
+                            ""
+                          ],
+                          "TRANSITION": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcJunctionBox": {
+                        "enumeration": {
+                          "DATA": [
+                            ""
+                          ],
+                          "POWER": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcPipeFitting": {
+                        "enumeration": {
+                          "BEND": [
+                            ""
+                          ],
+                          "CONNECTOR": [
+                            ""
+                          ],
+                          "ENTRY": [
+                            ""
+                          ],
+                          "EXIT": [
+                            ""
+                          ],
+                          "JUNCTION": [
+                            ""
+                          ],
+                          "OBSTRUCTION": [
+                            ""
+                          ],
+                          "TRANSITION": [
+                            ""
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "IfcFlowMovingDevice": {
+                    ".translation": [
+                      ""
+                    ],
+                    "children": {
+                      "IfcCompressor": {
+                        "enumeration": {
+                          "BOOSTER": [
+                            ""
+                          ],
+                          "DYNAMIC": [
+                            ""
+                          ],
+                          "HERMETIC": [
+                            ""
+                          ],
+                          "OPENTYPE": [
+                            ""
+                          ],
+                          "RECIPROCATING": [
+                            ""
+                          ],
+                          "ROLLINGPISTON": [
+                            ""
+                          ],
+                          "ROTARY": [
+                            ""
+                          ],
+                          "ROTARYVANE": [
+                            ""
+                          ],
+                          "SCROLL": [
+                            ""
+                          ],
+                          "SEMIHERMETIC": [
+                            ""
+                          ],
+                          "SINGLESCREW": [
+                            ""
+                          ],
+                          "SINGLESTAGE": [
+                            ""
+                          ],
+                          "TROCHOIDAL": [
+                            ""
+                          ],
+                          "TWINSCREW": [
+                            ""
+                          ],
+                          "WELDEDSHELLHERMETIC": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcFan": {
+                        "enumeration": {
+                          "CENTRIFUGALAIRFOIL": [
+                            ""
+                          ],
+                          "CENTRIFUGALBACKWARDINCLINEDCURVED": [
+                            ""
+                          ],
+                          "CENTRIFUGALFORWARDCURVED": [
+                            ""
+                          ],
+                          "CENTRIFUGALRADIAL": [
+                            ""
+                          ],
+                          "PROPELLORAXIAL": [
+                            ""
+                          ],
+                          "TUBEAXIAL": [
+                            ""
+                          ],
+                          "VANEAXIAL": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcPump": {
+                        "enumeration": {
+                          "CIRCULATOR": [
+                            ""
+                          ],
+                          "ENDSUCTION": [
+                            ""
+                          ],
+                          "SPLITCASE": [
+                            ""
+                          ],
+                          "SUBMERSIBLEPUMP": [
+                            ""
+                          ],
+                          "SUMPPUMP": [
+                            ""
+                          ],
+                          "VERTICALINLINE": [
+                            ""
+                          ],
+                          "VERTICALTURBINE": [
+                            ""
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "IfcFlowSegment": {
+                    ".translation": [
+                      ""
+                    ],
+                    "children": {
+                      "IfcCableCarrierSegment": {
+                        "enumeration": {
+                          "CABLELADDERSEGMENT": [
+                            ""
+                          ],
+                          "CABLETRAYSEGMENT": [
+                            ""
+                          ],
+                          "CABLETRUNKINGSEGMENT": [
+                            ""
+                          ],
+                          "CONDUITSEGMENT": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcCableSegment": {
+                        "enumeration": {
+                          "BUSBARSEGMENT": [
+                            ""
+                          ],
+                          "CABLESEGMENT": [
+                            ""
+                          ],
+                          "CONDUCTORSEGMENT": [
+                            ""
+                          ],
+                          "CORESEGMENT": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcDuctSegment": {
+                        "enumeration": {
+                          "FLEXIBLESEGMENT": [
+                            ""
+                          ],
+                          "RIGIDSEGMENT": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcPipeSegment": {
+                        "enumeration": {
+                          "CULVERT": [
+                            ""
+                          ],
+                          "FLEXIBLESEGMENT": [
+                            ""
+                          ],
+                          "GUTTER": [
+                            ""
+                          ],
+                          "RIGIDSEGMENT": [
+                            ""
+                          ],
+                          "SPOOL": [
+                            ""
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "IfcFlowStorageDevice": {
+                    ".translation": [
+                      ""
+                    ],
+                    "children": {
+                      "IfcElectricFlowStorageDevice": {
+                        "enumeration": {
+                          "BATTERY": [
+                            ""
+                          ],
+                          "CAPACITORBANK": [
+                            ""
+                          ],
+                          "HARMONICFILTER": [
+                            ""
+                          ],
+                          "INDUCTORBANK": [
+                            ""
+                          ],
+                          "UPS": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcTank": {
+                        "enumeration": {
+                          "BASIN": [
+                            ""
+                          ],
+                          "BREAKPRESSURE": [
+                            ""
+                          ],
+                          "EXPANSION": [
+                            ""
+                          ],
+                          "FEEDANDEXPANSION": [
+                            ""
+                          ],
+                          "PRESSUREVESSEL": [
+                            ""
+                          ],
+                          "STORAGE": [
+                            ""
+                          ],
+                          "VESSEL": [
+                            ""
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "IfcFlowTerminal": {
+                    ".translation": [
+                      ""
+                    ],
+                    "children": {
+                      "IfcAirTerminal": {
+                        "enumeration": {
+                          "DIFFUSER": [
+                            ""
+                          ],
+                          "GRILLE": [
+                            ""
+                          ],
+                          "LOUVRE": [
+                            ""
+                          ],
+                          "REGISTER": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcAudioVisualAppliance": {
+                        "enumeration": {
+                          "AMPLIFIER": [
+                            ""
+                          ],
+                          "CAMERA": [
+                            ""
+                          ],
+                          "DISPLAY": [
+                            ""
+                          ],
+                          "MICROPHONE": [
+                            ""
+                          ],
+                          "PLAYER": [
+                            ""
+                          ],
+                          "PROJECTOR": [
+                            ""
+                          ],
+                          "RECEIVER": [
+                            ""
+                          ],
+                          "SPEAKER": [
+                            ""
+                          ],
+                          "SWITCHER": [
+                            ""
+                          ],
+                          "TELEPHONE": [
+                            ""
+                          ],
+                          "TUNER": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcCommunicationsAppliance": {
+                        "enumeration": {
+                          "ANTENNA": [
+                            ""
+                          ],
+                          "COMPUTER": [
+                            ""
+                          ],
+                          "FAX": [
+                            ""
+                          ],
+                          "GATEWAY": [
+                            ""
+                          ],
+                          "MODEM": [
+                            ""
+                          ],
+                          "NETWORKAPPLIANCE": [
+                            ""
+                          ],
+                          "NETWORKBRIDGE": [
+                            ""
+                          ],
+                          "NETWORKHUB": [
+                            ""
+                          ],
+                          "PRINTER": [
+                            ""
+                          ],
+                          "REPEATER": [
+                            ""
+                          ],
+                          "ROUTER": [
+                            ""
+                          ],
+                          "SCANNER": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcElectricAppliance": {
+                        "enumeration": {
+                          "DISHWASHER": [
+                            ""
+                          ],
+                          "ELECTRICCOOKER": [
+                            ""
+                          ],
+                          "FREESTANDINGELECTRICHEATER": [
+                            ""
+                          ],
+                          "FREESTANDINGFAN": [
+                            ""
+                          ],
+                          "FREESTANDINGWATERCOOLER": [
+                            ""
+                          ],
+                          "FREESTANDINGWATERHEATER": [
+                            ""
+                          ],
+                          "FREEZER": [
+                            ""
+                          ],
+                          "FRIDGE_FREEZER": [
+                            ""
+                          ],
+                          "HANDDRYER": [
+                            ""
+                          ],
+                          "KITCHENMACHINE": [
+                            ""
+                          ],
+                          "MICROWAVE": [
+                            ""
+                          ],
+                          "PHOTOCOPIER": [
+                            ""
+                          ],
+                          "REFRIGERATOR": [
+                            ""
+                          ],
+                          "TUMBLEDRYER": [
+                            ""
+                          ],
+                          "VENDINGMACHINE": [
+                            ""
+                          ],
+                          "WASHINGMACHINE": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcFireSuppressionTerminal": {
+                        "enumeration": {
+                          "BREECHINGINLET": [
+                            ""
+                          ],
+                          "FIREHYDRANT": [
+                            ""
+                          ],
+                          "HOSEREEL": [
+                            ""
+                          ],
+                          "SPRINKLER": [
+                            ""
+                          ],
+                          "SPRINKLERDEFLECTOR": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcLamp": {
+                        "enumeration": {
+                          "COMPACTFLUORESCENT": [
+                            ""
+                          ],
+                          "FLUORESCENT": [
+                            ""
+                          ],
+                          "HALOGEN": [
+                            ""
+                          ],
+                          "HIGHPRESSUREMERCURY": [
+                            ""
+                          ],
+                          "HIGHPRESSURESODIUM": [
+                            ""
+                          ],
+                          "LED": [
+                            ""
+                          ],
+                          "METALHALIDE": [
+                            ""
+                          ],
+                          "OLED": [
+                            ""
+                          ],
+                          "TUNGSTENFILAMENT": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcLightFixture": {
+                        "enumeration": {
+                          "DIRECTIONSOURCE": [
+                            ""
+                          ],
+                          "POINTSOURCE": [
+                            ""
+                          ],
+                          "SECURITYLIGHTING": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcMedicalDevice": {
+                        "enumeration": {
+                          "AIRSTATION": [
+                            ""
+                          ],
+                          "FEEDAIRUNIT": [
+                            ""
+                          ],
+                          "OXYGENGENERATOR": [
+                            ""
+                          ],
+                          "OXYGENPLANT": [
+                            ""
+                          ],
+                          "VACUUMSTATION": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcOutlet": {
+                        "enumeration": {
+                          "AUDIOVISUALOUTLET": [
+                            ""
+                          ],
+                          "COMMUNICATIONSOUTLET": [
+                            ""
+                          ],
+                          "DATAOUTLET": [
+                            ""
+                          ],
+                          "POWEROUTLET": [
+                            ""
+                          ],
+                          "TELEPHONEOUTLET": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcSanitaryTerminal": {
+                        "enumeration": {
+                          "BATH": [
+                            ""
+                          ],
+                          "BIDET": [
+                            ""
+                          ],
+                          "CISTERN": [
+                            ""
+                          ],
+                          "SANITARYFOUNTAIN": [
+                            ""
+                          ],
+                          "SHOWER": [
+                            ""
+                          ],
+                          "SINK": [
+                            ""
+                          ],
+                          "TOILETPAN": [
+                            ""
+                          ],
+                          "URINAL": [
+                            ""
+                          ],
+                          "WASHHANDBASIN": [
+                            ""
+                          ],
+                          "WCSEAT": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcSpaceHeater": {
+                        "enumeration": {
+                          "CONVECTOR": [
+                            ""
+                          ],
+                          "RADIATOR": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcStackTerminal": {
+                        "enumeration": {
+                          "BIRDCAGE": [
+                            ""
+                          ],
+                          "COWL": [
+                            ""
+                          ],
+                          "RAINWATERHOPPER": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcWasteTerminal": {
+                        "enumeration": {
+                          "FLOORTRAP": [
+                            ""
+                          ],
+                          "FLOORWASTE": [
+                            ""
+                          ],
+                          "GULLYSUMP": [
+                            ""
+                          ],
+                          "GULLYTRAP": [
+                            ""
+                          ],
+                          "ROOFDRAIN": [
+                            ""
+                          ],
+                          "WASTEDISPOSALUNIT": [
+                            ""
+                          ],
+                          "WASTETRAP": [
+                            ""
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "IfcFlowTreatmentDevice": {
+                    ".translation": [
+                      ""
+                    ],
+                    "children": {
+                      "IfcDuctSilencer": {
+                        "enumeration": {
+                          "FLATOVAL": [
+                            ""
+                          ],
+                          "RECTANGULAR": [
+                            ""
+                          ],
+                          "ROUND": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcFilter": {
+                        "enumeration": {
+                          "AIRPARTICLEFILTER": [
+                            ""
+                          ],
+                          "COMPRESSEDAIRFILTER": [
+                            ""
+                          ],
+                          "ODORFILTER": [
+                            ""
+                          ],
+                          "OILFILTER": [
+                            ""
+                          ],
+                          "STRAINER": [
+                            ""
+                          ],
+                          "WATERFILTER": [
+                            ""
+                          ]
+                        }
+                      },
+                      "IfcInterceptor": {
+                        "enumeration": {
+                          "CYCLONIC": [
+                            ""
+                          ],
+                          "GREASE": [
+                            ""
+                          ],
+                          "OIL": [
+                            ""
+                          ],
+                          "PETROL": [
+                            ""
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "IfcElementAssembly": {
+            "enumeration": {
+              "ACCESSORY_ASSEMBLY": [
+                ""
+              ],
+              "ARCH": [
+                ""
+              ],
+              "BEAM_GRID": [
+                ""
+              ],
+              "BRACED_FRAME": [
+                ""
+              ],
+              "GIRDER": [
+                ""
+              ],
+              "REINFORCEMENT_UNIT": [
+                ""
+              ],
+              "RIGID_FRAME": [
+                ""
+              ],
+              "SLAB_FIELD": [
+                ""
+              ],
+              "TRUSS": [
+                ""
+              ]
+            }
+          },
+          "IfcElementComponent": {
+            ".translation": [
+              ""
+            ],
+            "children": {
+              "IfcBuildingElementPart": {
+                "enumeration": {
+                  "INSULATION": [
+                    ""
+                  ],
+                  "PRECASTPANEL": [
+                    ""
+                  ]
+                }
+              },
+              "IfcDiscreteAccessory": {
+                "enumeration": {
+                  "ANCHORPLATE": [
+                    ""
+                  ],
+                  "BRACKET": [
+                    ""
+                  ],
+                  "SHOE": [
+                    ""
+                  ]
+                }
+              },
+              "IfcFastener": {
+                "enumeration": {
+                  "GLUE": [
+                    ""
+                  ],
+                  "MORTAR": [
+                    ""
+                  ],
+                  "WELD": [
+                    ""
+                  ]
+                }
+              },
+              "IfcMechanicalFastener": {
+                "enumeration": {
+                  "ANCHORBOLT": [
+                    ""
+                  ],
+                  "BOLT": [
+                    ""
+                  ],
+                  "DOWEL": [
+                    ""
+                  ],
+                  "NAIL": [
+                    ""
+                  ],
+                  "NAILPLATE": [
+                    ""
+                  ],
+                  "RIVET": [
+                    ""
+                  ],
+                  "SCREW": [
+                    ""
+                  ],
+                  "SHEARCONNECTOR": [
+                    ""
+                  ],
+                  "STAPLE": [
+                    ""
+                  ],
+                  "STUDSHEARCONNECTOR": [
+                    ""
+                  ]
+                }
+              },
+              "IfcReinforcingElement": {
+                ".translation": [
+                  ""
+                ],
+                "children": {
+                  "IfcReinforcingBar": {
+                    ".translation": [
+                      "钢筋"
+                    ],
+                    "enumeration": {
+                      "ANCHORING": [
+                        ""
+                      ],
+                      "EDGE": [
+                        ""
+                      ],
+                      "LIGATURE": [
+                        ""
+                      ],
+                      "MAIN": [
+                        ""
+                      ],
+                      "PUNCHING": [
+                        ""
+                      ],
+                      "RING": [
+                        ""
+                      ],
+                      "SHEAR": [
+                        ""
+                      ],
+                      "STUD": [
+                        ""
+                      ]
+                    }
+                  },
+                  "IfcReinforcingMesh": {
+                    ".translation": [
+                      "钢筋笼",
+                      "钢筋网片"
+                    ]
+                  },
+                  "IfcTendon": {
+                    "enumeration": {
+                      "BAR": [
+                        "预应力钢筋"
+                      ],
+                      "COATED": [
+                        ""
+                      ],
+                      "STRAND": [
+                        "预应力钢丝"
+                      ],
+                      "WIRE": [
+                        "预应力钢绞线"
+                      ]
+                    }
+                  },
+                  "IfcTendonAnchor": {
+                    "enumeration": {
+                      "COUPLER": [
+                        ""
+                      ],
+                      "FIXED_END": [
+                        ""
+                      ],
+                      "TENSIONING_END": [
+                        ""
+                      ]
+                    }
+                  }
+                }
+              },
+              "IfcVibrationIsolator": {
+                "enumeration": {
+                  "COMPRESSION": [
+                    ""
+                  ],
+                  "SPRING": [
+                    ""
+                  ]
+                }
+              }
+            }
+          },
+          "IfcFeatureElement": {
+            ".translation": [
+              ""
+            ],
+            "children": {
+              "IfcFeatureElementAddition": {
+                ".translation": [
+                  ""
+                ],
+                "children": {
+                  "IfcProjectionElement": {
+                    ".translation": [
+                      ""
+                    ]
+                  }
+                }
+              },
+              "IfcFeatureElementSubtraction": {
+                ".translation": [
+                  ""
+                ],
+                "children": {
+                  "IfcOpeningElement": {
+                    "children": {
+                      "IfcOpeningStandardCase": {
+                        ".translation": [
+                          ""
+                        ]
+                      }
+                    },
+                    "enumeration": {
+                      "OPENING": [
+                        ""
+                      ],
+                      "RECESS": [
+                        ""
+                      ]
+                    }
+                  },
+                  "IfcVoidingFeature": {
+                    "enumeration": {
+                      "CHAMFER": [
+                        ""
+                      ],
+                      "CUTOUT": [
+                        ""
+                      ],
+                      "EDGE": [
+                        ""
+                      ],
+                      "HOLE": [
+                        ""
+                      ],
+                      "MITER": [
+                        ""
+                      ],
+                      "NOTCH": [
+                        ""
+                      ]
+                    }
+                  }
+                }
+              },
+              "IfcSurfaceFeature": {
+                "enumeration": {
+                  "MARK": [
+                    ""
+                  ],
+                  "TAG": [
+                    ""
+                  ],
+                  "TREATMENT": [
+                    ""
+                  ]
+                }
+              }
+            }
+          },
+          "IfcFurnishingElement": {
+            ".translation": [
+              ""
+            ],
+            "children": {
+              "IfcFurniture": {
+                "enumeration": {
+                  "BED": [
+                    ""
+                  ],
+                  "CHAIR": [
+                    ""
+                  ],
+                  "DESK": [
+                    ""
+                  ],
+                  "FILECABINET": [
+                    ""
+                  ],
+                  "SHELF": [
+                    ""
+                  ],
+                  "SOFA": [
+                    ""
+                  ],
+                  "TABLE": [
+                    ""
+                  ]
+                }
+              },
+              "IfcSystemFurnitureElement": {
+                "enumeration": {
+                  "PANEL": [
+                    ""
+                  ],
+                  "WORKSURFACE": [
+                    ""
+                  ]
+                }
+              }
+            }
+          },
+          "IfcGeographicElement": {
+            "enumeration": {
+              "TERRAIN": [
+                ""
+              ]
+            }
+          },
+          "IfcTransportElement": {
+            "enumeration": {
+              "CRANEWAY": [
+                ""
+              ],
+              "ELEVATOR": [
+                ""
+              ],
+              "ESCALATOR": [
+                ""
+              ],
+              "LIFTINGGEAR": [
+                ""
+              ],
+              "MOVINGWALKWAY": [
+                ""
+              ]
+            }
+          },
+          "IfcVirtualElement": {
+            ".translation": [
+              ""
+            ]
+          }
+        }
+      },
+      "IfcGrid": {
+        "enumeration": {
+          "IRREGULAR": [
+            ""
+          ],
+          "RADIAL": [
+            ""
+          ],
+          "RECTANGULAR": [
+            ""
+          ],
+          "TRIANGULAR": [
+            ""
+          ]
+        }
+      },
+      "IfcPort": {
+        ".translation": [
+          ""
+        ],
+        "children": {
+          "IfcDistributionPort": {
+            "enumeration": {
+              "CABLE": [
+                ""
+              ],
+              "CABLECARRIER": [
+                ""
+              ],
+              "DUCT": [
+                ""
+              ],
+              "PIPE": [
+                ""
+              ]
+            }
+          }
+        }
+      },
+      "IfcProxy": {
+        ".translation": [
+          ""
+        ]
+      },
+      "IfcSpatialElement": {
+        ".translation": [
+          ""
+        ],
+        "children": {
+          "IfcExternalSpatialStructureElement": {
+            ".translation": [
+              ""
+            ],
+            "children": {
+              "IfcExternalSpatialElement": {
+                "enumeration": {
+                  "EXTERNAL": [
+                    ""
+                  ],
+                  "EXTERNAL_EARTH": [
+                    "土方",
+                    "石方",
+                    "场地",
+                    "地坪"
+                  ],
+                  "EXTERNAL_FIRE": [
+                    ""
+                  ],
+                  "EXTERNAL_WATER": [
+                    ""
+                  ],
+                  "NOTDEFIEND": [
+                    ""
+                  ]
+                }
+              }
+            }
+          },
+          "IfcSpatialStructureElement": {
+            ".translation": [
+              ""
+            ],
+            "children": {
+              "IfcBuilding": {
+                ".translation": [
+                  ""
+                ]
+              },
+              "IfcBuildingStorey": {
+                ".translation": [
+                  ""
+                ]
+              },
+              "IfcSite": {
+                ".translation": [
+                  ""
+                ]
+              },
+              "IfcSpace": {
+                "enumeration": {
+                  "EXTERNAL": [
+                    ""
+                  ],
+                  "GFA": [
+                    ""
+                  ],
+                  "INTERNAL": [
+                    ""
+                  ],
+                  "PARKING": [
+                    ""
+                  ],
+                  "SPACE": [
+                    ""
+                  ]
+                }
+              }
+            }
+          },
+          "IfcSpatialZone": {
+            "enumeration": {
+              "CONSTRUCTION": [
+                ""
+              ],
+              "FIRESAFETY": [
+                ""
+              ],
+              "LIGHTING": [
+                ""
+              ],
+              "OCCUPANCY": [
+                ""
+              ],
+              "SECURITY": [
+                ""
+              ],
+              "THERMAL": [
+                ""
+              ],
+              "TRANSPORT": [
+                ""
+              ],
+              "VENTILATION": [
+                ""
+              ]
+            }
+          }
+        }
+      },
+      "IfcStructuralActivity": {
+        ".translation": [
+          ""
+        ],
+        "children": {
+          "IfcStructuralAction": {
+            ".translation": [
+              ""
+            ],
+            "children": {
+              "IfcStructuralCurveAction": {
+                ".translation": [
+                  ""
+                ],
+                "children": {
+                  "IfcStructuralLinearAction": {
+                    ".translation": [
+                      ""
+                    ]
+                  }
+                }
+              },
+              "IfcStructuralPointAction": {
+                ".translation": [
+                  ""
+                ]
+              },
+              "IfcStructuralSurfaceAction": {
+                ".translation": [
+                  ""
+                ],
+                "children": {
+                  "IfcStructuralPlanarAction": {
+                    ".translation": [
+                      ""
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "IfcStructuralReaction": {
+            ".translation": [
+              ""
+            ],
+            "children": {
+              "IfcStructuralCurveReaction": {
+                ".translation": [
+                  ""
+                ]
+              },
+              "IfcStructuralPointReaction": {
+                ".translation": [
+                  ""
+                ]
+              },
+              "IfcStructuralSurfaceReaction": {
+                ".translation": [
+                  ""
+                ]
+              }
+            }
+          }
+        }
+      },
+      "IfcStructuralItem": {
+        ".translation": [
+          ""
+        ],
+        "children": {
+          "IfcStructuralConnection": {
+            ".translation": [
+              ""
+            ],
+            "children": {
+              "IfcStructuralCurveConnection": {
+                ".translation": [
+                  ""
+                ]
+              },
+              "IfcStructuralPointConnection": {
+                ".translation": [
+                  ""
+                ]
+              },
+              "IfcStructuralSurfaceConnection": {
+                ".translation": [
+                  ""
+                ]
+              }
+            }
+          },
+          "IfcStructuralMember": {
+            ".translation": [
+              ""
+            ],
+            "children": {
+              "IfcStructuralCurveMember": {
+                "children": {
+                  "IfcStructuralCurveMemberVarying": {
+                    ".translation": [
+                      ""
+                    ]
+                  }
+                },
+                "enumeration": {
+                  "CABLE": [
+                    ""
+                  ],
+                  "COMPRESSION_MEMBER": [
+                    ""
+                  ],
+                  "PIN_JOINED_MEMBER": [
+                    ""
+                  ],
+                  "RIGID_JOINED_MEMBER": [
+                    ""
+                  ],
+                  "TENSION_MEMBER": [
+                    ""
+                  ]
+                }
+              },
+              "IfcStructuralSurfaceMember": {
+                "children": {
+                  "IfcStructuralSurfaceMemberVarying": {
+                    ".translation": [
+                      ""
+                    ]
+                  }
+                },
+                "enumeration": {
+                  "BENDING_ELEMENT": [
+                    ""
+                  ],
+                  "MEMBRANE_ELEMENT": [
+                    ""
+                  ],
+                  "SHELL": [
+                    ""
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
